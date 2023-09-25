@@ -39,7 +39,7 @@
               You
               <time class="text-xs opacity-50">5 min ago</time>
             </div>
-            <div class="chat-bubble">👋Hi there! Impressed by your skills!</div>
+            <div class="chat-bubble">👋Hi Benji! Impressed by your skills!</div>
             <!-- <div class="chat-footer opacity-50">Delivered</div> -->
           </div>
           <div class="chat chat-end">
