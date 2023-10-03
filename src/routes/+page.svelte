@@ -1,6 +1,26 @@
 <script lang="ts">
   import IconLinkedin from "~icons/mingcute/linkedin-fill";
   import IconArrowRight from "~icons/mingcute/arrow-right-line";
+
+  import SveleIcon from "~icons/cib/svelte";
+  import ReactIcon from "~icons/cib/react";
+  import StorybookIcon from "~icons/cib/storybook";
+  import GitIcon from "~icons/cib/git";
+  import TypescriptIcon from "~icons/cib/typescript";
+  import JavascriptIcon from "~icons/cib/javascript";
+  import CssIcon from "~icons/cib/css3-shiled";
+  import HtmlIcon from "~icons/cib/html5-shield";
+  import FirebaseIcon from "~icons/cib/firebase";
+  import FigmaIcon from "~icons/cib/figma";
+
+  import ReduxIcon from "~icons/cib/redux";
+  import JestIcon from "~icons/cib/jest";
+
+  let inputRef;
+
+  const onClickFocus = () => {
+    inputRef.focus();
+  };
 </script>
 
 <div class="hero min-h-screen">
@@ -8,22 +28,83 @@
     <div class="max-w-lg text-center md:text-left">
       <!-- <h6 class="uppercase">Welcome to Benjamin Karlsson</h6> -->
       <div class="badge badge-accent badge-outline mb-4">Remote First</div>
+
       <h1 class="text-6xl font-black contrast-150 brightness-150">
         Freelancing Fullstack Excellence
       </h1>
       <p class="py-9">
-        Senior experience in front-end development, specializing in TypeScript,
-        React.js, and advanced patterns like hooks, Redux, and routing.
-        Dedicated to creating user-friendly, feature-rich websites. Proficient
-        in Mono repo tools, Styled components, Jest, Storybook, and Git.
+        <span class="relative">
+          <span
+            class="block absolute -inset-1 -skew-y-3 bg-primary"
+            aria-hidden="true"
+          />
+          <span class="relative text-white">Senior</span>
+        </span> experience in front-end development, specializing in TypeScript,
+        React.js, and advanced patterns like hooks, Redux, and routing. Dedicated
+        to creating user-friendly, feature-rich websites. Proficient in Mono repo
+        tools, Styled components, Jest, Storybook, and Git.
       </p>
+      <div class="carousel carousel-end mb-9 w-full text-neutral">
+        <div class="carousel-item">
+          <SveleIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <ReactIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <ReduxIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <StorybookIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <TypescriptIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <JavascriptIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <CssIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <HtmlIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <JestIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <GitIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <FirebaseIcon class="w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <FigmaIcon class="w-16 hover:text-neutral-content" />
+        </div>
+      </div>
+      <!-- <div class="flex gap-4 text-primary mb-9">
+        <SveleIcon class="" />
+        <ReactIcon class="" />
+        <ReduxIcon class="" />
+        <StorybookIcon class="" />
+        <TypescriptIcon class="" />
+        <JavascriptIcon class="" />
+        <CssIcon class="" />
+        <HtmlIcon class="" />
+        <JestIcon class="" />
+        <GitIcon class="" />
+        <FirebaseIcon class="" />
+        <FigmaIcon class="" />
+      </div> -->
       <div class="join-vertical join md:join-horizontal gap-2">
         <a
-          class="btn md:btn-lg btn-neutral btn-wide normal-case"
+          class="btn md:btn-lg btn-neutral btn-wide normal-case ring-primary"
           href="/asset/Benjamin CV Fullstack Typescript - 2023.pdf"
           target="_blank">Read my cv</a
         >
-        <button class="btn md:btn-lg btn-primary btn-wide normal-case"
+        <button
+          on:click={onClickFocus}
+          class="btn md:btn-lg btn-primary btn-wide normal-case"
           >Get in touch <IconArrowRight /></button
         >
       </div>
@@ -171,10 +252,20 @@
               <div class="w-10 rounded-full" />
             </div>
 
-            <div class="chat-bubble chat-bubble-primary">
+            <div
+              class="chat-bubble chat-bubble-primary
+            focus-within:bg-primary-focus
+            focus-within:text-slate
+            focus-within:ring-2
+            ring-primary
+            ring-offset-2
+            ring-offset-slate-900
+            "
+            >
               Sure 👍, here it is
 
               <a
+                bind:this={inputRef}
                 class="link"
                 href="hi@benjaminkarlsson.com"
                 target="_blank"
