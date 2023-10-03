@@ -18,8 +18,10 @@
         in Mono repo tools, Styled components, Jest, Storybook, and Git.
       </p>
       <div class="join-vertical join md:join-horizontal gap-2">
-        <button class="btn md:btn-lg btn-neutral btn-wide normal-case"
-          >Read my cv</button
+        <a
+          class="btn md:btn-lg btn-neutral btn-wide normal-case"
+          href="/asset/Benjamin CV Fullstack Typescript - 2023.pdf"
+          target="_blank">Read my cv</a
         >
         <button class="btn md:btn-lg btn-primary btn-wide normal-case"
           >Get in touch <IconArrowRight /></button
