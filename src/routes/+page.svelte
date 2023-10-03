@@ -19,7 +19,7 @@
       </p>
       <div class="join-vertical join md:join-horizontal gap-2">
         <button class="btn md:btn-lg btn-neutral btn-wide normal-case"
-          >See cover letter</button
+          >Read my cv</button
         >
         <button class="btn md:btn-lg btn-primary btn-wide normal-case"
           >Get in touch <IconArrowRight /></button
@@ -120,7 +120,7 @@
       </div>
     </div> -->
     <!-- chat wwindow 2 -->
-    <div class="mockup-window border border-base-300">
+    <div class="mockup-window border border-base-300 backdrop-blur">
       <div
         class="flex justify-center px-4 py-8 md:py-16 border-t border-base-300"
       >
@@ -146,7 +146,7 @@
             </div>
 
             <div class="chat-bubble chat-bubble-primary">
-              😁Thanks! What's up?
+              Thanks! Nice to hear that 😁
             </div>
           </div>
 
@@ -160,7 +160,8 @@
             </div>
 
             <div class="chat-bubble">
-              📞 Interested in a chat? Drop your email. 😁😉
+              Interested in a chat? Drop your email. <br />
+              I'll send an invite for the call 😉
             </div>
           </div>
           <div class="chat chat-end">
@@ -184,6 +185,8 @@
                 target="_blank"
                 rel="noopener noreferrer">linkedin.com/in/benjik</a
               >
+              and
+              <a class="link" href="tel:+46-73 182 86 65">+46-73 182 86 65</a>
             </div>
           </div>
           <div class="chat chat-end">
