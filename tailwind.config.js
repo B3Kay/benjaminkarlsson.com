@@ -2,7 +2,11 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        '9/10': '90%'
+      },
+    },
   },
   daisyui: {
     themes: ["night"],

@@ -253,7 +253,8 @@
             </div>
 
             <div
-              class="chat-bubble chat-bubble-primary
+              class="relative block rounded-2xl min-h-[2.75rem] min-w-6 px-4 py-2 max-w-9/10
+            chat-bubble-primary
             focus-within:bg-primary-focus
             focus-within:text-slate
             focus-within:ring-2
