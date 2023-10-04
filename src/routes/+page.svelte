@@ -16,7 +16,7 @@
   import ReduxIcon from "~icons/cib/redux";
   import JestIcon from "~icons/cib/jest";
 
-  let inputRef;
+  let inputRef: HTMLAnchorElement;
 
   const onClickFocus = () => {
     inputRef.focus();
@@ -102,10 +102,10 @@
           href="/asset/Benjamin CV Fullstack Typescript - 2023.pdf"
           target="_blank">Read my cv</a
         >
-        <button
+        <a
           on:click={onClickFocus}
           class="btn md:btn-lg btn-primary btn-wide normal-case"
-          >Get in touch <IconArrowRight /></button
+          href="#contact-info-benjamin">Get in touch <IconArrowRight /></a
         >
       </div>
     </div>
@@ -261,6 +261,8 @@
             ring-offset-2
             ring-offset-slate-900
             "
+              id="contact-info-benjamin"
+              tabindex="-1"
             >
               Sure 👍, here it is
 
