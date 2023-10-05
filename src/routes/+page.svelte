@@ -39,7 +39,7 @@
           alt="Star-Struck"
         />
       </h1>
-      <p class="py-9">
+      <p class="py-9 text-xl sm:text-lg md:text-base">
         Senior experience in front-end development, specializing in TypeScript,
         React.js, and advanced patterns like hooks, Redux, and routing.
         Dedicated to creating user-friendly, feature-rich websites. Proficient
@@ -118,7 +118,7 @@
         class="flex justify-center px-4 py-8 md:py-16 border-t border-base-300"
       >
         <div>
-          <div class="chat chat-start">
+          <div class="chat pt-4 md:pt-1 chat-start">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
@@ -132,7 +132,7 @@
             </div>
             <div class="chat-bubble">👋Hi Benji! Impressed by your skills!</div>
           </div>
-          <div class="chat chat-end">
+          <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
@@ -148,7 +148,7 @@
             <div class="chat-bubble">😁Thanks! What's up?</div>
           </div>
 
-          <div class="chat chat-start">
+          <div class="chat pt-4 md:pt-1 chat-start">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
@@ -164,7 +164,7 @@
               📞 Interested in a chat? Drop your email. 😁😉
             </div>
           </div>
-          <div class="chat chat-end">
+          <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full" />
             </div>
@@ -190,7 +190,7 @@
               >
             </div>
           </div>
-          <div class="chat chat-end">
+          <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
@@ -209,8 +209,8 @@
       <div
         class="flex justify-center px-4 py-8 md:py-16 border-t border-base-300"
       >
-        <div>
-          <div class="chat chat-start">
+        <div class="text-xl sm:text-lg md:text-base">
+          <div class="chat pt-4 md:pt-1 chat-start">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
@@ -221,7 +221,7 @@
 
             <div class="chat-bubble">👋Hi Benji! Impressed by your skills!</div>
           </div>
-          <div class="chat chat-end">
+          <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
@@ -235,7 +235,7 @@
             </div>
           </div>
 
-          <div class="chat chat-start">
+          <div class="chat pt-4 md:pt-1 chat-start">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
@@ -249,7 +249,7 @@
               I'll send an invite for the call 😉
             </div>
           </div>
-          <div class="chat chat-end">
+          <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full" />
             </div>
@@ -287,7 +287,7 @@
               <a class="link" href="tel:+46-73 182 86 65">+46-73 182 86 65</a>
             </div>
           </div>
-          <div class="chat chat-end">
+          <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
