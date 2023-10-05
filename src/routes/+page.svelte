@@ -25,26 +25,28 @@
 
 <div class="hero min-h-screen">
   <div class="hero-content block lg:flex gap-8">
-    <div class="max-w-lg text-center md:text-left">
+    <div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left">
       <!-- <h6 class="uppercase">Welcome to Benjamin Karlsson</h6> -->
-      <div class="badge badge-accent badge-outline mb-4">Remote First</div>
+      <div class=" badge badge-accent badge-outline mb-4">Remote First</div>
 
-      <h1 class="text-6xl font-black contrast-150 brightness-150">
-        Freelancing Fullstack Excellence
+      <h1 class="text-7xl md:text-6xl font-black">
+        <span class="brightness-150 contrast-150">
+          Freelancing Fullstack Excellence
+        </span>
+        <img
+          class="w-16 inline"
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png"
+          alt="Star-Struck"
+        />
       </h1>
       <p class="py-9">
-        <span class="relative">
-          <span
-            class="block absolute -inset-1 -skew-y-3 bg-primary"
-            aria-hidden="true"
-          />
-          <span class="relative text-white">Senior</span>
-        </span> experience in front-end development, specializing in TypeScript,
-        React.js, and advanced patterns like hooks, Redux, and routing. Dedicated
-        to creating user-friendly, feature-rich websites. Proficient in Mono repo
-        tools, Styled components, Jest, Storybook, and Git.
+        Senior experience in front-end development, specializing in TypeScript,
+        React.js, and advanced patterns like hooks, Redux, and routing.
+        Dedicated to creating user-friendly, feature-rich websites. Proficient
+        in Mono repo tools, Styled components, Jest, Storybook, and Git.
       </p>
-      <div class="carousel carousel-end mb-9 w-full text-neutral">
+
+      <div class="carousel carousel-end mb-9 w-full text-neutral-600">
         <div class="carousel-item">
           <SveleIcon class="w-16 hover:text-neutral-content" />
         </div>
@@ -96,15 +98,15 @@
         <FirebaseIcon class="" />
         <FigmaIcon class="" />
       </div> -->
-      <div class="join-vertical join md:join-horizontal gap-2">
+      <div class=" join-vertical join md:join-horizontal gap-2">
         <a
-          class="btn md:btn-lg btn-neutral btn-wide normal-case ring-primary"
+          class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary"
           href="/asset/Benjamin CV Fullstack Typescript - 2023.pdf"
           target="_blank">Read my cv</a
         >
         <a
           on:click={onClickFocus}
-          class="btn md:btn-lg btn-primary btn-wide normal-case"
+          class="btn btn-lg md:btn-md btn-primary btn-wide normal-case"
           href="#contact-info-benjamin">Get in touch <IconArrowRight /></a
         >
       </div>
