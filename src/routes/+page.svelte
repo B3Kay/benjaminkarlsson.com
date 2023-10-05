@@ -267,24 +267,29 @@
               id="contact-info-benjamin"
               tabindex="-1"
             >
-              Sure 👍, here it is
+              <p>
+                Sure 👍, here it is
 
-              <a
-                bind:this={inputRef}
-                class="link"
-                href="hi@benjaminkarlsson.com"
-                target="_blank"
-                rel="noopener noreferrer">hi@benjaminkarlsson.com</a
-              >
-              or reach me at
-              <a
-                class="link"
-                href="https://www.linkedin.com/in/benjik/"
-                target="_blank"
-                rel="noopener noreferrer">linkedin.com/in/benjik</a
-              >
-              and
-              <a class="link" href="tel:+46-73 182 86 65">+46-73 182 86 65</a>
+                <a
+                  bind:this={inputRef}
+                  class="link font-semibold inline-block"
+                  href="hi@benjaminkarlsson.com"
+                  target="_blank"
+                  rel="noopener noreferrer">hi@benjaminkarlsson.com</a
+                >
+                or reach me at
+                <a
+                  class="link font-semibold inline-block"
+                  href="https://www.linkedin.com/in/benjik/"
+                  target="_blank"
+                  rel="noopener noreferrer">linkedin.com/in/benjik</a
+                >
+                and
+                <a
+                  class="link font-semibold inline-block"
+                  href="tel:+46-73 182 86 65">+46-73 182 86 65</a
+                >
+              </p>
             </div>
           </div>
           <div class="chat pt-4 md:pt-1 chat-end">
