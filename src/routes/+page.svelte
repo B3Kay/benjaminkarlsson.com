@@ -136,7 +136,7 @@
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
-                  src="https://media.licdn.com/dms/image/C4D03AQFLOxGUx-4V3A/profile-displayphoto-shrink_800_800/0/1663234716531?e=1700697600&v=beta&t=x2Z7F1h_0UAu0NqOPojIHHOO6R-xYGvcBLTcxCDuU7c"
+                  src="/asset/cv-no-smile-fancy-500.jpg"
                 />
               </div>
             </div>
@@ -194,7 +194,7 @@
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
-                  src="https://media.licdn.com/dms/image/C4D03AQFLOxGUx-4V3A/profile-displayphoto-shrink_800_800/0/1663234716531?e=1700697600&v=beta&t=x2Z7F1h_0UAu0NqOPojIHHOO6R-xYGvcBLTcxCDuU7c"
+                  src="/asset/cv-no-smile-fancy-500.jpg"
                 />
               </div>
             </div>
@@ -224,9 +224,7 @@
           <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
-                <img
-                  src="https://media.licdn.com/dms/image/C4D03AQFLOxGUx-4V3A/profile-displayphoto-shrink_800_800/0/1663234716531?e=1700697600&v=beta&t=x2Z7F1h_0UAu0NqOPojIHHOO6R-xYGvcBLTcxCDuU7c"
-                />
+                <img src="/asset/cv-no-smile-fancy-500.jpg" />
               </div>
             </div>
 
@@ -273,7 +271,7 @@
                 <a
                   bind:this={inputRef}
                   class="link font-semibold inline-block"
-                  href="hi@benjaminkarlsson.com"
+                  href="mailto:hi@benjaminkarlsson.com"
                   target="_blank"
                   rel="noopener noreferrer">hi@benjaminkarlsson.com</a
                 >
@@ -295,9 +293,7 @@
           <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
-                <img
-                  src="https://media.licdn.com/dms/image/C4D03AQFLOxGUx-4V3A/profile-displayphoto-shrink_800_800/0/1663234716531?e=1700697600&v=beta&t=x2Z7F1h_0UAu0NqOPojIHHOO6R-xYGvcBLTcxCDuU7c"
-                />
+                <img src="/asset/cv-no-smile-fancy-500.jpg" />
               </div>
             </div>
             <div class="chat-header" />
