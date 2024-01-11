@@ -1,5 +1,5 @@
 ---
-title: Rich Dad - Poor Dad | Book Summasry, Notes & Highlights
+title: Rich Dad - Poor Dad | Book Summary, Notes & Highlights
 # Kanske borde va en second title?
 description: Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour, growing youth or anyone interested in knowing the secrets of the rich. The mindset of the rich, the poor and middle class habits and believes, why wealth is your liberty and the tools of the trade to become fincancial literate.
 date: '2023-10-18'
