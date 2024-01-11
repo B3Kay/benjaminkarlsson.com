@@ -10,21 +10,23 @@
     <meta property="og:title" content="data.meta.title" />
 </svelte:head>
 
-<article class="ms-auto me-auto container mx-auto">
+<article class="ms-auto me-auto prose max-w-2xl">
     <hgroup>
-        <h1 class="text-7xl capitalize">{data.meta.title}</h1>
+        <!-- <h1 class="text-4xl capitalize">{data.meta.title}</h1>
+        <p>{data.meta.description}</p> -->
         <p class="text-slate-500 mt-2">
-            Publihed at {formatDate(data.meta.date)}
+            Published at {formatDate(data.meta.date)}
         </p>
     </hgroup>
 
-    <div class="flex gap-2 mt-8">
+    <div class="flex gap-2 mt-2 mb-8">
         {#each data.meta.categories as category}
-            <span class="badge badge-ghost">&num;{category}</span>
+            <span class="badge badge-ghost">{category}</span>
         {/each}
     </div>
+    <!-- <div class="divider"></div> -->
 
-    <div class="prose max-w-2xl">
+    <div class="">
         <svelte:component this={data.content} />
     </div>
 </article>

@@ -9,7 +9,8 @@
     <title>{config.title}</title>
 </svelte:head>
 
-<section>
+<section class="ms-auto me-auto container">
+    <h1>All posts</h1>
     <ul class="grid gap-7">
         {#each data.posts as post}
             <li
@@ -20,7 +21,7 @@
                 pb-7
                 "
             >
-                <a class="text-5xl text-white capitalize" href={post.slug}
+                <a class="text-2xl text-white capitalize" href={post.slug}
                     >{post.title}{post.slug}</a
                 >
                 <p class="mt-2 text-slate-400">{formatDate(post.date)}</p>

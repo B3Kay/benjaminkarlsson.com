@@ -1,6 +1,7 @@
 # Todo
 
 [x] Default styling of texts (Just use "prose" class!)
-[] Preender true
+[X] Preender true
+[] Style blog & blogpost
 [] Migrate to Lucide.dev icon
 [] Add prettier

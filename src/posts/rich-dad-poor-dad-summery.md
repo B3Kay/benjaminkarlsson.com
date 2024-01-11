@@ -4,19 +4,20 @@ title: Rich Dad - Poor Dad | Book Summasry, Notes & Highlights
 description: Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour, growing youth or anyone interested in knowing the secrets of the rich. The mindset of the rich, the poor and middle class habits and believes, why wealth is your liberty and the tools of the trade to become fincancial literate.
 date: '2023-10-18'
 categories:
-    - booksummary
-    - business
+    - 📕 booksummary
+    - 🤑 business
 published: true
+rating: 4
 ---
 
 # Rich Dad - Poor Dad | Book Summary, Notes & Highlights
 
 Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour, growing youth or anyone interested in knowing the secrets of the rich. The mindset of the rich, the poor and middle class habits and believes, why wealth is your liberty and the tools of the trade to become fincancial literate.
 
-Image of book
+![Rich Dad Poor Dad: Book cover](/asset/blog/rdpd/richdadpoordad.jpg)
 
-Affiliate link to book
-Youtube video 
+<!-- Affiliate link to book -->
+<!-- Youtube video  -->
 
 
 ## 🗝️The books 3 Key takeaways
@@ -25,14 +26,14 @@ Youtube video
 	3. Get a growth mindset with purpose desire and a seek discomfort.
 
 ## 🎨Impressions
-Thiss book reflects the mindset and patterns of a lot of people around me as I grew up on the country side in the north of sweden. The things you learn in this book are things they wont teach you in school. You are tought to stand in line and learn a proffession to create value for your employeer. This book gives you the tools and knowledge to start your escape out of the rat race.
+This book reflects the mindset and patterns of a lot of people around me as I grew up on the country side in the north of sweden. The things you learn in this book are things they wont teach you in school. You are tought to stand in line and learn a proffession to create value for your employeer. This book gives you the tools and knowledge to start your escape out of the rat race.
 
 
 
-## 🙍Wh should read it?
+## 🙍Who should read it?
 This book is for individuals who want to start creating value for themself. To learn the mindset required to become a financially independet individual and the practical knowledge to financial literacy.
 
-You'd enjoy this book if:
+**You'd enjoy this book if:**
 	1. You are seeking wealth-building strategies.
 	2. You are stuck in the rat race and want to know the mindset & habits for wealth.
 	3. You are looking to learn the secrets of the rich.
@@ -48,7 +49,7 @@ You'd enjoy this book if:
 	2. "The poor and the middle class work for money. The rich have money work for them."
 	3. "In Texas, everything is bigger. When Texans win, they win big. And when they lose, it’s spectacular."
 
-## 📖Suymmery + Notes
+## 📖Summery + Notes
 
 Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour, growing youth or anyone interested in knowing the secrets of the rich. The mindset of the rich, the poor and middle class habits and believes, why wealth is your liberty and the tools of the trade to become fincancial literate.
 

@@ -1,4 +1,4 @@
-export type Categories = 'business' | 'booksummary'
+export type Categories = '🤑business' | '📕booksummary'
 
 
 export type Post = {
@@ -8,4 +8,5 @@ export type Post = {
     description: string
     categories: Categories[]
     published: boolean
+    rating: number
 }
