@@ -1,10 +1,10 @@
 ---
-title: Rich Dad - Poor Dad | Book Summery, Notes & Highlights
+title: Rich Dad - Poor Dad | Book Summasry, Notes & Highlights
 # Kanske borde va en second title?
 description: Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour, growing youth or anyone interested in knowing the secrets of the rich. The mindset of the rich, the poor and middle class habits and believes, why wealth is your liberty and the tools of the trade to become fincancial literate.
 date: '2023-10-18'
 categories:
-    - booksummery
+    - booksummary
     - business
 published: true
 ---
@@ -169,7 +169,7 @@ Robert Kayousaki developed the cashflow quadrant for you to realize part of the 
 	- I - Investor 🤑💸💸💸💸💸💸💸
 From left to right we got economical leverage, from working for money to money orking for you. And from top to bottom we got feedom, from your presence required to the income not being dependant on any active work. The optimal position is to be in the bottom right corner. Where you will generate a lot of money without doing anything, total freedom. As self employed you still have freedom but you are still required to make work hours to get payed, maybe you are a freelancing developer or a doctor. If you are a business owner your time is compounded by your employees but you are still required to be there and attend the business in one way or another. Example of business owener is running a store, a it company or a consultancy firm. Example of the investor only own the process but someone else is doing all the job for you, by owning shares, stocks, funds and royalties.
 
-I hope you all enjoyed this book summery of Rich Dad Poor Dad. It's been a pleasure to write my first book summery for you. I read the book a second time and it's one of the first financial books I've read in my career towards financial freedom. I truly recomends it to all young and aspiring entreprenours and engaged responsible people out there. 
+I hope you all enjoyed this book summary of Rich Dad Poor Dad. It's been a pleasure to write my first book summary for you. I read the book a second time and it's one of the first financial books I've read in my career towards financial freedom. I truly recomends it to all young and aspiring entreprenours and engaged responsible people out there. 
 Did it inspire you to adopt a growth mindset? What assets have you bought and liabillities sold beause of this book? How are you going to start investing in yourself?
 
 Learning is everything.
