@@ -5,7 +5,7 @@ date: '2024-01-08'
 categories:
     - sveltekit
     - svelte
-published: true
+published: false
 ---
 
 ## Markdown
@@ -17,3 +17,9 @@ function greet(name: string){
     console.log(`hey ${name}! 👋`)
 }
 ```
+
+## Svelte
+
+Media inside the **static** foldes is served from '/'.
+
+![svelte](favicon.png)
