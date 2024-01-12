@@ -8,7 +8,7 @@
 <div class="h-full max-w-screen-sxl grid grid-rows-layout">
   <Header></Header>
 
-  <main class="md:p-0 p-9 m-7">
+  <main class="p-0 md:p-9 m-6">
     <slot />
   </main>
   <Footer></Footer>

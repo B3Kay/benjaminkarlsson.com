@@ -9,7 +9,7 @@
         aria-label="Toggle Theme"
         on:click={toggleTheme}
         type="checkbox"
-        class="theme-controller"
+        class="theme-controller m-5"
         value="synthwave"
     />
     <Sun class="swap-on"></Sun>
