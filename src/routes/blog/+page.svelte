@@ -24,8 +24,8 @@
         of it interesting too.
     </p>
     <ul
-        class="grid gap-16 border-t-2
-    border-slate-500
+        class="grid gap-16 border-t-1
+    border-base-300
     pt-16 mt-16"
     >
         {#each data.posts as post}

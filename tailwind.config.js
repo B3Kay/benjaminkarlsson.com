@@ -16,6 +16,9 @@ export default {
 
         // Complex site-specific column configuration
         'layout': 'auto 1fr auto',
+      },
+      borderWidth: {
+        '1': '1px'
       }
     },
   },
