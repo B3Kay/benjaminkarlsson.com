@@ -6,10 +6,13 @@
     Bonus:
     [] Add rating stars to post : ⭐⭐⭐⭐
     [] Style All posts header.
-    [] Bredda blog inspo: https://tailwindui.com/components/marketing/sections/content-sections#component-3f7a35fa653498b2c62441a98df3dc08
+    [] Bredda blog inspo: <https://tailwindui.com/components/marketing/sections/content-sections#component-3f7a35fa653498b2c62441a98df3dc08>
+    [] Add a more books section in the end.
 [x] Style header
 [x] Style footer
 [x] Style 404 page
-[] About me page inspo: https://aliabdaal.com/about/
+[x] About me page inspo: <https://aliabdaal.com/about/>
 [] Migrate to Lucide.dev icon
 [] Add prettier
+[] Add page views to DB
+[] Contact form

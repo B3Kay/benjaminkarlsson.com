@@ -12,7 +12,7 @@ rating: 4
 
 # Rich Dad - Poor Dad | Book Summary, Notes & Highlights
 
-Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour, growing youth or anyone interested in knowing the secrets of the rich. The mindset of the rich, the poor and middle class habits and believes, why wealth is your liberty and the tools of the trade to become fincancial literate.
+"Rich Dad Poor Dad" is a remarkable classic book that I highly recommend for entrepreneurs, young individuals aspiring for growth, or anyone interested in unraveling the secrets of the wealthy. This book delves into the mindset of the rich, the habits and beliefs of the poor and middle class, why wealth equals freedom, and the essential tools for achieving financial literacy.
 
 ![Rich Dad Poor Dad: Book cover](/asset/blog/rdpd/richdadpoordad.jpg)
 
@@ -22,22 +22,22 @@ Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour
 ## 🗝️The books 3 Key takeaways
 
  1. Buy assets not liabillities and Learn the importance of financial literacy.
- 2. Invest in your greatest asset of all, your brain.
- 3. Get a growth mindset with purpose desire and a seek discomfort.
+ 2. Invest in your mind, your greatest asset of all.
+ 3. Cultivate a growth mindset, driven by purpose, desire, and a willingness to embrace discomfort.
 
 ## 🎨Impressions
 
-This book reflects the mindset and patterns of a lot of people around me as I grew up on the country side in the north of sweden. The things you learn in this book are things they wont teach you in school. You are tought to stand in line and learn a proffession to create value for your employeer. This book gives you the tools and knowledge to start your escape out of the rat race.
+As I grew up in the countryside of northern Sweden, I found that this book reflects the mindset and patterns of many people around me. Its teachings are not commonly found in school, where we are encouraged to conform and seek secure employment. "Rich Dad Poor Dad" equips readers with the knowledge and tools necessary to escape the rat race.
 
 ## 🙍Who should read it?
 
-This book is for individuals who want to start creating value for themself. To learn the mindset required to become a financially independet individual and the practical knowledge to financial literacy.
+This book is intended for individuals who want to create value for themselves and develop the mindset required for financial independence. It is a must-read for those seeking wealth-building strategies, looking to escape the rat race, and aspiring to learn the secrets of the affluent.
 
 **You'd enjoy this book if:**
 
  1. You are seeking wealth-building strategies.
- 2. You are stuck in the rat race and want to know the mindset & habits for wealth.
- 3. You are looking to learn the secrets of the rich.
+ 2. You feel trapped in the rat race and want to adopt a wealth-oriented mindset.
+ 3. You are curious to uncover the secrets of the rich.
 
 ### 🍀How the book changed me
 
@@ -54,14 +54,14 @@ This book is for individuals who want to start creating value for themself. To l
 
 ## 📖Summery + Notes
 
-Rich Dad Poor Dad is a great classic book I higly recommend for any entreprenour, growing youth or anyone interested in knowing the secrets of the rich. The mindset of the rich, the poor and middle class habits and believes, why wealth is your liberty and the tools of the trade to become fincancial literate.
+"Rich Dad Poor Dad" is an invaluable book that I highly recommend to entrepreneurs, young individuals, and anyone interested in unraveling the secrets of wealth accumulation. The book explores the mindsets of the rich, the habits of the poor and middle class, the importance of wealth in providing opportunities and security, and the tools and knowledge necessary for financial literacy.
 
-I structed the Rich Dad Poor Dad book in to a framework that I'd like divide in to 4 categories.
+I have structured the book into four categories:
 
- 1. Poor, the limiting mindset of the poor and the middle class where money is in control of them. Why they focus on buying liabillities and job security. Either you work for money, or money work for you, your decition.
- 2. Rich, what does the rich do, what are their mindset and what do they focus on.
- 3. Liberty, Why wealth will make your life easier by allowing more opurtunities and safety. The 5 blockers of your financial success. But most important of all how to escape the rat race.
- 4. Financial Literacy, is about basics of cashflow. What is a liabillity and asset, taxes and dept. What skills do you need to learn to succeed in becoming rich. How do you eaven defin rich? What is your financial statement?
+ 1. **Poor**, This section discusses the limiting mindset of the poor and middle class, where money controls them. It emphasizes the importance of distinguishing between assets and liabilities and debunks the illusion of job security.
+ 2. **Rich**, The rich have a fundamentally different mindset and focus. This section explores the habits and mindset of the wealthy.
+ 3. **Liberty**, Why wealth will make your life easier by allowing more opurtunities and safety. The 5 blockers of your financial success. But most important of all how to escape the rat race.
+ 4. **Financial Literacy**, is about basics of cashflow. What is a liabillity and asset, taxes and dept. What skills do you need to learn to succeed in becoming rich. How do you eaven defin rich? What is your financial statement?
 
 ### The poor work for money
 
@@ -71,11 +71,13 @@ The rich, those greedy bastards… The poor and the middle class have a limiting
 
 The poor and middle class are carrying limiting believes that are stopping them from taking action and calculated risk.
 
-- 👈👉Blames others. But instead blames others for the responsibillity of their life, why their job sucks, for their low paycheck and hopes that someone else will fix their problems. They believe that the covernment will take care of them and support them with social wellfare when their working days are over.
-- 🏎️The poor pay much more effort and resources to look rich. They are jeleous with a loosers mindset. Instead of trying to become rich, they want to look rich. Another problem is that they think the rich are crooks and evil and should pay more tax, or that they dont pay tax. They are jelous that someone else are making more money than them.
-- 👻Fear directs the poor and the middle class to play it safe. We learn by early age not to take risky loans, being an entreprenour is risky, it's better to get a good education and a stable, secure job. They play it safe and they die boring instead of letting their passion direct them and conquer their fears.
-- 😒The poor and the middle class lack curiosity, they dont learn new things and they dont move on.
-- 🧐Having a fast car does not make you rich and it is very ignorant to think that money is the root of all evil. Many intellects of the middle class often think they are "above" sales people even though the sales person might make much more money. This is ignorant, who is actually doing the smarter choices?
+What are limiting believes:
+
+- **👈👉Blames others**. But instead blames others for the responsibillity of their life, why their job sucks, for their low paycheck and hopes that someone else will fix their problems. They believe that the covernment will take care of them and support them with social wellfare when their working days are over.
+- 🏎️**The poorpay much more effort and resources to look rich** . They are jeleous with a loosers mindset. Instead of trying to become rich, they want to look rich. Another problem is that they think the rich are crooks and evil and should pay more tax, or that they dont pay tax. They are jelous that someone else are making more money than them.
+- 👻**Fear directs the poor** and the middle class to play it safe. We learn by early age not to take risky loans, being an entreprenour is risky, it's better to get a good education and a stable, secure job. They play it safe and they die boring instead of letting their passion direct them and conquer their fears.
+- 😒**The poor and the middle class lack curiosity**, they dont learn new things and they dont move on.
+- 🧐**Having a fast car does not make you rich** and it is very ignorant to think that money is the root of all evil. Many intellects of the middle class often think they are "above" sales people even though the sales person might make much more money. This is ignorant, who is actually doing the smarter choices?
 
 #### 🤑Money controls the poor and the middle class
 
@@ -117,19 +119,19 @@ Imagine you or someone you love got in to an life threatenig accident or sick fr
 
 #### 🗽 The 5 reasons you are still poor
 
- 1. 😱Fear - Be a Texan
+ 1. **😱Fear** - Be a Texan
 The rich dad said "The situations you fear is the skill you need to learn the most." He wanted you to be a Texan. When they win, they win big and when they loose, it's spectacular! You need to learn to handle your life, you do not want to go broke over something lame. Instead be inspired by your loss to practice harder, study more and become better. Failure inspires winners while failure defeats loosers. To many people are so afraid of loosing they they already lost. They did not try. Bneing a winner means you are unafraid of loosing. Our biggest fear is rejection we just have to fail a lot and learn. Every rich person lost money. If you are afraid of risk, start early. Then you will get the compounding effect on interest on interest. Do mistakes early and learn.
- 2. 💩Cynism - Doubt is expensive
+ 2. **💩Cynism** - Doubt is expensive
 The biggest problem with cynics is that they focus on the bad stuff. This will shut of your brain of trying. If you want something, think how can I afford it? What if X? This will start the creativity in your brain. Cinics does not see mistakes as oppurtunities to learn. Unfortunatelly this is not encouraged in school, we are tought to avoid mistakes. This is what keeps people poor, they play it to safe. Instead, focus on the good stuff, most people are not born rich and worst times are where you can make the best investments. Winners analyze, cynics criticize.
- 3. 😴Laziness - The cure is Greed
+ 3. **😴Laziness** - The cure is Greed
 One way the poor and the middle class are keeping themself poor is by being "busy". Doing other things then they need to do. Lazyness by being busy, to busy to take care of their own wealth. To busy watching TV, to busy ordering things online. There are a lot of ways the poor and middle class fool them selfe being busy by procrastinating with, shoping, hobbies, fishing, their kids or their work. "I have so much to do at work". The cure for lazyness is a little bit of greed. Greed is seen as something negative among the poor and middle class. "They think only about themself". But ask yourself, "how would your life be if you didnt need to work again?", the world evolve and progresses because we all want something better. The lazy mind has a lot of sneaky tricks up it's sleave: I'm tired, I worked really hard today or I cannot afford it. Rich dad forbid the words "I cannot afford it". It creates depression, helpnessness and shuts of your brain.
 How can I afford it? Opens upp our minds for posssibillities, excitement and dreams. You know somewhere deep inside there is a spirit saying: "Let's go to the gym".
 Action beats inaction.  
                      The lazy people will be victims to those who have self disipline.
 The diciplined people will win over you. But remember that the hard road always becomes easier and the easy road becomes hard.
- 4. 😎Arrogance - Educate yourself
+ 4. **😎Arrogance** - Educate yourself
 Be honest with yourself and other people around you. Arrogant people think they are the centre of the usniverse. Rich dad said: "What I know makes me money, what I don't know loses me money". Self esteem is something a lot of arrogant people lack, this is something you earn. The solution is to stop lying, to yourself and others. Say you dont know. And most important of all - Educate yourself.
- 5. 🚬Bad Habits - Our life is a reflection of our habits
+ 5. **🚬Bad Habits** - Our life is a reflection of our habits
 We are not more then our habits. It's the action we take that will be seen. Habits are more important then education. To become rich you will need the habits of the rich. And habit number 1.
 Only put money in the asset column.
 
@@ -139,11 +141,11 @@ What does Robert Kyasaki say is the plan to escape this slavery? First of all. K
 
 #### 💵Make money work for you
 
-- 🏢Build assets
+- 🏢**Build assets**
 Make sure you have a solid base before you get maried, buy a house, have kids, take a risky financial position or get stuck in your job. You need to have money free for oppurtunities. You need free capital, therefore focus on your asset column.
-- 🏭Become a producrer,
+- 🏭**Become a producrer,**
 invent money. Intellegence solves problems. And problem solving produces value. Value can be converted to money.
-- 🔨Learn through life.
+- 🔨**Learn through life.**
 Nothing worth having comes easy. All these things are learnt outside school. They are learnt in life. Is working harder at this the best solution to this problem? We need to make a lot of mistakes to progress.
 
 ### Finacnial Literacy - Finacial Knowledge
@@ -154,9 +156,9 @@ In order to beome rich we need to learn to become financial literate. To read an
 
 According to Rich dad the most important financial skill is cashflow. Things you neead to learn are accounting, balance sheet, liabillities, assets, taxes and dept.
 
-- 🧾Accounting & the Balance sheet
+- **🧾Accounting & the Balance sheet**
 The balance sheet is a very powerfull tool to understand your financial standing. It consists mainly of two component the assets and the liabillities. Focus on building the asset column and minimize the liabilitties column in the balance sheet.
-- 🏠Assets
+- 🏠**Assets**
 This is what the rich focuses. Money will work for you 24/7, imagine every dollar as an employee or as a money growing tree. Rich dad always recomended to buy assets he love. Assets you are naturally interested in. This way you will be more engaged and dig a deeper understanding. There are multiple categories of assets. A few are:
   ○ Business with no required presence
   ○ Stocks
@@ -165,13 +167,13 @@ This is what the rich focuses. Money will work for you 24/7, imagine every dolla
   ○ Bonds
   ○ Notes (IOUs)
   ○ Anything else with value.
-- 🏎️Liabillities
+- **🏎️Liabillities**
 Takes money from your pocket. Try to accumulate as little liabillities as possible. The poor pay them first, while the rich pay himself first. When assets genereate enough income to cover your luxuries. Then it's time to buy them.
-- 🪙Taxes - The government & Corporations
+- **🪙Taxes** - The government & Corporations
  The government will always try to take as much money as it can if you let it. Therefore it is very important for you to know the tax rules. If you now your right you dont need to be afraid. Everyone is always afraid of the tax man. Fight back! Th problm with the government is that it will always need more money. As the government grows it also need to increase taxes. The more money the government have, the more they need to spend. The more the spend the bigger budget they get next year without creating any kind of value. This unfortunately creates a pack of lazy thieves. According to rich dad the government are lazy workers trying to live of people who create real value. Instead they try to invent ways of using others money. The government have invented multiple different ways of making you pay more tax then you realize. You pay not just income tax on your labour. But the employee pays employee tax for every employee, social security or medicare tax, value added tax on goods and then you pay in some countries property tax. In the country Sweden that has the highest marginal tax in the world, the avarage swede works 9 months for the government and only 3 months for themself. They have a marginal tax of 75%. Of every 100sek 75 goes to the government.
 But the rich always find a ways to pay less tax. And now we will get in to the secret of the rich. Corporations, a way of legally evade personal responsibillity and create a shared ownage. Corporations are just a folder of legal documents creating a new legal entity. The difference between a corporation and the government is that the less people hired, the less expenses the company have and the more money the rich make. Through this the rich pay less tax, minimze risk and can use tax advantages. With a corporation yuo pay less tax on dividend but can also pay expenses on before taxed money. With proper tax planning you can pay computer, phone, health club as company expenses. And you can do board meetings and conferenses abroad in exotic places like hawaii and combine it with your vacation.
-- ✅Good dept - There are good depts and bad depts. Good dept are a mortage on real estate, business loan or educational loan.
-- 🛑Bad dept - Credit loan, loan for luxuries or high interest short term loans.
+- ✅**Good dept** - There are good depts and bad depts. Good dept are a mortage on real estate, business loan or educational loan.
+- 🛑**Bad dept** - Credit loan, loan for luxuries or high interest short term loans.
 
 #### 👨‍💼Management
 
@@ -185,23 +187,13 @@ The 3 most underrated skills as an entreprenour are sales, marketing and communi
 
 Robert Kayousaki developed the cashflow quadrant for you to realize part of the financial freedom you are in. It's usefull for you together with your fincancial statement to evaluate your career and your professional life. Each letter represent a type of worker you are.
 
-- E - Employee💲
-- S - Self Empliyed 💲💵
-- B - Business Owner 🤑💵💵💵
-- I - Investor 🤑💸💸💸💸💸💸💸
+- **E** - Employee💲
+- **S** - Self Empliyed 💲💵
+- **B** - Business Owner 🤑💵💵💵
+- **I** - Investor 🤑💸💸💸💸💸💸💸
 From left to right we got economical leverage, from working for money to money orking for you. And from top to bottom we got feedom, from your presence required to the income not being dependant on any active work. The optimal position is to be in the bottom right corner. Where you will generate a lot of money without doing anything, total freedom. As self employed you still have freedom but you are still required to make work hours to get payed, maybe you are a freelancing developer or a doctor. If you are a business owner your time is compounded by your employees but you are still required to be there and attend the business in one way or another. Example of business owener is running a store, a it company or a consultancy firm. Example of the investor only own the process but someone else is doing all the job for you, by owning shares, stocks, funds and royalties.
 
 I hope you all enjoyed this book summary of Rich Dad Poor Dad. It's been a pleasure to write my first book summary for you. I read the book a second time and it's one of the first financial books I've read in my career towards financial freedom. I truly recomends it to all young and aspiring entreprenours and engaged responsible people out there.
 Did it inspire you to adopt a growth mindset? What assets have you bought and liabillities sold beause of this book? How are you going to start investing in yourself?
 
 Learning is everything.
-
-Best Regards
-Benjamin Karlsson
-
-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-If you'd like to check out more of my Book Suymmeries, you might find these interesting.
-
-- Book 1 - Is about
-- Book 2 - One of my all time favourite
