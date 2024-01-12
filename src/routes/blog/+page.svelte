@@ -10,40 +10,46 @@
 </svelte:head>
 
 <section class="ms-auto me-auto container max-w-2xl">
-    <h1 class="text-7xl md:text-6xl font-black">
+    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
         <span class="brightness-150 contrast-150"> All Posts </span>
         <img
-            class="w-16 inline"
+            class="w-12 inline"
             src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Monocle.png"
             alt="Star-Struck"
         />
     </h1>
-    <p class="prose mb-24">
+    <p class="mt-2 prose">
         I like to blog about stuff like productivity, business, health &
         fitness, and other stuff I'm interested in. Hopefully you'll find some
         of it interesting too.
     </p>
-    <ul class="grid gap-7">
+    <ul
+        class="grid gap-16 border-t-2
+    border-slate-500
+    pt-16 mt-16"
+    >
         {#each data.posts as post}
             <li
                 class="max-is-prose
-                last:border-b-0
-                border-b-2
-                border-slate-700
-                pb-7
+                <!-- last:border-b-0 -->
+                
                 "
             >
+                <div class="flex items-center gap-x-4 mt-2 mb-2">
+                    <time class="text-slate-400">{formatDate(post.date)}</time>
+                    <span class="flex gap-2 py-1.5">
+                        {#each post.categories as category}
+                            <span class="badge badge-ghost">{category}</span>
+                        {/each}
+                    </span>
+                </div>
                 <a
-                    class="text-2xl font-bold text-base-contents capitalize hover:text-primary"
+                    class="mt-3 text-lg font-semibold leading-6 text-base-contents capitalize hover:text-primary"
                     href={post.slug}>{post.title}</a
                 >
-                <p class="mt-2 text-slate-400">{formatDate(post.date)}</p>
-                <p class="mt-2 line-clamp-3">{post.description}</p>
-                <div class="flex gap-2 mt-2 mb-2">
-                    {#each post.categories as category}
-                        <span class="badge badge-ghost">{category}</span>
-                    {/each}
-                </div>
+                <p class="mt-5 line-clamp-3 text-sm leading-6">
+                    {post.description}
+                </p>
             </li>
         {/each}
     </ul>
