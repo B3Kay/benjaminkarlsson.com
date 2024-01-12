@@ -31,8 +31,7 @@
         {#each data.posts as post}
             <li
                 class="max-is-prose
-                <!-- last:border-b-0 -->
-                
+                last:mb-16
                 "
             >
                 <div class="flex items-center gap-x-4 mt-2 mb-2">
