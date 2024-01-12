@@ -28,9 +28,9 @@
             <li class="">
                 <a class="inherit decoration-0" href="/about">About</a>
             </li>
-            <li class="">
+            <!-- <li class="">
                 <a class="inherit decoration-0" href="/contact">Contact</a>
-            </li>
+            </li> -->
         </ul>
         <!-- </div> -->
     </div>
