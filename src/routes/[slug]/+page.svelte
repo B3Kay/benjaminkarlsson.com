@@ -19,7 +19,7 @@
         </p>
     </hgroup>
 
-    <div class="flex gap-2 mt-2 mb-8">
+    <div class="flex flex-wrap gap-2 mt-2 mb-8">
         {#each data.meta.categories as category}
             <span class="badge badge-ghost">{category}</span>
         {/each}

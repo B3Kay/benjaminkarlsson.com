@@ -9,7 +9,7 @@
     <title>{config.title}</title>
 </svelte:head>
 
-<section class="ms-auto me-auto container max-w-2xl">
+<section class="ms-auto me-auto container max-w-7xl">
     <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
         <span class="brightness-150 contrast-150"> All Posts </span>
         <img
@@ -34,9 +34,11 @@
                 last:mb-16
                 "
             >
-                <div class="flex items-center gap-x-4 mt-2 mb-2">
-                    <time class="text-slate-400">{formatDate(post.date)}</time>
-                    <span class="flex gap-2 py-1.5">
+                <div class="flex flex-wrap items-center gap-x-4 mt-2 mb-2">
+                    <time class="text-slate-400 text-nowrap"
+                        >{formatDate(post.date)}</time
+                    >
+                    <span class="flex flex-wrap gap-2 py-1.5">
                         {#each post.categories as category}
                             <span class="badge badge-ghost">{category}</span>
                         {/each}
