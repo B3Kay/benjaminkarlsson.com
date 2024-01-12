@@ -1,23 +1,23 @@
-# Who am i?
+# Who Am I?
 
-Hey friends. I'm Benjamin Karlsson. A developer, designer, creator, avid
-traveler, learning enthuthiast with over 5+ years in the IT industry.
+Greetings, friends! I'm Benjamin Karlsson, a multifaceted individual wearing the hats of a developer, designer, creator, enthusiastic traveler, and a lifelong learner with over 5+ years of immersion in the IT industry.
 
-This page is a little bit self indulgent, it's all about me. Hopefully
-you find it interesting.
+This page might be a tad self-indulgent, but it's my canvas. I hope you discover it as fascinating as I find it.
 
-![bild](/asset/about/hogcykel.jpg)
+![Image](/asset/about/hogcykel.jpg)
 
-## Quick facts about me
+## A Glimpse into My Story
 
-1. 🔫 Graduated military service
-2. 🏛️ Studied Informatics for 3 years at Umeå University.
-3. ✈️ Spent 2 years fulltime traveling while working as a Digital Nomad.
-4. 🚲 I also build physical thigns. Built a tallbike with my bare hands cykling around Gothenburg, featuring national and local news and radio.
-5. 🧑‍🏫 I love to teach, take a look at my Advent of Wisdom on [Instagram](https://www.instagram.com/benjimink_/reels/) or [TikTok](https://www.tiktok.com/@benji.karlsson_/video/7314702498151927073)
-6. 💪 Health and fitness junkey, trying out new diets and training regiemes. Currently it's the carnivore diet and calisthenics.
-7. 🪑 I'm 29 years old. Born in May, 1994 in Sweden. I now live a little bit of here and there.
+1. 🔫 I've proudly graduated from military service.
+2. 🏛️ Embarked on a 3-year Informatics journey at Umeå University.
+3. ✈️ Wanderlust led me to spend a full 2 years traversing the globe, working as a Digital Nomad. I've called places like Poland, Spain, Portugal, and Indonesia my temporary homes.
+4. 🚲 Beyond the digital realm, I craft tangible creations. One notable project involved handcrafting a towering bicycle, navigating the streets of Gothenburg adorned with snippets of national and local news, and radio broadcasts.
+5. 🧑‍🏫 My passion extends to teaching; explore my Advent of Wisdom on [Instagram](https://www.instagram.com/benjimink_/reels/) or [TikTok](https://www.tiktok.com/@benji.karlsson_/video/7314702498151927073).
+6. 💪 Health and fitness are paramount; I delve into diets and training regimens. Presently, it's the carnivore diet coupled with calisthenics.
+7. 🪑 A 29-year-old soul, born in May 1994 in Sweden, I now call various places my home.
 
-## In the media
+## In the Limelight
 
-[Expressen - Benjamins hemmabygge en två meter hög cykel](https://www.expressen.se/nyheter/benjamins-hemmabygge-en-tva-meter-hog-cykel/)
+Delve into the details of my home-built, two-meter-high bike in this [Expressen article](https://www.expressen.se/nyheter/benjamins-hemmabygge-en-tva-meter-hog-cykel/).
+
+Join me on this journey of exploration, creation, and continual growth!
