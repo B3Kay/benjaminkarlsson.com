@@ -1,9 +1,11 @@
 <script lang="ts">
     import * as config from "$lib/config";
+    import { Menu } from "lucide-svelte";
     import Toggle from "./toggle.svelte";
+    import { toggleTheme } from "$lib/theme";
 </script>
 
-<nav class="block p-7 sm:flex sm:space-x-0 content-between justify-between">
+<nav class="p-7 flex content-between justify-between">
     <a href="/" class="title">
         <b>{config.title}</b>
     </a>
@@ -16,25 +18,14 @@
         </li>
     </ul>
     <div class="flex gap-2">
-        <Toggle />
-
+        <div class="hidden md:flex">
+            <Toggle />
+        </div>
         <div class="dropdown dropdown-bottom dropdown-end block md:hidden">
             <button
                 tabindex="0"
                 role="button"
-                class="btn btn-ghost btn-square btn-sm m-1"
-                ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    class="inline-block w-5 h-5 stroke-current"
-                    ><path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"
-                    ></path></svg
-                ></button
+                class="btn btn-ghost btn-square sm:btn-sm"><Menu /></button
             >
             <ul
                 class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
@@ -44,6 +35,11 @@
                 </li>
                 <li class="">
                     <a class="inherit decoration-0" href="/about">About</a>
+                </li>
+                <li class="">
+                    <button on:click={toggleTheme} class="inherit decoration-0"
+                        >Toggle theme</button
+                    >
                 </li>
             </ul>
         </div>
