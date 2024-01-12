@@ -6,6 +6,7 @@ categories:
     - 🖋️ article
     - 🧠 learning
     - 💬 speech
+    - 📹 30 Day Video Challenge
 published: true
 
 ---
