@@ -9,7 +9,7 @@
     <title>{config.title}</title>
 </svelte:head>
 
-<section class="ms-auto me-auto container">
+<section class="ms-auto me-auto container max-w-2xl">
     <h1 class="text-7xl md:text-6xl font-black">
         <span class="brightness-150 contrast-150"> All Posts </span>
         <img
@@ -21,7 +21,7 @@
     <p class="prose mb-24">
         I like to blog about stuff like productivity, business, health &
         fitness, and other stuff I'm interested in. Hopefully you'll find some
-        of it interesting too
+        of it interesting too.
     </p>
     <ul class="grid gap-7">
         {#each data.posts as post}
