@@ -21,10 +21,14 @@
         <div class="hidden md:flex">
             <Toggle />
         </div>
-        <details class="dropdown dropdown-bottom dropdown-end block md:hidden">
-            <summary class="m-1 btn btn-ghost btn-square sm:btn-sm"
-                ><Menu /></summary
+        <div class="dropdown dropdown-bottom dropdown-end block md:hidden">
+            <div
+                tabindex="0"
+                role="button"
+                class="btn m-1 btn-ghost btn-square sm:btn-sm"
             >
+                <Menu />
+            </div>
             <ul
                 class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"
             >
@@ -43,6 +47,6 @@
                     >
                 </li>
             </ul>
-        </details>
+        </div>
     </div>
 </nav>
