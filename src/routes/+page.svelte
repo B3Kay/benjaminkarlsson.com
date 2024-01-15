@@ -46,42 +46,44 @@
         in Mono repo tools, Styled components, Jest, Storybook, and Git.
       </p>
 
-      <div class="carousel carousel-end mb-9 w-full text-neutral-600">
+      <div
+        class="carousel carousel-end mb-9 w-full max-w-80 md:max-w-full text-neutral-600"
+      >
         <div class="carousel-item">
-          <SveleIcon class="w-16 hover:text-neutral-content" />
+          <SveleIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <ReactIcon class="w-16 hover:text-neutral-content" />
+          <ReactIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <ReduxIcon class="w-16 hover:text-neutral-content" />
+          <ReduxIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <StorybookIcon class="w-16 hover:text-neutral-content" />
+          <StorybookIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <TypescriptIcon class="w-16 hover:text-neutral-content" />
+          <TypescriptIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <JavascriptIcon class="w-16 hover:text-neutral-content" />
+          <JavascriptIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <CssIcon class="w-16 hover:text-neutral-content" />
+          <CssIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <HtmlIcon class="w-16 hover:text-neutral-content" />
+          <HtmlIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <JestIcon class="w-16 hover:text-neutral-content" />
+          <JestIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <GitIcon class="w-16 hover:text-neutral-content" />
+          <GitIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <FirebaseIcon class="w-16 hover:text-neutral-content" />
+          <FirebaseIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
-          <FigmaIcon class="w-16 hover:text-neutral-content" />
+          <FigmaIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
       </div>
       <!-- <div class="flex gap-4 text-primary mb-9">
@@ -209,11 +211,12 @@
       <div
         class="flex justify-center px-4 py-8 md:py-16 border-t border-base-300"
       >
-        <div class="text-xl sm:text-lg md:text-base">
+        <div class="text-base">
           <div class="chat pt-4 md:pt-1 chat-start">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
+                  alt="Recruiter profile"
                   src="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fGZhY2UlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
                 />
               </div>
@@ -224,7 +227,10 @@
           <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
-                <img src="/asset/cv-no-smile-fancy-500.jpg" />
+                <img
+                  alt="Benjamin Karlsson Profile"
+                  src="/asset/cv-no-smile-fancy-500.jpg"
+                />
               </div>
             </div>
 
@@ -237,6 +243,7 @@
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
                 <img
+                  alt="Recruiter profile"
                   src="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fGZhY2UlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
                 />
               </div>
@@ -293,7 +300,10 @@
           <div class="chat pt-4 md:pt-1 chat-end">
             <div class="chat-image avatar">
               <div class="w-10 rounded-full">
-                <img src="/asset/cv-no-smile-fancy-500.jpg" />
+                <img
+                  alt="Benjamin Karlsson profile"
+                  src="/asset/cv-no-smile-fancy-500.jpg"
+                />
               </div>
             </div>
             <div class="chat-header" />
