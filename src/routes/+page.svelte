@@ -24,12 +24,12 @@
 </script>
 
 <div class="hero min-h-screen">
-  <div class="hero-content block lg:flex gap-8">
+  <div class="hero-content block lg:flex gap-8 p-0">
     <div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left">
       <!-- <h6 class="uppercase">Welcome to Benjamin Karlsson</h6> -->
       <div class=" badge badge-accent badge-outline mb-4">Remote First</div>
 
-      <h1 class="text-7xl md:text-6xl font-black">
+      <h1 class="lg:text-7xl md:text-6xl text-4xl font-black">
         <span class="brightness-150 contrast-150">
           Freelancing Fullstack Excellence
         </span>
@@ -39,7 +39,7 @@
           alt="Star-Struck"
         />
       </h1>
-      <p class="py-9 text-xl sm:text-lg md:text-base">
+      <p class="py-9 text-sm md:text-base">
         Senior experience in front-end development, specializing in TypeScript,
         React.js, and advanced patterns like hooks, Redux, and routing.
         Dedicated to creating user-friendly, feature-rich websites. Proficient

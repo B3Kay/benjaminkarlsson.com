@@ -22,10 +22,8 @@
             <Toggle />
         </div>
         <div class="dropdown dropdown-bottom dropdown-end block md:hidden">
-            <button
-                tabindex="0"
-                role="button"
-                class="btn btn-ghost btn-square sm:btn-sm"><Menu /></button
+            <button tabindex="0" class="btn btn-ghost btn-square sm:btn-sm"
+                ><Menu /></button
             >
             <ul
                 class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"

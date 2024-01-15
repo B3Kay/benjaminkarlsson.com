@@ -12,6 +12,7 @@
 [x] Style footer
 [x] Style 404 page
 [x] About me page inspo: <https://aliabdaal.com/about/>
+[] Add privacy policy <https://florian.ec/privacy/>
 [] Migrate to Lucide.dev icon
 [] Add prettier
 [] Add page views to DB
