@@ -21,13 +21,16 @@
         <div class="hidden md:flex">
             <Toggle />
         </div>
-        <div class="dropdown dropdown-bottom dropdown-end block md:hidden">
-            <button tabindex="0" class="btn btn-ghost btn-square sm:btn-sm"
-                ><Menu /></button
+        <details class="dropdown dropdown-bottom dropdown-end block md:hidden">
+            <summary class="m-1 btn btn-ghost btn-square sm:btn-sm"
+                ><Menu /></summary
             >
             <ul
-                class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"
             >
+                <li class="">
+                    <a class="inherit decoration-0" href="/">Home</a>
+                </li>
                 <li class="">
                     <a class="inherit decoration-0" href="/blog">Blog</a>
                 </li>
@@ -40,6 +43,6 @@
                     >
                 </li>
             </ul>
-        </div>
+        </details>
     </div>
 </nav>

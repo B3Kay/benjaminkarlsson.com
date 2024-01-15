@@ -39,7 +39,7 @@
           alt="Star-Struck"
         />
       </h1>
-      <p class="py-9 text-sm md:text-base">
+      <p class="py-9 text-base">
         Senior experience in front-end development, specializing in TypeScript,
         React.js, and advanced patterns like hooks, Redux, and routing.
         Dedicated to creating user-friendly, feature-rich websites. Proficient
