@@ -5,6 +5,14 @@
   import Footer from "./footer.svelte";
 </script>
 
+<svelte:head>
+  <script
+    data-goatcounter="https://benjaminkarlsson.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js"
+  ></script>
+</svelte:head>
+
 <div class="h-full max-w-screen-sxl grid grid-rows-layout">
   <Header></Header>
 
