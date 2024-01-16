@@ -30,6 +30,7 @@
                 <Menu />
             </div>
             <ul
+                tabindex="0"
                 class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"
             >
                 <li class="">
