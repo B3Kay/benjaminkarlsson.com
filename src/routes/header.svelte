@@ -5,19 +5,25 @@
     import { toggleTheme } from "$lib/theme";
 </script>
 
-<nav class="p-7 flex content-between justify-between">
-    <a href="/" class="title">
-        <b>{config.title}</b>
-    </a>
-    <ul class="hidden md:flex gap-12 font-bold text-sm">
-        <li class="">
-            <a class="inherit decoration-0" href="/blog">Blog</a>
-        </li>
-        <li class="">
-            <a class="inherit decoration-0" href="/about">About</a>
-        </li>
-    </ul>
-    <div class="flex gap-2">
+<!-- New nav -->
+<div class="navbar bg-base-100 px-6">
+    <div class="navbar-start">
+        <a class="btn btn-ghost normal-case" href="/">Benjamin Karlsson</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li class="">
+                <a class="inherit decoration-0" href="/">Home</a>
+            </li>
+            <li class="">
+                <a class="inherit decoration-0" href="/blog">Blog</a>
+            </li>
+            <li class="">
+                <a class="inherit decoration-0" href="/about">About</a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-end">
         <div class="hidden md:flex">
             <Toggle />
         </div>
@@ -29,6 +35,11 @@
             >
                 <Menu />
             </div>
+            <!-- We can't use <button> here because Safari has a bug that prevents the button from being focused. -->
+            <!-- <div role="button" tabindex="0"> is a workaround for this bug. -->
+            <!-- It is accessible and works in all browsers. -->
+            <!-- https://bugs.webkit.org/show_bug.cgi?id=22261 -->
+            <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
             <ul
                 tabindex="0"
                 class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"
@@ -49,80 +60,5 @@
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
-<div class="drawer">
-    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content flex flex-col">
-        <!-- Navbar -->
-        <div class="w-full navbar bg-base-300">
-            <div class="flex-none lg:hidden">
-                <label
-                    for="my-drawer-3"
-                    aria-label="open sidebar"
-                    class="btn btn-square btn-ghost"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        class="inline-block w-6 h-6 stroke-current"
-                        ><path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        ></path></svg
-                    >
-                </label>
-            </div>
-            <div class="flex-1 px-2 mx-2">Navbar Title</div>
-            <div class="flex-none hidden lg:block">
-                <ul class="menu menu-horizontal">
-                    <!-- Navbar menu content here -->
-                    <li class="">
-                        <a class="inherit decoration-0" href="/">Home</a>
-                    </li>
-                    <li class="">
-                        <a class="inherit decoration-0" href="/blog">Blog</a>
-                    </li>
-                    <li class="">
-                        <a class="inherit decoration-0" href="/about">About</a>
-                    </li>
-                    <li class="">
-                        <button
-                            on:click={toggleTheme}
-                            class="inherit decoration-0">Toggle theme</button
-                        >
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Page content here -->
-        Content
-    </div>
-    <div class="drawer-side">
-        <label
-            for="my-drawer-3"
-            aria-label="close sidebar"
-            class="drawer-overlay"
-        ></label>
-        <ul class="menu p-4 w-80 min-h-full bg-base-200">
-            <!-- Sidebar content here -->
-            <li class="">
-                <a class="inherit decoration-0" href="/">Home</a>
-            </li>
-            <li class="">
-                <a class="inherit decoration-0" href="/blog">Blog</a>
-            </li>
-            <li class="">
-                <a class="inherit decoration-0" href="/about">About</a>
-            </li>
-            <li class="">
-                <button on:click={toggleTheme} class="inherit decoration-0"
-                    >Toggle theme</button
-                >
-            </li>
-        </ul>
     </div>
 </div>
