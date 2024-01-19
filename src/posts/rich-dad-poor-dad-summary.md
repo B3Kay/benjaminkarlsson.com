@@ -18,6 +18,8 @@ rating: 4
 
 ![Rich Dad Poor Dad: Book cover](/asset/blog/rdpd/richdadpoordad.jpg)
 
+## Contents
+
 <!-- Affiliate link to book -->
 <!-- Youtube video  -->
 
@@ -199,3 +201,9 @@ I hope you all enjoyed this book summary of Rich Dad Poor Dad. It's been a pleas
 Did it inspire you to adopt a growth mindset? What assets have you bought and liabilities sold because of this book? How are you going to start investing in yourself?
 
 Learning is everything.
+
+-------------------------------------------------------------------------
+
+If you'd like to check out more of my Book Summaries, you might find these interesting:
+
+- [**"The Alchemist"**](/the-alchemist-summary)- Embarks on a philosophical journey through the desert and the heart, unraveling the quest for one's Personal Legend and the transformative power of dreams in shaping one's destiny.
