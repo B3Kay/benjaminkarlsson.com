@@ -75,7 +75,7 @@ The poor and middle class are carrying limiting beliefs that are stopping them f
 
 What are limiting beliefs:
 
-- **👈👉Blames others**. But instead blames others for the responsibility of their life, why their job sucks, for their low paycheck and hopes that someone else will fix their problems. They believe that the government will take care of them and support them with social wellfare when their working days are over.
+- **👈👉Blaming others**. But instead blaming others for the responsibility of their life, why their job sucks, for their low paycheck and hopes that someone else will fix their problems. They believe that the government will take care of them and support them with social wellfare when their working days are over.
 - 🏎️**The poor pay much more effort and resources to look rich** . They are jealous with a losers mindset. Instead of trying to become rich, they want to look rich. Another problem is that they think the rich are crooks and evil and should pay more tax, or that they don't pay tax. They are jealous that someone else are making more money than them.
 - 👻**Fear directs the poor** and the middle class to play it safe. We learn from an early age not to take risky loans, being an entrepreneur is risky, it's better to get a good education and a stable, secure job. They play it safe and they die boring instead of letting their passion direct them and conquer their fears.
 - 😒**The poor and the middle class lack curiosity**, they don't learn new things and they dont move on.

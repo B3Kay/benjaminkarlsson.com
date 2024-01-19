@@ -20,13 +20,13 @@
 
         <ul class="mt-16 grid grid-flow-col gap-8 font-bold text-sm">
             <li class="">
-                <a class="inherit decoration-0" href="/">Home</a>
+                <a class="btn btn-ghost inherit" href="/">Home</a>
             </li>
             <li class="">
-                <a class="inherit decoration-0" href="/blog">Blog</a>
+                <a class="btn btn-ghost inherit" href="/blog">Blog</a>
             </li>
             <li class="">
-                <a class="inherit decoration-0" href="/about">About</a>
+                <a class="btn btn-ghost inherit" href="/about">About</a>
             </li>
             <!-- <li class="">
                 <a class="inherit decoration-0" href="/contact">Contact</a>
