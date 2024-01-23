@@ -2,7 +2,7 @@
 
 Welcome to my digital canvas at [benjaminkarlsson.com](https://benjaminkarlsson.com)! I'm Benjamin Karlsson, a versatile individual donning the roles of a developer, designer, creator, avid traveler, and lifelong learner, boasting over 5 years of experience in the IT industry.
 
-![Image](/asset/about/hogcykel.jpg)
+![Image](./static/asset/about/hogcykel.jpg)
 
 ## Who Am I?
 
