@@ -10,7 +10,7 @@
     <div class="navbar-start">
         <a class="btn btn-ghost normal-case" href="/">Benjamin Karlsson</a>
     </div>
-    <div class="navbar-center hidden lg:flex">
+    <div class="navbar-center hidden md:flex">
         <ul class="menu menu-horizontal px-1">
             <li class="">
                 <a class="inherit decoration-0" href="/">Home</a>
