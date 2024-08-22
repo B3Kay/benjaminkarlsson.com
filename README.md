@@ -25,8 +25,6 @@ This page might be a tad self-indulgent, but it's my canvas. I hope you discover
 Feel free to explore my website and blog to learn more about my experiences, projects, and insights. Here's a quick guide:
 
 - **Blog:** Dive into my thoughts, experiences, and learnings in the [Blog section](https://benjaminkarlsson.com/blog).
-- **Projects:** Explore some of my notable projects in the [Projects section](https://benjaminkarlsson.com/projects).
-- **Gallery:** Check out a visual journey of my adventures and creations in the [Gallery](https://benjaminkarlsson.com/gallery).
 
 ## Connect with Me
 
