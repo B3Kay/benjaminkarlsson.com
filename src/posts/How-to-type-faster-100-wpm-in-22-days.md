@@ -1,33 +1,34 @@
 ---
-title: 100 WPM in 22 days | How to type faster
+title: Become the Top 1% Fastest Typer | How to type faster
 
 # Kanske borde va en second title?
 
-description: How I increased my typing speed from 41wpm to 100wpm in 22 days. And you can too.
+description: How I 2.5x my typing speed became more accurate in only 22 days. And you can too.
 date: '2024-10-21'
 categories:
     - 💻 productivity
-    - 🚀 growth
+    - 🧠 learning
+    - 📝 guide
 published: true
 ---
 
 # From 40 wpm to 100 WPM in 22 days | How I became a typing ninja
 
-## WHY?
+## Why do I bring this up?
 
 RRight, let’s get right into it. The truth is, I’m on the job hunt in 2024—the year when the IT business is in a slump. I’ve been on a sabbatical for a year, and I thought jobs would throw themselves at me. I started applying a few weeks back and received a few offers, but today I’m quite picky and want higher pay than what I’ve been offered. Anyway, this is just some background. What happened in one job, or actually twice, is that I had to do a test to see my typing speed.
 
+## Contents
 
-What the hell?
+## **What the hell?**
 
 I never knew typing speed was a thing. 2024 is so different. Why would anyone care about your words per minute(WPM)? Isn’t it about producing value for your customer that is the most important thing? That you write good code, not the speed at which you write shitty lines? Because if you make a lot of mistakes, you are just producing more trash. Speed is not equivalent to value.
 
-
-	Speed != Value
+>	Speed != Value
 
 It shouldn’t really matter how long it takes you to finish a task; it’s more about finishing your task and doing it well. Creating value for your employer? If you do it in 2 hours or 8 hours, does it matter if you are still delivering the same thing? This is not the subject of today, but it got me thinking.
 
-	Value = value
+>	Value = value
 
 Why would it matter? Let’s say I put myself in the shoes of a professional athlete or an employer who wants to hire a “10x developer” (whatever that is). If I’m a professional basketball player, probably my coach and I would care about each individual detail—the way I hold the ball, the way I step. If you take your job extremely seriously, you would probably think of every little detail that can improve your productivity as well to create more value. Think of it as practicing your footwork as a basketball player; this is your interface with the sport. Of course, there are many more factors. This is the same with programming. You are hired to solve problems related to writing code. Hence, the keyboard is your interface. To become a faster and more precise basketball player, we need to make drills for our footwork. The same applies to programming. If we can improve our accuracy and typing speed, we can make fewer mistakes and potentially produce more value—potentially become more productive. Let’s say you could write 2.5 times faster; you could write an A4 page of text in 5 minutes instead of 12.5 minutes. This is a huge improvement.
 What it also could mean for your employer is a signal that you take your job very seriously. It could show that you are dedicated and passionate about your craft. You put extra time and effort into becoming more productive. In the end, we have to look at everything as a whole; just putting your fingers on a keyboard faster in itself does not make you a better programmer, of course.
