@@ -8,7 +8,7 @@ date: '2024-10-21'
 categories:
     - 💻 productivity
     - 🚀 growth
-published: false
+published: true
 ---
 
 # From 40 wpm to 100 WPM in 22 days | How I became a typing ninja
