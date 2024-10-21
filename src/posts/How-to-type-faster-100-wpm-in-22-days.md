@@ -56,15 +56,17 @@ I did some research on typing faster. What are the statistics? Am I fast or slow
 - Fast: 60-80 WPM - 70-80th Percentile
 - Professional: 80-90 WPM - 90-98th Percentile
 
-So if you study a little bit of statistics in University of school you know about the percentile. We can assume, but also know that the spread of typing skills probably has something representing a bell curve.
+So if you study a little bit of statistics in University or school you know about the percentile. We can assume, that the spread of typing skills probably has something representing a bell curve.
 
 ![Typing speed bell curve](/asset/blog/httf/avarage-speed.png)
 
-Typing speed bell curve from [Keybr.com](https://www.keybr.com/)
+This is the actual Typing speed bell curve from [Keybr.com](https://www.keybr.com/)
 
 Let’s say your average speed is 59.1 WPM; then you are faster than 64.79% of all other people. Most people, the average, are somewhere in the middle. If you are fast, then you type maybe 80 WPM, making you faster than 80% of the population. If you type 90 WPM, you are faster than 98% of the population.
 
-I did my test, and I was slow—not extremely slow, but slow as a programmer. A programmer types a lot, and on average, they are 10 WPM faster than other groups. My speed was 41 WPM when I submitted my job application. They didn’t hire me for the job. So, I’m right in the middle—average but slower than an average programmer. I thought I was fast, and this totally hit my ego. The crazy thing is, most people and programmers do not practice their typing speed. I asked around and a lot have kind of accepted that our speed was just the way it was. Nothing you could really practice, just like reading speed. I set out for a new challenge: to increase my typing speed. In this article, blog post, or whatever this is, I will tell you how I did it and surpassed the speed of 99% of people in a very short time.
+**I did my test, and I was slow,** not extremely slow, but slow as a programmer. 
+
+A programmer types a lot, and on average, they are 10 WPM faster than other groups. My speed was 41 WPM when I submitted my job application. They didn’t hire me for the job. So, I’m right in the middle—average but slower than an average programmer. I thought I was fast, and this totally hit my ego. The crazy thing is, most people and programmers do not practice their typing speed. I asked around and a lot have kind of accepted that our speed was just the way it was. Nothing you could really practice, just like reading speed. I set out for a new challenge: to increase my typing speed. In this article, blog post, or whatever this is, I will tell you how I did it and surpassed the speed of 99% of people in a very short time.
 
 
 
