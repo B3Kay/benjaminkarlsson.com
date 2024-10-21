@@ -133,7 +133,7 @@ The benefit of typing nonsense words is that you must type the letters you see, 
 My typing speed on [Monkeytype.com](https://monkeytype.com/), X-axis is days, Y-axis is WPM and accuracy.
 
 Here you can see my overall progression of typing speed. The top gray line is the highest WPM. The Yellow line is avarage WPM with and grey line on the bottom is accuracy, the higher the faster. The lower the more accurate.
-It was a fun journey, and I am glad I did it.
+It was a fun journey, and I am glad I did it. I will continue to practice and see how far I can go.
 
 
 ## 🤩 3 key takeaways
