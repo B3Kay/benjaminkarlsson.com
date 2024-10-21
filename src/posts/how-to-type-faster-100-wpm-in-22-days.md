@@ -225,7 +225,9 @@ When typing, try to type without subvocalizing. What does that mean? If you want
 
 ### 💻 For Power Users - Learn IDE shortcuts
 
-For programmers, typing speed often involves familiarity with specific syntax and commands. Learning the shortcuts for IDEs (Integrated Development Environments) can reduce typing time. Additionally, typing out snippets of code rather than plain text can help build muscle memory for programming syntax.
+For programmers, typing speed often involves familiarity with specific syntax and commands. Learning the shortcuts for IDEs (Integrated Development Environments) can reduce typing time. Additionally, typing out snippets of code rather than plain text can help build muscle memory for programming syntax. 
+
+You can also add snippets and functionallity to your desktop or mobile device, but this is for another blog post.
 
 
 ## Good luck  & Enjoy the journey
