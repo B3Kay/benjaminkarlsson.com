@@ -97,7 +97,7 @@ This is for people like me around the 30-40 WPM mark who are already working on 
 
 ## How I got to 1% fastest typists in 22 days?
 
-Again, if you want to know how I did it—not just how I recommend you do it—stick with me. But if you just want to know the [3 - key takeaways](#-3-key-takeaways) and how to type 100 WPM the fastest, skip ahead to “three main takeaways.”(LINK HERE) If you want to know my exact story of how I achieved 100 WPM in 22 days starting at 41 WPM, then keep on reading.
+Again, if you want to know how I did it—not just how I recommend you do it—stick with me. But if you just want to know the secret sauce and how to type 100 WPM the fastest, skip ahead to [3 - key takeaways](#-3-key-takeaways). But, If you want to know my exact story of how I achieved 100 WPM in 22 days starting at 41 WPM, then keep on reading.
 
 ### 👟 Week 1 - Just do it
 Let us start from the beginning. Honestly, I did not have too much of a plan at first. But I tried to create some kind of strategy. What did I do? Well, I researched the web, social media, looking at YouTube, Reddit, and blogs. There weren’t too many answers. A lot of people show their typing on fancy keyboards or are total keyboard geeks knowing everything about switches, but nothing actually told me how to become a better typist and go from 40 WPM to 100 WPM in less than 30 days. There were no obvious ways. The only thing I found was that people were using fancy tools and practicing daily. So, I did what I do best: just went for it.
