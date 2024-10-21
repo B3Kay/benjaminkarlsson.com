@@ -20,6 +20,12 @@ I went from 40 wpm to 100 WPM in 22 days, and you can do it too
 
 This was a crazy 143.9% speed increase, and yes, my wrists definitely felt it! In this article, I'll share how I achieved such a rapid boost in typing speed, along with tips to help you improve even faster than I did. If you’re short on time, feel free to jump straight to the [3 key takeaways](#-3-key-takeaways) at the end of the article.
 
+
+![100 WPM Achievement](/asset/blog/httf/100wpm-screenshot-big.png)
+Screenshot of my 101 WPM achievement on [Monkeytype.com/b3kay](https://monkeytype.com/profile/B3kay)
+
+
+
 ## Contents
 
 ## Why does typing speed matter?
@@ -127,7 +133,11 @@ Eminem released a new album this summer, and I hadn’t had any time to listen t
 
 There is another great feature of Keybr that works in synergy with what I just discussed: the removal of subvocalizing. Keybr generates words that look like English but do not actually exist—combinations of English word patterns that are entirely new. This forced me to type the characters I saw instead of the characters that are trained into the pattern of a word. English is not my first language, so I make a lot of mistakes. When I think of a word in English and then want to type it, I sometimes spell it incorrectly, usually the same way. This is due to a habit or a pattern of mislearning how to type a word.
 
-The benefit of typing nonsense words is that you must type the letters you see, not the words. This means you become faster at noticing the letters in words, not just the words themselves. It may sound flimsy, but this is the case. So, I continued listening to Eminem while typing. Then, suddenly, one afternoon on September 23, 2024, I logged into Monkeytype at the end of my workday and went for a test. There it was—BANG! 100 WPM. I couldn’t believe it; it was just day 22 when it happened. I felt great, and finally, I could lean back and take pride in the glory of my achievement.
+The benefit of typing nonsense words is that you must type the letters you see, not the words. This means you become faster at noticing the letters in words, not just the words themselves. It may sound flimsy, but this is the case. So, I continued listening to Eminem while typing. Then, suddenly, one afternoon on September 23, 2024, I logged into Monkeytype at the end of my workday and went for a test.
+
+![100 WPM Achievement](/asset/blog/httf/100wpm-screenshot-big.png)
+
+**There it was—BANG! 100 WPM.** I couldn’t believe it; it was just day 22 when it happened. I felt great, and finally, I could lean back and take pride in the glory of my achievement.
 
 ![Typing speed bell curve](/asset/blog/httf/monkeytype-stats.png)
 My typing speed on [Monkeytype.com](https://monkeytype.com/), X-axis is days, Y-axis is WPM and accuracy.
@@ -151,7 +161,10 @@ Touch typing and typing on a keyboard rely on muscle memory. Essentially, you wa
 
 *You need to set aside time and schedule your training, just like going to the gym. I do it first thing when I open the browser, get it over with, and then focus on more important tasks.*
 
-Keywords: muscle memory, finger placement, schedule, set aside time.
+
+![track your progress](/asset/blog/httf/schedule.png)
+
+Monkeytype.com - Track your progress.
 
 
 ### 2. Accuracy before speed
@@ -169,7 +182,7 @@ My favorite tools for typing practice:
 - 👎 [Typeracer](https://play.typeracer.com/) - Try it out, I didnt like it.
 
 
-## 🎁 Bonus!!
+## 🎁 Bonus!
 
 You might be thinking, *“Hey Benji! Is this it? Is this all you’re going to tell me?”* Yes, honestly, those are the most important things. But I will give you three bonuses that will help you take your 70 WPM to 100 WPM, putting you in the top 1% of typists. You can easily reach over 70 WPM with “just do it,” but if you want to go faster, listen up!
 
