@@ -28,7 +28,7 @@ Screenshot of my 101 WPM achievement on [Monkeytype.com/b3kay](https://monkeytyp
 
 ## Contents
 
-## Why does typing speed matter?
+## Why did I want to type faster?
 
 Right, let’s get right into it. The truth is, I’m on the job hunt in 2024—the year when the IT business is in a slump. I’ve been on a sabbatical for a year, and I thought jobs would throw themselves at me. I started applying for jobs a few weeks back and received a few offers, but today I’m quite picky and want higher pay than what I’ve been offered so far. Anyway, this is just some background. What happened in one job application, or actually twice, is that I had to do a test to see my typing speed.
 
@@ -45,6 +45,18 @@ It shouldn’t really matter how long it takes you to finish a task; it’s more
 Why would it matter? Let’s say I put myself in the shoes of a professional athlete or an employer who wants to hire a “10x developer” (whatever that is). If I’m a professional basketball player, probably my coach and I would care about each individual detail—the way I hold the ball, the way I step. If you take your job extremely seriously, you would probably think of every little detail that can improve your productivity as well to create more value. Think of it as practicing your footwork as a basketball player; this is your interface with the sport. Of course, there are many more factors. This is the same with programming. You are hired to solve problems related to writing code. Hence, the keyboard is your interface. To become a faster and more precise basketball player, we need to make drills for our footwork. The same applies to programming. If we can improve our accuracy and typing speed, we can make fewer mistakes and potentially produce more value—potentially become more productive. Let’s say you could write 2.5 times faster; you could write an A4 page of text in 5 minutes instead of 12.5 minutes. This is a huge improvement.
 What it also could mean for your employer is a signal that you take your job very seriously. It could show that you are dedicated and passionate about your craft. You put extra time and effort into becoming more productive. In the end, we have to look at everything as a whole; just putting your fingers on a keyboard faster in itself does not make you a better programmer, of course.
 
+### Why Typing Faster Matters
+
+- 💼 It shows you take your job as a computer user seriously.
+- 🚀 It can potentially increase your productivity.
+- 🚿 It keeps you in the flow. If you can type at the speed of your thoughts, you won’t lose your train of thought.
+- 🤩 Last but not least, According to [Ali Abdaal](https://www.youtube.com/watch?v=tU_AXrvQjpo&t=125s), *"it looks really cool"*. He might have a point.
+
+### How Did It Change Me?
+
+- ✨ It feels good to write faster, especially after achieving the goal I set. I can now brag that I have a typing speed of 100 WPM, though I still see room for improvement.
+- 💬 It gave me a reason to write this blog post and share my experience with others. Plus, it’s a great conversation starter with people who also use computers regularly.
+- ⚡I think I’ve become more productive. I now type faster and, more importantly, make fewer mistakes. I basically write 2.5 times faster.
 
 
 ## Typing speed statistics
@@ -107,6 +119,7 @@ Let’s take the word "cow," the animal that says “moo.” You could have two 
 
 As I noticed this, I started focusing on accuracy. Sure, it was slower in the beginning, but overall, I started making small incremental increases in speed again. I would say this is the number one most important thing for typing faster: accuracy—not making mistakes. During this week, I also tried another tool called Typeracer. The faster you type, the faster your race car travels across the display, and the first one to finish the text wins the race. I am very competitive, but it wasn't for me, the UI was distracting, and I just wanted to improve my typing without the stress that causes more mistakes.
 
+Another note on accuracy, as english is not my native language, a lot of training was just fixing my terrible patterns and spelling mistakes.
 
 ### 👍 Week 3 - Thumbs
 
@@ -215,11 +228,10 @@ When typing, try to type without subvocalizing. What does that mean? If you want
 For programmers, typing speed often involves familiarity with specific syntax and commands. Learning the shortcuts for IDEs (Integrated Development Environments) can reduce typing time. Additionally, typing out snippets of code rather than plain text can help build muscle memory for programming syntax.
 
 
-## Good luck
+## Good luck  & Enjoy the journey
 
 This is how I increased my typing speed to 100 WPM from 41 WPM in 22 days, which is 8 days less than my goal. If you follow these tips and practice a little every day, you should reach 100 WPM in no time. Don’t compare your results to mine; it might go faster or slower. It depends on your previous experience—whether you’ve played an instrument, for example. The fine motor skills of your fingers and hands matter a lot. Just make sure you have good posture, take breaks, and don’t sit still for too long. Eat well, sleep, and exercise. If you are overall healthy and have a positive approach to learning, I believe anyone can learn anything. 
 
-I learned 1,000 words of German in 26 days by studying just one hour per day. I thought that was impossible too, but with the right strategy, mindset, and a little commitment, anything is possible.
 
 
 Sheers
@@ -232,6 +244,10 @@ Benjamin Karlsson
 
 -------------------------------------------------------------------------
 
+
+I learned 1,000 words of German in 26 days by studying just one hour per day. I thought that was impossible too, but with the right strategy, mindset, and a little commitment, anything is possible.
+
 If you'd like to check out more of my Book Summaries, you might find these interesting:
 
-- [**"Rich Dad Poor Dad"**](/rich-dad-poor-dad-summary)- Explores the mindset of the rich versus the poor, offering insights on adopting a growth mindset and building a fortune.
+- [**"Rich Dad Poor Dad" - Book summary**](/rich-dad-poor-dad-summary)- Explores the mindset of the rich versus the poor, offering insights on adopting a growth mindset and building a fortune.
+- [**"The Alchemist" - Book summary**](/the-alchemist-summary)- The greatest of Personal Develoment books. A story about entering the desert to find your Personal Legend.
