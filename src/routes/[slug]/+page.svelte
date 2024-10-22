@@ -15,7 +15,7 @@
         <!-- <h1 class="text-4xl capitalize">{data.meta.title}</h1>
         <p>{data.meta.description}</p> -->
         <p class="text-slate-500 mt-2">
-            Published at {formatDate(data.meta.date)}
+            Published on {formatDate(data.meta.date)}
         </p>
     </hgroup>
 
