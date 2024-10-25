@@ -30,7 +30,7 @@
 
       <h1 class="lg:text-7xl md:text-6xl text-4xl font-black">
         <span class="brightness-150 contrast-150">
-          Freelancing Frontend Excellence
+          Freelancing Full Stack Developer
         </span>
         <img
           class="w-16 inline"
@@ -90,7 +90,7 @@
       <div class=" join-vertical join md:join-horizontal gap-2">
         <a
           class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary"
-          href="/asset/Benjamin CV Frontend Typescript - 2024.pdf"
+          href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf"
           target="_blank">Read my cv</a
         >
         <a
