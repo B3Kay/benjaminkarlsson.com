@@ -34,7 +34,7 @@ Right, let’s get right into it. The truth is, I’m on the job hunt in 2024, t
 
 **What the hell?**
 
-I never knew typing speed was a thing. 2024 is so different. Why would anyone care about your words per minute(WPM)? Isn’t it about producing value for your customer that is the most important thing? That you write good code, not the speed at which you write shitty lines? Because if you make a lot of mistakes, you are just producing more trash. Speed is not equivalent to value.
+I never knew typing speed was a thing. I had to ask reddit: [Is it normal with a typing test during dev interview?](https://www.reddit.com/r/Frontend/comments/1g9lnvn/is_it_normal_with_speed_typing_tests_during_a_dev/), 2024 is so different. Why would anyone care about your words per minute(WPM)? Isn’t it about producing value for your customer that is the most important thing? That you write good code, not the speed at which you write shitty lines? Because if you make a lot of mistakes, you are just producing more trash. Most people on reddit say speed is not equivalent to value. They get payed for thinking, not typing.
 
 >	Speed != Value
 
@@ -44,6 +44,9 @@ It shouldn’t really matter how long it takes you to finish a task; it’s more
 
 Why would it matter? Let’s say I put myself in the shoes of a professional athlete or an employer who wants to hire a “10x developer” (whatever that is). If I’m a professional basketball player, probably my coach and I would care about each individual detail, the way I hold the ball, the way I step. If you take your job extremely seriously, you would probably think of every little detail that can improve your productivity as well to create more value. Think of it as practicing your footwork as a basketball player; this is your interface with the sport. Of course, there are many more factors. This is the same with programming. You are hired to solve problems related to writing code. Hence, the keyboard is your interface. To become a faster and more precise basketball player, we need to make drills for our footwork. The same applies to programming. If we can improve our accuracy and typing speed, we can make fewer mistakes and potentially produce more value, therefore  become more productive. Let’s say you could write 2.5 times faster; you could write an A4 page of text in 5 minutes instead of 12.5 minutes. This is a huge improvement.
 What it also could mean for your employer is a signal that you take your job very seriously. It could show that you are dedicated and passionate about your craft. You put extra time and effort into becoming more productive. In the end, we have to look at everything as a whole; just putting your fingers on a keyboard faster in itself does not make you a better programmer, of course.
+
+> If you want to get indepth into why you should type fast a as a programmer, read Steve Yegge's article: [Programmings dirtiest little secret](https://steve-yegge.blogspot.com/2008/09/programmings-dirtiest-little-secret.html?m=1#:~:text=Do%20you%20need%20to%20learn%20to%20type%3F)
+
 
 ### Why Typing Faster Matters
 
@@ -82,6 +85,8 @@ A programmer types a lot, and on average, they are 10 WPM faster than other grou
 
 
 
+
+
 ## My Goal 🏆 The top 1% typist speed
 
 I do not settle for mediocrity. I’m a competitive person and would do anything to achieve a job. So when I set goals, I set them high. My current best speed is around 41 WPM with less than 90% accuracy. I will get into why accuracy matters immensely later in the blog.
@@ -94,6 +99,7 @@ How long did it take me to achieve this? What was my strategy, and what do I rec
 ## Who should increase their typing speed?
 
 This is for people like me around the 30-40 WPM mark who are already working on their computers, like programmers or students who are accustomed to typing without looking at their fingers and want to increase their typing speed to become the fastest typists in the top 1%. There are already courses out there that you can buy; Udemy provides courses to learn touch typing for $40. I think this is incredibly expensive; they also only expect you to achieve a speed of 40 WPM. Using the tips and tricks in this article, you will be able to surpass 100 WPM within 30 days, and this is totally free, nothing charged except your attention, a little bit of your time, and your trust. Imagine; I could easily charge over $150 to help you type 100 WPM and be in the top 1% of typists. Shall we jump right into it?
+
 
 ## How I got to 1% fastest typists in 22 days?
 
