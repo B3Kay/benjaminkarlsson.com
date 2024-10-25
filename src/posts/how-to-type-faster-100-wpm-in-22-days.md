@@ -202,6 +202,7 @@ My favorite tools for typing practice:
 
 - 🤩 [Keybr](https://www.keybr.com/) - For finger placement and training.
 - 🤩 [Monkeytype](https://monkeytype.com/) - For speed testing and practice.
+- 🤩 [Entrained](https://entertrained.app/) - Typing real books and learn at the same time.
 - 👎 [Typeracer](https://play.typeracer.com/) - Try it out, I didnt like it.
 
 
