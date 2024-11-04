@@ -17,17 +17,15 @@ rating: 4.5
 
 ### Introduction
  
-I've been trying out all kinds of diets, low carb, keto, vegan, body builder diet and carnivore. My problem was always that you never get what you desire in a normal restaurant, so I started going to buffets where I can fullfill any special dietary needs. 
+I've tried all kinds of diets: low-carb, keto, vegan, bodybuilder diets, and even carnivore. My main issue has always been that typical restaurants don’t cater well to these specific dietary needs. To get around this, I started going to buffets, where I could fulfill any dietary preference.
 
 The only problem was finding them.
 
-They can be hard to find so, I do what a problem solver do the best.
+Buffets can be hard to locate, so I decided to solve this problem myself.
 
-I solve the problem.
+I began building a platform to help people find and review buffets nearby, tailored to their dietary needs. Google Maps and other platforms don’t adequately serve the dietary needs of modern lifestyles.
 
-I started building a platform to review and find buffets nearby you, tailored to your special needs. Google maps and other providers does not fullfill the dietary needs of modern diets. 
-
-This is a opinonated page for finding reviewed buffets.
+This is an opinionated page focused on finding reviewed buffets for specific diets.
 
 ## Technologies Used
 TypeScript, CSS, HTML, Node.JS, Next.JS, Tailwind CSS, shadcnui, Radix UI, Framer Motion, pocketbase
