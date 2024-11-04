@@ -10,11 +10,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content={data.meta.title} />
     <meta property="og:description" content={data.meta.description} />
-    <meta
-        property="og:image"
-        content={data.meta.image ||
-            "www.benjaminkarlsson.com/asset/about/hogcykel.jpg"}
-    />
+    <meta property="og:image" content={data.meta.image} />
 </svelte:head>
 
 <article class="ms-auto me-auto prose max-w-2xl">
