@@ -19,6 +19,9 @@
                 <a class="inherit decoration-0" href="/blog">Blog</a>
             </li>
             <li class="">
+                <a class="inherit decoration-0" href="/portfolio">Portfolio</a>
+            </li>
+            <li class="">
                 <a class="inherit decoration-0" href="/about">About</a>
             </li>
         </ul>
@@ -49,6 +52,11 @@
                 </li>
                 <li class="">
                     <a class="inherit decoration-0" href="/blog">Blog</a>
+                </li>
+                <li class="">
+                    <a class="inherit decoration-0" href="/portfolio"
+                        >Portfolio</a
+                    >
                 </li>
                 <li class="">
                     <a class="inherit decoration-0" href="/about">About</a>
