@@ -1,30 +1,37 @@
 ---
-title: "Ecarx Project"
-slug: "ecarx-project"
-date: "2023-04-01"
+title: "Ecarx - Code Dependancy visualisation"
+slug: "ecarx"
+date: "2024-11-04"
 description: "An innovative project by Ecarx focusing on automotive technology."
-categories: ["🚗automotive", "🔧technology"]
-published: false
+categories: ["React", "TailwindCSS", "Automotive", "postgreSQL", "Kubernetees", "Golang", "Gitlab", "Python"]
+published: true
+imageUrl: '/asset/portfolio/ecarx/dependancy_tree.png'
 rating: 4.8
 ---
 
 ## Ecarx Project: Revolutionizing Automotive Technology
 
-### Introduction
 
-The Ecarx Project is a groundbreaking initiative aimed at transforming the automotive industry through advanced technology and innovative solutions. This project focuses on enhancing vehicle connectivity, safety, and user experience.
 
-### Key Features
+![Componnt details](/asset/portfolio/ecarx/graph_aggregated_suites.png)
+*Componnt details*
 
-1. **Advanced Connectivity**: Ecarx integrates state-of-the-art connectivity solutions, enabling seamless communication between vehicles and external devices.
-2. **Enhanced Safety**: The project prioritizes safety with features like advanced driver-assistance systems (ADAS) and real-time monitoring.
-3. **User Experience**: Ecarx offers an intuitive and user-friendly interface, providing a superior driving experience.
-4. **Sustainability**: The project emphasizes eco-friendly practices and technologies to reduce the environmental impact of vehicles.
+## Commit List
+![Commit List](/asset/portfolio/ecarx/commit_list.png)
+*Commit List*
 
-### Conclusion
+## Manifest
+![Componnt details](/asset/portfolio/ecarx/manifest_tree.png)
+*Manifest tree*
 
-The Ecarx Project is set to revolutionize the automotive industry by introducing cutting-edge technology and innovative solutions. With a focus on connectivity, safety, user experience, and sustainability, Ecarx is paving the way for the future of transportation.
+## Dependancy - Big cards
+![Componnt details](/asset/portfolio/ecarx/dependancy_big.png)
+*Big Cards in Graph*
 
-Stay tuned for more updates on this exciting project!
+## Bundle Diff tool
+![Compare Bundles](/asset/portfolio/ecarx/compare_bundles.png)
+*Compare Bundles*
 
-Happy driving!
+## Componnt details
+![Componnt details](/asset/portfolio/ecarx/component_details.png)
+*Componnt details*
