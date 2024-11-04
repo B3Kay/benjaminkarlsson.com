@@ -3,8 +3,9 @@ title: Top 1% Fastest Typist | How I did it in 22 days
 
 # Kanske borde va en second title?
 
-description: I went from 40 wpm to 100 WPM in 22 days, and you can do it too. This was a crazy 143.9% speed increase, and yes, my wrists definitely felt it! In this article, I'll share how I achieved such a rapid boost in typing speed, along with tips to help you improve even faster than I did..
+description: I went from 40 wpm to 100 WPM in 22 days, and you can do it too. This was a crazy 143.9% speed increase, and yes, my wrists definitely felt it! In this article, I'll share how I achieved such a rapid boost in typing speed, along with tips to help you improve even faster than I did.
 date: '2024-10-21'
+image: '/asset/blog/httf/100wpm-screenshot-big.png'
 categories:
     - 💻 productivity
     - 🧠 learning
