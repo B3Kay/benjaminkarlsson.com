@@ -11,7 +11,8 @@
     <meta property="og:description" content={data.meta.description} />
     <meta
         property="og:image"
-        content={data.meta.image || "/asset/about/hogcykel.jpg"}
+        content={data.meta.image ||
+            "www.benjaminkarlsson.com/asset/about/hogcykel.jpg"}
     />
 </svelte:head>
 
