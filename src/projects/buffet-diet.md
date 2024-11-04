@@ -27,6 +27,8 @@ I began building a platform to help people find and review buffets nearby, tailo
 
 This is an opinionated page focused on finding reviewed buffets for specific diets.
 
+Take a look at the [Buffet Diet - Github](https://github.com/B3Kay/next-buffet-diet-webb-app)
+
 ## Technologies Used
 TypeScript, CSS, HTML, Node.JS, Next.JS, Tailwind CSS, shadcnui, Radix UI, Framer Motion, pocketbase
 
