@@ -9,105 +9,48 @@
     <title>{config.title}</title>
 </svelte:head>
 
-<div class="container mx-auto px-4 py-12">
-    <header class="text-center mb-12">
-        <h1 class="text-4xl font-bold mb-4">My Projects</h1>
-        <p class="text-xl text-muted-foreground">
+<div class="container mx-auto px-4 py-8 md:py-10">
+    <header class="text-center mb-8 md:mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold mb-3 md:mb-4">My Projects</h1>
+        <p class="text-lg md:text-xl text-muted-foreground">
             Explore some of the projects I've worked on.
         </p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {#each data.portfolio as project, index}
-            {#if index === 0}
-                <!-- Large Card -->
-                <div class="col-span-1 md:col-span-2 row-span-2">
-                    <a
-                        href={`/portfolio/${project.slug}`}
-                        class="block group h-full"
-                    >
-                        <div
-                            class="bg-card rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl h-full"
-                        >
-                            <div class="relative h-48 md:h-64">
-                                <img
-                                    src={project.imageUrl}
-                                    alt={project.title}
-                                    class="transition-transform duration-300 group-hover:scale-105 object-cover w-full h-full"
-                                />
-                            </div>
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold mb-2">
-                                    {project.title}
-                                </h3>
-                                <p class="text-muted-foreground">
-                                    {project.description}
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            {:else if index === 4}
-                <!-- Wide Card -->
-                <div class="col-span-1 md:col-span-2">
-                    <a
-                        href={`/portfolio/${project.slug}`}
-                        class="block group h-full"
-                    >
-                        <div
-                            class="bg-card rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl h-full"
-                        >
-                            <div class="relative h-48 md:h-64">
-                                <img
-                                    src={project.imageUrl}
-                                    alt={project.title}
-                                    class="transition-transform duration-300 group-hover:scale-105 object-cover w-full h-full"
-                                />
-                            </div>
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold mb-2">
-                                    {project.title}
-                                </h3>
-                                <p class="text-muted-foreground">
-                                    {project.description}
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            {:else}
-                <!-- Regular Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6">
+        {#each data.portfolio as project}
+            <div
+                class="bg-white/10 rounded-lg overflow-hidden border border-gray-700 shadow-none transition-all duration-300 hover:shadow-xl"
+            >
                 <a href={`/portfolio/${project.slug}`} class="block group">
-                    <div
-                        class="bg-card rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl"
-                    >
-                        <div class="relative h-48 md:h-64">
-                            <img
-                                src={project.imageUrl}
-                                alt={project.title}
-                                class="transition-transform duration-300 group-hover:scale-105 object-cover w-full h-full"
-                            />
-                        </div>
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2">
-                                {project.title}
-                            </h3>
-                            <p class="text-muted-foreground">
-                                {project.description}
-                            </p>
-                        </div>
+                    <div class="relative h-56 md:h-72">
+                        <img
+                            src={project.imageUrl}
+                            alt={project.title}
+                            class="transition-transform duration-300 group-hover:scale-105 object-cover w-full h-full"
+                        />
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3
+                            class="text-xl md:text-2xl font-semibold mb-2 md:mb-3"
+                        >
+                            {project.title}
+                        </h3>
+                        <p
+                            class="text-muted-foreground text-xs md:text-sm mb-4 md:mb-5"
+                        >
+                            {project.description}
+                        </p>
+                        <span class="flex flex-wrap gap-1 md:gap-2 py-1">
+                            {#each project.categories as category}
+                                <span class="badge badge-neutral"
+                                    >{category}</span
+                                >
+                            {/each}
+                        </span>
                     </div>
                 </a>
-            {/if}
+            </div>
         {/each}
     </div>
 </div>
-
-<style>
-    .text-muted-foreground {
-        color: #666;
-    }
-    .bg-card {
-        background-color: #fff;
-    }
-</style>

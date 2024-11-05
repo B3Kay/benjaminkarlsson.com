@@ -2,8 +2,8 @@
 title: "Ecarx - Code Dependancy visualisation"
 slug: "ecarx"
 date: "2024-11-04"
-description: "An innovative project by Ecarx focusing on automotive technology."
-categories: ["React", "TailwindCSS", "Automotive", "postgreSQL", "Kubernetees", "Golang", "Gitlab", "Python"]
+description: "Built a tool to visualise code dependancies within AOSP and automtotive projects."
+categories: ["React", "TailwindCSS", "Automotive", "postgreSQL", "Kubernetees", "Golang", "AOSP", "Gitlab", "Python", "Docker", ]
 published: true
 imageUrl: '/asset/portfolio/ecarx/dependancy_tree.png'
 rating: 4.8

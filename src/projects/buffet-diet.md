@@ -3,7 +3,7 @@ title: "Buffet Diet - Fullstack Application"
 slug: "buffet-diet"
 date: "2024-11-05"
 description: Our comprehensive buffet review site helps you find the perfect all-you-can-eat experience, with user reviews, location details, and menu information."
-categories: ["Next.js", "Typescript", "SQLite", "React", "TailwindCSS"]
+categories: ["Next.js", "Typescript", "SQLite", "React", "TailwindCSS", "Chadcn/UI", "RadixUI", "Pocketbase"]
 imageUrl: '/asset/portfolio/buffetdiet/restaurants_view.png'
 published: true
 rating: 4.5
