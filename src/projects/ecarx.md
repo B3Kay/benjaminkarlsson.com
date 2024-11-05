@@ -21,9 +21,25 @@ It's integrated to Gitlab, getting building a dependancy tree based on the AOSP 
 
 The frontend is built with React, using Mantein UI, swr for data fetching, azure for single sign on, an internal REST api for the data tree and Gitlab for populating the commit and git specific data. 
 
+## Aggregated Suites
 
-![Componnt details](/asset/portfolio/ecarx/graph_aggregated_suites.png)
-*Componnt details*
+In order to track the code quality and the progress of the development, the tool visualises the aggregated test suites.
+This means from commit to customer.
+
+- Commit
+- Integration
+- QA Activity on integration
+- Delivery bundle
+- Test suites
+- Customer Integration
+- Bug reporting
+
+![Aggregated Suites](/asset/portfolio/ecarx/graph_aggregated_suites.png)
+*Snapshot of the aggregated suites, visualized*
+
+------
+
+Bellow are some snapshots of the other features of the tool.
 
 ## Commit List
 ![Commit List](/asset/portfolio/ecarx/commit_list.png)
