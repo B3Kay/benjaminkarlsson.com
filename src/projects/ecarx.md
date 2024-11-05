@@ -11,6 +11,15 @@ rating: 4.8
 
 ## Ecarx Project: Revolutionizing Automotive Technology
 
+The Ecarx project is a tool to visualise code dependancies within AOSP and automotive projects. As a developer at Ecarx you're asked to take full responsibility of the code that you deliver. From commit to deployment, testing on physical rigs, in simulators and all the way to production.
+
+To visualise the code dependancies I built a tool that visualises the code dependancies within AOSP and automotive projects. Including external test suites and components.
+
+This tool is built on a Golang microservice architecture, with a React frontend.
+
+It's integrated to Gitlab, getting building a dependancy tree based on the AOSP manifest and the git history. It's then integrated with external test suites and jira data. This is to track the code quality and the progress of the development.
+
+The frontend is built with React, using Mantein UI, swr for data fetching, azure for single sign on, an internal REST api for the data tree and Gitlab for populating the commit and git specific data. 
 
 
 ![Componnt details](/asset/portfolio/ecarx/graph_aggregated_suites.png)
