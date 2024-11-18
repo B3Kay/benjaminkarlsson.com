@@ -12,6 +12,8 @@
 [x] Style footer
 [x] Style 404 page
 [x] About me page inspo: <https://aliabdaal.com/about/>
+[ ] Add a sitemap https://sveltekit.io/blog/svelte-sitemaps
+[] Optimize images
 [] Add privacy policy <https://florian.ec/privacy/>
 [] Migrate to Lucide.dev icon
 [] Add prettier
