@@ -1,9 +1,9 @@
 ---
-title: "Buffet Diet - Fullstack Application"
+title: "The Buffet Diet - Fullstack Developer"
 slug: "buffet-diet"
 date: "2024-11-05"
 description: Our comprehensive buffet review site helps you find the perfect all-you-can-eat experience, with user reviews, location details, and menu information."
-categories: ["Next.js", "Typescript", "SQLite", "React", "TailwindCSS", "Chadcn/UI", "RadixUI", "Pocketbase"]
+categories: ["Next.js", "Typescript", "SQLite", "React", "TailwindCSS", "Chadcn/UI", "RadixUI", "PocketBase DB", "Groq AI", "LLM api", "Vervecl", "SSR"]
 imageUrl: '/asset/portfolio/buffetdiet/restaurants_view.png'
 published: true
 rating: 4.5
@@ -12,7 +12,7 @@ rating: 4.5
 # Buffet Diet - Full stack Poject.
 
 ![Restaurants viww](/asset/portfolio/buffetdiet/restaurants_view.png)
-*Restaurnats view*
+*Restaurants view*
 
 
 ### Introduction
@@ -27,10 +27,11 @@ I began building a platform to help people find and review buffets nearby, tailo
 
 This is an opinionated page focused on finding reviewed buffets for specific diets.
 
-Take a look at the [Buffet Diet - Github](https://github.com/B3Kay/next-buffet-diet-webb-app)
+Take a look at the [Buffet Diet - Github](https://github.com/B3Kay/next-buffet-diet-webb-app).
+Or the live website [buffetdiet.com](https://buffetdiet.com)
 
 ## Technologies Used
-TypeScript, CSS, HTML, Node.JS, Next.JS, Tailwind CSS, shadcnui, Radix UI, Framer Motion, pocketbase
+TypeScript, React, Next.JS, Tailwind CSS, shadc/ui, Radix UI, CSS, HTML, Node.JS, Framer Motion, Pocketbase, SQLite, Groq AI, LLM api
 
 ## 🔑Key Features
 

@@ -1,5 +1,5 @@
 ---
-title: "Ecarx - Code Dependancy visualisation"
+title: "Ecarx - Fullstack Developer"
 slug: "ecarx"
 date: "2024-11-04"
 description: "Built a tool to visualise code dependancies within AOSP and automtotive projects."
