@@ -1,5 +1,5 @@
 ---
-title: "The Buffet Diet - Fullstack Developer"
+title: "The Buffet Diet - Currently working on"
 slug: "buffet-diet"
 date: "2024-11-05"
 description: My comprehensive buffet review site helps you find the perfect all-you-can-eat experience, with user reviews, location details, and menu information.
@@ -9,13 +9,13 @@ published: true
 rating: 4.5
 ---
 
-# Buffet Diet - Full stack Poject.
+# Buffet Diet - Full stack Project.
 
 ![Restaurants viww](/asset/portfolio/buffetdiet/restaurants_view.png)
 *Restaurants view*
 
 
-### Introduction
+## A Restaurant website for people with special dietary needs
  
 I've tried all kinds of diets: low-carb, keto, vegan, bodybuilder diets, and even carnivore. My main issue has always been that typical restaurants don’t cater well to these specific dietary needs. To get around this, I started going to buffets, where I could fulfill any dietary preference.
 
@@ -27,11 +27,15 @@ I began building a platform to help people find and review buffets nearby, tailo
 
 This is an opinionated page focused on finding reviewed buffets for specific diets.
 
-Take a look at the [Buffet Diet - Github](https://github.com/B3Kay/next-buffet-diet-webb-app).
-Or the live website [buffetdiet.com](https://buffetdiet.com)
+Take a look at the code [Buffet Diet - Github](https://github.com/B3Kay/next-buffet-diet-webb-app).
+Or the live website [www.buffetdiet.com](https://buffetdiet.com)
 
-## Technologies Used
-TypeScript, React, Next.JS, Tailwind CSS, shadc/ui, Radix UI, CSS, HTML, Node.JS, Framer Motion, Pocketbase, SQLite, Groq AI, LLM api
+## Tech stack:
+
+Frontend: TypeScript, React, Next.JS, Tailwind CSS, shadc/ui, Radix, Framer Motion, UI, CSS, HTML, WCAG
+
+Backend: Next.js, Node.JS, F Pocketbase, SQLite, Groq AI, LLM api
+
 
 ## 🔑Key Features
 
