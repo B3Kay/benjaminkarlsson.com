@@ -23,7 +23,7 @@
             />
         </h1>
         <p class="text-lg md:text-xl text-muted-foreground">
-            Versatile Fullstack Engineer a Passion for UI and Frontend.
+            Versatile Fullstack Engineer with a Passion for UI and Frontend.
         </p>
     </header>
 

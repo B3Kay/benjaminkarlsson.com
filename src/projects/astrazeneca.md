@@ -2,7 +2,7 @@
 title: "AstraZeneca - Frontend Developer"
 slug: "astrazeneca"
 date: "2023-05-01"
-description: "A detailed overview of AstraZeneca's latest pharmaceutical innovations."
+description: "At AstraZeneca I contracted as a Frontend Developer to digitize digital trials. "
 categories: ["Typescript",
     "React.js",
     "Redux",
