@@ -3,7 +3,7 @@ title: "The Buffet Diet - Currently working on"
 slug: "buffet-diet"
 date: "2024-11-05"
 description: My comprehensive buffet review site helps you find the perfect all-you-can-eat experience, with user reviews, location details, and menu information.
-categories: ["Next.js", "Typescript", "SQLite", "React", "TailwindCSS", "Chadcn/UI", "RadixUI", "PocketBase DB", "Groq AI", "LLM api", "Vervecl", "SSR"]
+categories: ["Next.js", "Typescript", "SQLite", "React", "TailwindCSS", "shadcn/UI", "RadixUI", "PocketBase DB", "Groq AI", "LLM api", "Vervecl", "SSR"]
 imageUrl: '/asset/portfolio/buffetdiet/restaurants_view.png'
 published: true
 rating: 4.5
@@ -32,9 +32,13 @@ Or the live website [www.buffetdiet.com](https://buffetdiet.com)
 
 ## Tech stack:
 
-Frontend: TypeScript, React, Next.JS, Tailwind CSS, shadc/ui, Radix, Framer Motion, UI, CSS, HTML, WCAG
+Frontend: TypeScript, React, Next.JS, Tailwind CSS, shadcn/ui, Radix, Framer Motion, UI, CSS, HTML, WCAG
 
-Backend: Next.js, Node.JS, F Pocketbase, SQLite, Groq AI, LLM api
+Backend: Next.js, Node.JS, Groq AI, LLM api
+
+Database: PocketBase DB (SQLite)
+
+Deployment: Vercel
 
 
 ## 🔑Key Features
