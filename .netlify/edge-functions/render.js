@@ -95,6 +95,9 @@ function get_current_component() {
     throw new Error("Function called outside component initialization");
   return current_component;
 }
+function onDestroy(fn) {
+  get_current_component().$$.on_destroy.push(fn);
+}
 function setContext(key2, context) {
   get_current_component().$$.context.set(key2, context);
   return context;
@@ -1659,8 +1662,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
     universal_id = "src/routes/+layout.ts";
-    imports = ["_app/immutable/nodes/0.qm4vqW3O.js", "_app/immutable/chunks/scheduler.HxqytEGj.js", "_app/immutable/chunks/index.ui8EsKgp.js", "_app/immutable/chunks/index.dxTvQFpy.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.biqfU4Fk.js", "_app/immutable/chunks/each.-oqiv04n.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
-    stylesheets = ["_app/immutable/assets/0.DX0cB79X.css"];
+    imports = ["_app/immutable/nodes/0.CalGU74c.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.BSsncVet.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
+    stylesheets = ["_app/immutable/assets/0.X42Gp5NG.css"];
     fonts = [];
   }
 });
@@ -1730,7 +1733,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.sLOW1neO.js", "_app/immutable/chunks/scheduler.HxqytEGj.js", "_app/immutable/chunks/index.ui8EsKgp.js", "_app/immutable/chunks/entry.kL4XuSd6.js", "_app/immutable/chunks/index.dxTvQFpy.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
+    imports2 = ["_app/immutable/nodes/1.n78VDoPR.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/entry.jHFKyKrj.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -1753,7 +1756,7 @@ var page_svelte_exports = {};
 __export(page_svelte_exports, {
   default: () => Page
 });
-var Send, Send$1, Arrow_right_line, Svelte, React, Storybook, Git, Typescript, Javascript, Css3_shiled, Html5_shield, Firebase, Figma, Redux, Jest, MAX_MESSAGES, MAX_INPUT_LENGTH, ChatBot, Page;
+var Send, Send$1, Sparkles, Sparkles$1, Arrow_right_line, Svelte, React, Storybook, Git, Typescript, Javascript, Css3_shiled, Html5_shield, Firebase, Figma, Redux, Jest, MAX_MESSAGES, MAX_INPUT_LENGTH, ChatBot, Page;
 var init_page_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_page.svelte.js"() {
     init_ssr();
@@ -1768,6 +1771,26 @@ var init_page_svelte = __esm({
       })}`;
     });
     Send$1 = Send;
+    Sparkles = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      const iconNode = [
+        [
+          "path",
+          {
+            "d": "m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+          }
+        ],
+        ["path", { "d": "M5 3v4" }],
+        ["path", { "d": "M19 17v4" }],
+        ["path", { "d": "M3 5h4" }],
+        ["path", { "d": "M17 19h4" }]
+      ];
+      return `  ${validate_component(Icon$1, "Icon").$$render($$result, Object.assign({}, { name: "sparkles" }, $$props, { iconNode }), {}, {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      })}`;
+    });
+    Sparkles$1 = Sparkles;
     Arrow_right_line = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `<svg${spread(
         [
@@ -1915,18 +1938,30 @@ var init_page_svelte = __esm({
     MAX_INPUT_LENGTH = 500;
     ChatBot = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let userMessageCount;
-      let messages = [
-        {
-          role: "assistant",
-          content: "Hey! \u{1F44B} I'm Benjamin's AI assistant. Ask me anything about his skills, experience, or how to get in touch!"
-        }
-      ];
+      let messages = [];
       let input = "";
       let chatContainer;
+      let windowEl;
+      let chatWrapper;
+      let sparkles = [];
+      onDestroy(() => {
+      });
       userMessageCount = messages.filter((m) => m.role === "user").length;
-      return `<div class="mockup-window border border-base-300 backdrop-blur"><div class="flex flex-col border-t border-base-300" style="height: 420px;"> <div class="flex-1 overflow-y-auto px-4 py-4"${add_attribute("this", chatContainer, 0)}>${each(messages, (message) => {
-        return `${message.role === "assistant" ? `<div class="chat pt-2 chat-start"><div class="chat-image avatar" data-svelte-h="svelte-b1r7s4"><div class="w-10 rounded-full"><img alt="AI Assistant" src="/asset/cv-no-smile-fancy-500.jpg"> </div></div> <div class="chat-bubble">${escape(message.content)}</div> </div>` : `<div class="chat pt-2 chat-end"><div class="chat-bubble chat-bubble-primary">${escape(message.content)}</div> </div>`}`;
-      })} ${``}</div>  <div class="border-t border-base-300 p-3">${`<form class="flex gap-2 items-center"><input type="text"${add_attribute("maxlength", MAX_INPUT_LENGTH, 0)} placeholder="Ask about Benjamin's skills, experience..." class="input input-bordered flex-1 input-sm md:input-md" ${""}${add_attribute("value", input, 0)}> <button type="submit" class="btn btn-primary btn-sm md:btn-md btn-square" ${!input.trim() ? "disabled" : ""}>${validate_component(Send$1, "Send").$$render($$result, { size: 18 }, {}, {})}</button></form> <p class="text-xs text-base-content/40 mt-1 text-right">${escape(userMessageCount)}/${escape(MAX_MESSAGES)} messages</p>`}</div></div></div>`;
+      return `<div class="relative"${add_attribute("this", chatWrapper, 0)}> ${each(sparkles, (sparkle) => {
+        return `<div class="sparkle" style="${"left: " + escape(sparkle.x, true) + "px; bottom: 60px;"}"><div class="sparkle-inner">${validate_component(Sparkles$1, "Sparkles").$$render($$result, { size: 14, color: sparkle.color }, {}, {})}</div> </div>`;
+      })}  ${``} <div class="${[
+        "mockup-window border border-base-300 backdrop-blur transition-transform",
+        ""
+      ].join(" ").trim()}"${add_attribute("this", windowEl, 0)}><div class="flex flex-col border-t border-base-300" style="height: 420px;"> <div class="flex-1 overflow-y-auto px-4 py-4"${add_attribute("this", chatContainer, 0)}>${each(messages, (message, i) => {
+        return `${message.role === "assistant" ? `<div class="${"chat pt-2 chat-start " + escape(
+          message.animation === "blip" ? "chat-blip" : "chat-bounce-in",
+          true
+        )}"><div class="chat-image avatar" data-svelte-h="svelte-qkcb4q"><div class="w-10 rounded-full"><img alt="Benji's AI" src="/asset/cv-no-smile-fancy-500.jpg"> </div></div> <div class="chat-bubble">${escape(message.content)}</div> </div>` : `<div class="chat pt-2 chat-end chat-bounce-in"><div class="chat-bubble chat-bubble-primary">${escape(message.content)}</div> </div>`}`;
+      })} ${``}</div>  <div class="border-t border-base-300 p-3">${`<form class="flex gap-2 items-center"><input type="text"${add_attribute("maxlength", MAX_INPUT_LENGTH, 0)}${add_attribute(
+        "placeholder",
+        "Benji's AI is waking up...",
+        0
+      )} class="input input-bordered flex-1 input-sm md:input-md" ${"disabled"}${add_attribute("value", input, 0)}> <button type="submit" class="btn btn-primary btn-sm md:btn-md btn-square" ${"disabled"}>${validate_component(Send$1, "Send").$$render($$result, { size: 18 }, {}, {})}</button></form> <p class="text-xs text-base-content/40 mt-1 text-right">${escape(userMessageCount)}/${escape(MAX_MESSAGES)} messages</p>`}</div></div></div></div>`;
     });
     Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${$$result.head += `<!-- HEAD_svelte-btmkba_START -->${$$result.title = `<title>${escape(title)} - Freelance Full Stack Developer</title>`, ""}<meta name="description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work."><meta property="og:type" content="website"><meta property="og:title" content="${escape(title, true) + " - Freelance Full Stack Developer"}"><meta property="og:description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work."><meta property="og:url"${add_attribute("content", url, 0)}><!-- HEAD_svelte-btmkba_END -->`, ""} <div class="hero min-h-screen"><div class="hero-content block lg:flex gap-8 p-0"><div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left"><div class="badge badge-accent badge-outline mb-4 animate-fade-in-up" data-svelte-h="svelte-119drau">Remote First</div> <h1 class="lg:text-7xl md:text-6xl text-4xl font-black animate-fade-in-up-delay-1" data-svelte-h="svelte-kqi0y1"><span class="brightness-150 contrast-150">Freelancing Full Stack Developer</span> <img class="w-16 inline" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck"></h1> <p class="py-9 text-base animate-fade-in-up-delay-2" data-svelte-h="svelte-5qrhm2">Senior with 5+ years experience in front-end development, specializing
@@ -2040,7 +2075,7 @@ var init__3 = __esm({
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
     universal_id2 = "src/routes/+page.ts";
-    imports3 = ["_app/immutable/nodes/2.pK_wqRfZ.js", "_app/immutable/chunks/scheduler.HxqytEGj.js", "_app/immutable/chunks/index.ui8EsKgp.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.-oqiv04n.js", "_app/immutable/chunks/Icon.biqfU4Fk.js"];
+    imports3 = ["_app/immutable/nodes/2.5-8YEV4p.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/Icon.BSsncVet.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -2414,7 +2449,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1veyxq3"
+  version_hash: "18bqtod"
 };
 async function get_hooks() {
   return {};
@@ -5326,7 +5361,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.wbvdpF4F.js", "app": "_app/immutable/entry/app.bUW2g1mf.js", "imports": ["_app/immutable/entry/start.wbvdpF4F.js", "_app/immutable/chunks/entry.kL4XuSd6.js", "_app/immutable/chunks/scheduler.HxqytEGj.js", "_app/immutable/chunks/index.dxTvQFpy.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.bUW2g1mf.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.HxqytEGj.js", "_app/immutable/chunks/index.ui8EsKgp.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.ga0usBGU.js", "app": "_app/immutable/entry/app.6INNvBaa.js", "imports": ["_app/immutable/entry/start.ga0usBGU.js", "_app/immutable/chunks/entry.jHFKyKrj.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.6INNvBaa.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
