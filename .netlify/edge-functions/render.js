@@ -286,6 +286,688 @@ var init_ssr = __esm({
   }
 });
 
+// .svelte-kit/output/server/chunks/exports.js
+function resolve(base2, path) {
+  if (path[0] === "/" && path[1] === "/")
+    return path;
+  let url = new URL(base2, internal);
+  url = new URL(path, url);
+  return url.protocol === internal.protocol ? url.pathname + url.search + url.hash : url.href;
+}
+function normalize_path(path, trailing_slash) {
+  if (path === "/" || trailing_slash === "ignore")
+    return path;
+  if (trailing_slash === "never") {
+    return path.endsWith("/") ? path.slice(0, -1) : path;
+  } else if (trailing_slash === "always" && !path.endsWith("/")) {
+    return path + "/";
+  }
+  return path;
+}
+function decode_pathname(pathname) {
+  return pathname.split("%25").map(decodeURI).join("%25");
+}
+function decode_params(params) {
+  for (const key2 in params) {
+    params[key2] = decodeURIComponent(params[key2]);
+  }
+  return params;
+}
+function make_trackable(url, callback, search_params_callback) {
+  const tracked = new URL(url);
+  Object.defineProperty(tracked, "searchParams", {
+    value: new Proxy(tracked.searchParams, {
+      get(obj, key2) {
+        if (key2 === "get" || key2 === "getAll" || key2 === "has") {
+          return (param) => {
+            search_params_callback(param);
+            return obj[key2](param);
+          };
+        }
+        callback();
+        const value = Reflect.get(obj, key2);
+        return typeof value === "function" ? value.bind(obj) : value;
+      }
+    }),
+    enumerable: true,
+    configurable: true
+  });
+  for (const property of tracked_url_properties) {
+    Object.defineProperty(tracked, property, {
+      get() {
+        callback();
+        return url[property];
+      },
+      enumerable: true,
+      configurable: true
+    });
+  }
+  {
+    tracked[Symbol.for("nodejs.util.inspect.custom")] = (depth, opts, inspect) => {
+      return inspect(url, opts);
+    };
+  }
+  {
+    disable_hash(tracked);
+  }
+  return tracked;
+}
+function disable_hash(url) {
+  allow_nodejs_console_log(url);
+  Object.defineProperty(url, "hash", {
+    get() {
+      throw new Error(
+        "Cannot access event.url.hash. Consider using `$page.url.hash` inside a component instead"
+      );
+    }
+  });
+}
+function disable_search(url) {
+  allow_nodejs_console_log(url);
+  for (const property of ["search", "searchParams"]) {
+    Object.defineProperty(url, property, {
+      get() {
+        throw new Error(`Cannot access url.${property} on a page with prerendering enabled`);
+      }
+    });
+  }
+}
+function allow_nodejs_console_log(url) {
+  {
+    url[Symbol.for("nodejs.util.inspect.custom")] = (depth, opts, inspect) => {
+      return inspect(new URL(url), opts);
+    };
+  }
+}
+function has_data_suffix(pathname) {
+  return pathname.endsWith(DATA_SUFFIX) || pathname.endsWith(HTML_DATA_SUFFIX);
+}
+function add_data_suffix(pathname) {
+  if (pathname.endsWith(".html"))
+    return pathname.replace(/\.html$/, HTML_DATA_SUFFIX);
+  return pathname.replace(/\/$/, "") + DATA_SUFFIX;
+}
+function strip_data_suffix(pathname) {
+  if (pathname.endsWith(HTML_DATA_SUFFIX)) {
+    return pathname.slice(0, -HTML_DATA_SUFFIX.length) + ".html";
+  }
+  return pathname.slice(0, -DATA_SUFFIX.length);
+}
+function validator(expected) {
+  function validate(module, file) {
+    if (!module)
+      return;
+    for (const key2 in module) {
+      if (key2[0] === "_" || expected.has(key2))
+        continue;
+      const values = [...expected.values()];
+      const hint = hint_for_supported_files(key2, file?.slice(file.lastIndexOf("."))) ?? `valid exports are ${values.join(", ")}, or anything with a '_' prefix`;
+      throw new Error(`Invalid export '${key2}'${file ? ` in ${file}` : ""} (${hint})`);
+    }
+  }
+  return validate;
+}
+function hint_for_supported_files(key2, ext = ".js") {
+  const supported_files = [];
+  if (valid_layout_exports.has(key2)) {
+    supported_files.push(`+layout${ext}`);
+  }
+  if (valid_page_exports.has(key2)) {
+    supported_files.push(`+page${ext}`);
+  }
+  if (valid_layout_server_exports.has(key2)) {
+    supported_files.push(`+layout.server${ext}`);
+  }
+  if (valid_page_server_exports.has(key2)) {
+    supported_files.push(`+page.server${ext}`);
+  }
+  if (valid_server_exports.has(key2)) {
+    supported_files.push(`+server${ext}`);
+  }
+  if (supported_files.length > 0) {
+    return `'${key2}' is a valid export in ${supported_files.slice(0, -1).join(", ")}${supported_files.length > 1 ? " or " : ""}${supported_files.at(-1)}`;
+  }
+}
+var internal, tracked_url_properties, DATA_SUFFIX, HTML_DATA_SUFFIX, valid_layout_exports, valid_page_exports, valid_layout_server_exports, valid_page_server_exports, valid_server_exports, validate_layout_exports, validate_page_exports, validate_layout_server_exports, validate_page_server_exports, validate_server_exports;
+var init_exports = __esm({
+  ".svelte-kit/output/server/chunks/exports.js"() {
+    internal = new URL("sveltekit-internal://");
+    tracked_url_properties = /** @type {const} */
+    [
+      "href",
+      "pathname",
+      "search",
+      "toString",
+      "toJSON"
+    ];
+    DATA_SUFFIX = "/__data.json";
+    HTML_DATA_SUFFIX = ".html__data.json";
+    valid_layout_exports = /* @__PURE__ */ new Set([
+      "load",
+      "prerender",
+      "csr",
+      "ssr",
+      "trailingSlash",
+      "config"
+    ]);
+    valid_page_exports = /* @__PURE__ */ new Set([...valid_layout_exports, "entries"]);
+    valid_layout_server_exports = /* @__PURE__ */ new Set([...valid_layout_exports]);
+    valid_page_server_exports = /* @__PURE__ */ new Set([...valid_layout_server_exports, "actions", "entries"]);
+    valid_server_exports = /* @__PURE__ */ new Set([
+      "GET",
+      "POST",
+      "PATCH",
+      "PUT",
+      "DELETE",
+      "OPTIONS",
+      "HEAD",
+      "fallback",
+      "prerender",
+      "trailingSlash",
+      "config",
+      "entries"
+    ]);
+    validate_layout_exports = validator(valid_layout_exports);
+    validate_page_exports = validator(valid_page_exports);
+    validate_layout_server_exports = validator(valid_layout_server_exports);
+    validate_page_server_exports = validator(valid_page_server_exports);
+    validate_server_exports = validator(valid_server_exports);
+  }
+});
+
+// node_modules/devalue/src/utils.js
+function is_primitive(thing) {
+  return Object(thing) !== thing;
+}
+function is_plain_object(thing) {
+  const proto = Object.getPrototypeOf(thing);
+  return proto === Object.prototype || proto === null || Object.getOwnPropertyNames(proto).sort().join("\0") === object_proto_names;
+}
+function get_type(thing) {
+  return Object.prototype.toString.call(thing).slice(8, -1);
+}
+function get_escaped_char(char) {
+  switch (char) {
+    case '"':
+      return '\\"';
+    case "<":
+      return "\\u003C";
+    case "\\":
+      return "\\\\";
+    case "\n":
+      return "\\n";
+    case "\r":
+      return "\\r";
+    case "	":
+      return "\\t";
+    case "\b":
+      return "\\b";
+    case "\f":
+      return "\\f";
+    case "\u2028":
+      return "\\u2028";
+    case "\u2029":
+      return "\\u2029";
+    default:
+      return char < " " ? `\\u${char.charCodeAt(0).toString(16).padStart(4, "0")}` : "";
+  }
+}
+function stringify_string(str) {
+  let result = "";
+  let last_pos = 0;
+  const len = str.length;
+  for (let i = 0; i < len; i += 1) {
+    const char = str[i];
+    const replacement = get_escaped_char(char);
+    if (replacement) {
+      result += str.slice(last_pos, i) + replacement;
+      last_pos = i + 1;
+    }
+  }
+  return `"${last_pos === 0 ? str : result + str.slice(last_pos)}"`;
+}
+var escaped, DevalueError, object_proto_names;
+var init_utils = __esm({
+  "node_modules/devalue/src/utils.js"() {
+    escaped = {
+      "<": "\\u003C",
+      "\\": "\\\\",
+      "\b": "\\b",
+      "\f": "\\f",
+      "\n": "\\n",
+      "\r": "\\r",
+      "	": "\\t",
+      "\u2028": "\\u2028",
+      "\u2029": "\\u2029"
+    };
+    DevalueError = class extends Error {
+      /**
+       * @param {string} message
+       * @param {string[]} keys
+       */
+      constructor(message, keys) {
+        super(message);
+        this.name = "DevalueError";
+        this.path = keys.join("");
+      }
+    };
+    object_proto_names = /* @__PURE__ */ Object.getOwnPropertyNames(
+      Object.prototype
+    ).sort().join("\0");
+  }
+});
+
+// node_modules/devalue/src/uneval.js
+function uneval(value, replacer) {
+  const counts = /* @__PURE__ */ new Map();
+  const keys = [];
+  const custom = /* @__PURE__ */ new Map();
+  function walk(thing) {
+    if (typeof thing === "function") {
+      throw new DevalueError(`Cannot stringify a function`, keys);
+    }
+    if (!is_primitive(thing)) {
+      if (counts.has(thing)) {
+        counts.set(thing, counts.get(thing) + 1);
+        return;
+      }
+      counts.set(thing, 1);
+      if (replacer) {
+        const str2 = replacer(thing);
+        if (typeof str2 === "string") {
+          custom.set(thing, str2);
+          return;
+        }
+      }
+      const type = get_type(thing);
+      switch (type) {
+        case "Number":
+        case "BigInt":
+        case "String":
+        case "Boolean":
+        case "Date":
+        case "RegExp":
+          return;
+        case "Array":
+          thing.forEach((value2, i) => {
+            keys.push(`[${i}]`);
+            walk(value2);
+            keys.pop();
+          });
+          break;
+        case "Set":
+          Array.from(thing).forEach(walk);
+          break;
+        case "Map":
+          for (const [key2, value2] of thing) {
+            keys.push(
+              `.get(${is_primitive(key2) ? stringify_primitive(key2) : "..."})`
+            );
+            walk(value2);
+            keys.pop();
+          }
+          break;
+        default:
+          if (!is_plain_object(thing)) {
+            throw new DevalueError(
+              `Cannot stringify arbitrary non-POJOs`,
+              keys
+            );
+          }
+          if (Object.getOwnPropertySymbols(thing).length > 0) {
+            throw new DevalueError(
+              `Cannot stringify POJOs with symbolic keys`,
+              keys
+            );
+          }
+          for (const key2 in thing) {
+            keys.push(`.${key2}`);
+            walk(thing[key2]);
+            keys.pop();
+          }
+      }
+    }
+  }
+  walk(value);
+  const names = /* @__PURE__ */ new Map();
+  Array.from(counts).filter((entry) => entry[1] > 1).sort((a, b) => b[1] - a[1]).forEach((entry, i) => {
+    names.set(entry[0], get_name(i));
+  });
+  function stringify2(thing) {
+    if (names.has(thing)) {
+      return names.get(thing);
+    }
+    if (is_primitive(thing)) {
+      return stringify_primitive(thing);
+    }
+    if (custom.has(thing)) {
+      return custom.get(thing);
+    }
+    const type = get_type(thing);
+    switch (type) {
+      case "Number":
+      case "String":
+      case "Boolean":
+        return `Object(${stringify2(thing.valueOf())})`;
+      case "RegExp":
+        return `new RegExp(${stringify_string(thing.source)}, "${thing.flags}")`;
+      case "Date":
+        return `new Date(${thing.getTime()})`;
+      case "Array":
+        const members = (
+          /** @type {any[]} */
+          thing.map(
+            (v, i) => i in thing ? stringify2(v) : ""
+          )
+        );
+        const tail = thing.length === 0 || thing.length - 1 in thing ? "" : ",";
+        return `[${members.join(",")}${tail}]`;
+      case "Set":
+      case "Map":
+        return `new ${type}([${Array.from(thing).map(stringify2).join(",")}])`;
+      default:
+        const obj = `{${Object.keys(thing).map((key2) => `${safe_key(key2)}:${stringify2(thing[key2])}`).join(",")}}`;
+        const proto = Object.getPrototypeOf(thing);
+        if (proto === null) {
+          return Object.keys(thing).length > 0 ? `Object.assign(Object.create(null),${obj})` : `Object.create(null)`;
+        }
+        return obj;
+    }
+  }
+  const str = stringify2(value);
+  if (names.size) {
+    const params = [];
+    const statements = [];
+    const values = [];
+    names.forEach((name, thing) => {
+      params.push(name);
+      if (custom.has(thing)) {
+        values.push(
+          /** @type {string} */
+          custom.get(thing)
+        );
+        return;
+      }
+      if (is_primitive(thing)) {
+        values.push(stringify_primitive(thing));
+        return;
+      }
+      const type = get_type(thing);
+      switch (type) {
+        case "Number":
+        case "String":
+        case "Boolean":
+          values.push(`Object(${stringify2(thing.valueOf())})`);
+          break;
+        case "RegExp":
+          values.push(thing.toString());
+          break;
+        case "Date":
+          values.push(`new Date(${thing.getTime()})`);
+          break;
+        case "Array":
+          values.push(`Array(${thing.length})`);
+          thing.forEach((v, i) => {
+            statements.push(`${name}[${i}]=${stringify2(v)}`);
+          });
+          break;
+        case "Set":
+          values.push(`new Set`);
+          statements.push(
+            `${name}.${Array.from(thing).map((v) => `add(${stringify2(v)})`).join(".")}`
+          );
+          break;
+        case "Map":
+          values.push(`new Map`);
+          statements.push(
+            `${name}.${Array.from(thing).map(([k, v]) => `set(${stringify2(k)}, ${stringify2(v)})`).join(".")}`
+          );
+          break;
+        default:
+          values.push(
+            Object.getPrototypeOf(thing) === null ? "Object.create(null)" : "{}"
+          );
+          Object.keys(thing).forEach((key2) => {
+            statements.push(
+              `${name}${safe_prop(key2)}=${stringify2(thing[key2])}`
+            );
+          });
+      }
+    });
+    statements.push(`return ${str}`);
+    return `(function(${params.join(",")}){${statements.join(
+      ";"
+    )}}(${values.join(",")}))`;
+  } else {
+    return str;
+  }
+}
+function get_name(num) {
+  let name = "";
+  do {
+    name = chars[num % chars.length] + name;
+    num = ~~(num / chars.length) - 1;
+  } while (num >= 0);
+  return reserved.test(name) ? `${name}0` : name;
+}
+function escape_unsafe_char(c) {
+  return escaped[c] || c;
+}
+function escape_unsafe_chars(str) {
+  return str.replace(unsafe_chars, escape_unsafe_char);
+}
+function safe_key(key2) {
+  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? key2 : escape_unsafe_chars(JSON.stringify(key2));
+}
+function safe_prop(key2) {
+  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? `.${key2}` : `[${escape_unsafe_chars(JSON.stringify(key2))}]`;
+}
+function stringify_primitive(thing) {
+  if (typeof thing === "string")
+    return stringify_string(thing);
+  if (thing === void 0)
+    return "void 0";
+  if (thing === 0 && 1 / thing < 0)
+    return "-0";
+  const str = String(thing);
+  if (typeof thing === "number")
+    return str.replace(/^(-)?0\./, "$1.");
+  if (typeof thing === "bigint")
+    return thing + "n";
+  return str;
+}
+var chars, unsafe_chars, reserved;
+var init_uneval = __esm({
+  "node_modules/devalue/src/uneval.js"() {
+    init_utils();
+    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$";
+    unsafe_chars = /[<\b\f\n\r\t\0\u2028\u2029]/g;
+    reserved = /^(?:do|if|in|for|int|let|new|try|var|byte|case|char|else|enum|goto|long|this|void|with|await|break|catch|class|const|final|float|short|super|throw|while|yield|delete|double|export|import|native|return|switch|throws|typeof|boolean|default|extends|finally|package|private|abstract|continue|debugger|function|volatile|interface|protected|transient|implements|instanceof|synchronized)$/;
+  }
+});
+
+// node_modules/devalue/src/constants.js
+var UNDEFINED, HOLE, NAN, POSITIVE_INFINITY, NEGATIVE_INFINITY, NEGATIVE_ZERO;
+var init_constants = __esm({
+  "node_modules/devalue/src/constants.js"() {
+    UNDEFINED = -1;
+    HOLE = -2;
+    NAN = -3;
+    POSITIVE_INFINITY = -4;
+    NEGATIVE_INFINITY = -5;
+    NEGATIVE_ZERO = -6;
+  }
+});
+
+// node_modules/devalue/src/parse.js
+var init_parse = __esm({
+  "node_modules/devalue/src/parse.js"() {
+    init_constants();
+  }
+});
+
+// node_modules/devalue/src/stringify.js
+function stringify(value, reducers) {
+  const stringified = [];
+  const indexes = /* @__PURE__ */ new Map();
+  const custom = [];
+  for (const key2 in reducers) {
+    custom.push({ key: key2, fn: reducers[key2] });
+  }
+  const keys = [];
+  let p = 0;
+  function flatten(thing) {
+    if (typeof thing === "function") {
+      throw new DevalueError(`Cannot stringify a function`, keys);
+    }
+    if (indexes.has(thing))
+      return indexes.get(thing);
+    if (thing === void 0)
+      return UNDEFINED;
+    if (Number.isNaN(thing))
+      return NAN;
+    if (thing === Infinity)
+      return POSITIVE_INFINITY;
+    if (thing === -Infinity)
+      return NEGATIVE_INFINITY;
+    if (thing === 0 && 1 / thing < 0)
+      return NEGATIVE_ZERO;
+    const index4 = p++;
+    indexes.set(thing, index4);
+    for (const { key: key2, fn } of custom) {
+      const value2 = fn(thing);
+      if (value2) {
+        stringified[index4] = `["${key2}",${flatten(value2)}]`;
+        return index4;
+      }
+    }
+    let str = "";
+    if (is_primitive(thing)) {
+      str = stringify_primitive2(thing);
+    } else {
+      const type = get_type(thing);
+      switch (type) {
+        case "Number":
+        case "String":
+        case "Boolean":
+          str = `["Object",${stringify_primitive2(thing)}]`;
+          break;
+        case "BigInt":
+          str = `["BigInt",${thing}]`;
+          break;
+        case "Date":
+          str = `["Date","${thing.toISOString()}"]`;
+          break;
+        case "RegExp":
+          const { source, flags } = thing;
+          str = flags ? `["RegExp",${stringify_string(source)},"${flags}"]` : `["RegExp",${stringify_string(source)}]`;
+          break;
+        case "Array":
+          str = "[";
+          for (let i = 0; i < thing.length; i += 1) {
+            if (i > 0)
+              str += ",";
+            if (i in thing) {
+              keys.push(`[${i}]`);
+              str += flatten(thing[i]);
+              keys.pop();
+            } else {
+              str += HOLE;
+            }
+          }
+          str += "]";
+          break;
+        case "Set":
+          str = '["Set"';
+          for (const value2 of thing) {
+            str += `,${flatten(value2)}`;
+          }
+          str += "]";
+          break;
+        case "Map":
+          str = '["Map"';
+          for (const [key2, value2] of thing) {
+            keys.push(
+              `.get(${is_primitive(key2) ? stringify_primitive2(key2) : "..."})`
+            );
+            str += `,${flatten(key2)},${flatten(value2)}`;
+          }
+          str += "]";
+          break;
+        default:
+          if (!is_plain_object(thing)) {
+            throw new DevalueError(
+              `Cannot stringify arbitrary non-POJOs`,
+              keys
+            );
+          }
+          if (Object.getOwnPropertySymbols(thing).length > 0) {
+            throw new DevalueError(
+              `Cannot stringify POJOs with symbolic keys`,
+              keys
+            );
+          }
+          if (Object.getPrototypeOf(thing) === null) {
+            str = '["null"';
+            for (const key2 in thing) {
+              keys.push(`.${key2}`);
+              str += `,${stringify_string(key2)},${flatten(thing[key2])}`;
+              keys.pop();
+            }
+            str += "]";
+          } else {
+            str = "{";
+            let started = false;
+            for (const key2 in thing) {
+              if (started)
+                str += ",";
+              started = true;
+              keys.push(`.${key2}`);
+              str += `${stringify_string(key2)}:${flatten(thing[key2])}`;
+              keys.pop();
+            }
+            str += "}";
+          }
+      }
+    }
+    stringified[index4] = str;
+    return index4;
+  }
+  const index3 = flatten(value);
+  if (index3 < 0)
+    return `${index3}`;
+  return `[${stringified.join(",")}]`;
+}
+function stringify_primitive2(thing) {
+  const type = typeof thing;
+  if (type === "string")
+    return stringify_string(thing);
+  if (thing instanceof String)
+    return stringify_string(thing.toString());
+  if (thing === void 0)
+    return UNDEFINED.toString();
+  if (thing === 0 && 1 / thing < 0)
+    return NEGATIVE_ZERO.toString();
+  if (type === "bigint")
+    return `["BigInt","${thing}"]`;
+  return String(thing);
+}
+var init_stringify = __esm({
+  "node_modules/devalue/src/stringify.js"() {
+    init_utils();
+    init_constants();
+  }
+});
+
+// node_modules/devalue/index.js
+var init_devalue = __esm({
+  "node_modules/devalue/index.js"() {
+    init_uneval();
+    init_parse();
+    init_stringify();
+  }
+});
+
 // node_modules/cookie/index.js
 var require_cookie = __commonJS({
   "node_modules/cookie/index.js"(exports) {
@@ -615,7 +1297,7 @@ var init_layout_ts = __esm({
 var title;
 var init_config = __esm({
   ".svelte-kit/output/server/chunks/config.js"() {
-    title = "Benji";
+    title = "Benjamin Karlsson";
   }
 });
 
@@ -627,7 +1309,7 @@ __export(layout_svelte_exports, {
 function is_void(name) {
   return void_element_names.test(name) || name.toLowerCase() === "!doctype";
 }
-var void_element_names, defaultAttributes, defaultAttributes$1, Icon, Icon$1, Moon, Moon$1, Sun, Sun$1, Toggle, Header, Footer, Layout;
+var void_element_names, defaultAttributes, defaultAttributes$1, Icon, Icon$1, Github, Github$1, Instagram, Instagram$1, Linkedin, Linkedin$1, Menu, Menu$1, Moon, Moon$1, Sun, Sun$1, Toggle, Header, Footer, Layout;
 var init_layout_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_layout.svelte.js"() {
     init_ssr();
@@ -687,6 +1369,122 @@ var init_layout_svelte = __esm({
       })}${slots.default ? slots.default({}) : ``}</svg>`;
     });
     Icon$1 = Icon;
+    Github = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      const iconNode = [
+        [
+          "path",
+          {
+            "d": "M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+          }
+        ],
+        ["path", { "d": "M9 18c-4.51 2-5-2-7-2" }]
+      ];
+      return `  ${validate_component(Icon$1, "Icon").$$render($$result, Object.assign({}, { name: "github" }, $$props, { iconNode }), {}, {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      })}`;
+    });
+    Github$1 = Github;
+    Instagram = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      const iconNode = [
+        [
+          "rect",
+          {
+            "width": "20",
+            "height": "20",
+            "x": "2",
+            "y": "2",
+            "rx": "5",
+            "ry": "5"
+          }
+        ],
+        [
+          "path",
+          {
+            "d": "M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "17.5",
+            "x2": "17.51",
+            "y1": "6.5",
+            "y2": "6.5"
+          }
+        ]
+      ];
+      return `  ${validate_component(Icon$1, "Icon").$$render($$result, Object.assign({}, { name: "instagram" }, $$props, { iconNode }), {}, {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      })}`;
+    });
+    Instagram$1 = Instagram;
+    Linkedin = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      const iconNode = [
+        [
+          "path",
+          {
+            "d": "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+          }
+        ],
+        [
+          "rect",
+          {
+            "width": "4",
+            "height": "12",
+            "x": "2",
+            "y": "9"
+          }
+        ],
+        ["circle", { "cx": "4", "cy": "4", "r": "2" }]
+      ];
+      return `  ${validate_component(Icon$1, "Icon").$$render($$result, Object.assign({}, { name: "linkedin" }, $$props, { iconNode }), {}, {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      })}`;
+    });
+    Linkedin$1 = Linkedin;
+    Menu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      const iconNode = [
+        [
+          "line",
+          {
+            "x1": "4",
+            "x2": "20",
+            "y1": "12",
+            "y2": "12"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "4",
+            "x2": "20",
+            "y1": "6",
+            "y2": "6"
+          }
+        ],
+        [
+          "line",
+          {
+            "x1": "4",
+            "x2": "20",
+            "y1": "18",
+            "y2": "18"
+          }
+        ]
+      ];
+      return `  ${validate_component(Icon$1, "Icon").$$render($$result, Object.assign({}, { name: "menu" }, $$props, { iconNode }), {}, {
+        default: () => {
+          return `${slots.default ? slots.default({}) : ``}`;
+        }
+      })}`;
+    });
+    Menu$1 = Menu;
     Moon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       const iconNode = [
         [
@@ -723,16 +1521,18 @@ var init_layout_svelte = __esm({
     });
     Sun$1 = Sun;
     Toggle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<label class="swap swap-rotate"><input aria-label="Toggle Theme" type="checkbox" class="theme-controller" value="synthwave"> ${validate_component(Sun$1, "Sun").$$render($$result, { class: "swap-on" }, {}, {})} ${validate_component(Moon$1, "Moon").$$render($$result, { class: "swap-off" }, {}, {})}</label>`;
+      return `<label class="swap swap-rotate"><input aria-label="Toggle Theme" type="checkbox" class="theme-controller w-10" value="synthwave"> ${validate_component(Sun$1, "Sun").$$render($$result, { class: "swap-on" }, {}, {})} ${validate_component(Moon$1, "Moon").$$render($$result, { class: "swap-off" }, {}, {})}</label>`;
     });
     Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<nav class="block m-7 sm:flex sm:space-x-0 justify-between"><a href="/" class="title"><b>${escape(title)}</b></a> <ul class="flex gap-7" data-svelte-h="svelte-1moy1xf"><li class=""><a class="inherit decoration-0" href="/blog">Blog</a></li> <li class=""><a class="inherit decoration-0" href="/about">About</a></li> <li class=""><a class="inherit decoration-0" href="/contact">Contact</a></li></ul> <button data-svelte-h="svelte-izorxe">Toggle</button> ${validate_component(Toggle, "Toggle").$$render($$result, {}, {}, {})}</nav>`;
+      return ` <div class="navbar bg-base-100 px-6"><div class="navbar-start" data-svelte-h="svelte-1m4w4ha"><a class="btn btn-ghost normal-case" href="/">Benjamin Karlsson</a></div> <div class="navbar-center hidden md:flex" data-svelte-h="svelte-70sb8j"><ul class="menu menu-horizontal px-1"><li class=""><a class="inherit decoration-0" href="/">Home</a></li> <li class=""><a class="inherit decoration-0" href="/blog">Blog</a></li> <li class=""><a class="inherit decoration-0" href="/portfolio">Portfolio</a></li> <li class=""><a class="inherit decoration-0" href="/about">About</a></li></ul></div> <div class="navbar-end"><div class="hidden md:flex">${validate_component(Toggle, "Toggle").$$render($$result, {}, {}, {})}</div> <div class="dropdown dropdown-bottom dropdown-end block md:hidden"><div tabindex="0" role="button" class="btn m-1 btn-ghost btn-square sm:btn-sm">${validate_component(Menu$1, "Menu").$$render($$result, {}, {}, {})}</div>      <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"><li class="" data-svelte-h="svelte-f7ff05"><a class="inherit decoration-0" href="/">Home</a></li> <li class="" data-svelte-h="svelte-1ohni4"><a class="inherit decoration-0" href="/blog">Blog</a></li> <li class="" data-svelte-h="svelte-n29uw8"><a class="inherit decoration-0" href="/portfolio">Portfolio</a></li> <li class="" data-svelte-h="svelte-1ibgiay"><a class="inherit decoration-0" href="/about">About</a></li> <li class=""><button class="inherit decoration-0" data-svelte-h="svelte-ax5pvz">Toggle theme</button></li></ul></div></div></div>`;
     });
     Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<footer class="block m-7 sm:flex sm:space-x-0 border-t-2"><p>${escape(title)} \xA9 ${escape((/* @__PURE__ */ new Date()).getFullYear())}</p></footer>`;
+      return `<footer class="block px-6 py-24 sm:py-32 bg-base-200 justify-center"><div class="m-auto max-w-7xl" data-svelte-h="svelte-1ff9665"><h3 class="text-3xl font-bold tracking-tight sm:text-xl">Oh, this is a footer? <img class="w-12 inline" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Monocle.png" alt="Face with Monocle"></h3> <p class="max-w-prose mt-5 text-sm leading-6">I like to blog about stuff like productivity, business, health &amp;
+            fitness, and other stuff I&#39;m interested in. Hopefully you&#39;ll find
+            some of it interesting too.</p> <ul class="mt-16 flex flex-wrap gap-4 font-bold text-sm"><li><a class="btn btn-ghost inherit" href="/">Home</a></li> <li><a class="btn btn-ghost inherit" href="/blog">Blog</a></li> <li><a class="btn btn-ghost inherit" href="/portfolio">Portfolio</a></li> <li><a class="btn btn-ghost inherit" href="/about">About</a></li></ul></div> <div class="max-w-7xl m-auto flex justify-between pt-10 mt-10 border-t-base-300 border-t-1 text-neutral-600"><p>\xA9 ${escape((/* @__PURE__ */ new Date()).getFullYear())} ${escape(title)}, All rights reserved.</p> <ul class="grid grid-flow-col gap-4"><li><a href="https://www.instagram.com/BENJIMINK_" target="_blank" rel="noopener noreferrer">${validate_component(Instagram$1, "Instagram").$$render($$result, {}, {}, {})}</a></li> <li><a href="https://github.com/B3Kay" target="_blank" rel="noopener noreferrer">${validate_component(Github$1, "Github").$$render($$result, {}, {}, {})}</a></li> <li><a href="https://www.linkedin.com/in/benjik/" target="_blank" rel="noopener noreferrer">${validate_component(Linkedin$1, "Linkedin").$$render($$result, {}, {}, {})}</a></li></ul></div></footer>`;
     });
     Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<div class="h-full max-w-screen-sxl grid grid-rows-layout">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main class="md:p-0 p-9 m-7">${slots.default ? slots.default({}) : ``}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
+      return `${$$result.head += `<!-- HEAD_svelte-1j6j911_START --><script data-goatcounter="https://benjaminkarlsson.goatcounter.com/count" async src="//gc.zgo.at/count.js" data-svelte-h="svelte-19ze9uc"><\/script><!-- HEAD_svelte-1j6j911_END -->`, ""} <div class="h-full max-w-screen-sxl grid grid-rows-layout">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main class="p-0 md:p-9 m-6">${slots.default ? slots.default({}) : ``}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
     });
   }
 });
@@ -755,8 +1555,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
     universal_id = "src/routes/+layout.ts";
-    imports = ["_app/immutable/nodes/0.o_8uhFL4.js", "_app/immutable/chunks/scheduler.69abA-Ez.js", "_app/immutable/chunks/index.f2uyaywR.js", "_app/immutable/chunks/config.zROGvkBR.js", "_app/immutable/chunks/index.Esrvn6KB.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.-oqiv04n.js"];
-    stylesheets = ["_app/immutable/assets/0.dPcb0Woo.css"];
+    imports = ["_app/immutable/nodes/0.-HeW71I1.js", "_app/immutable/chunks/scheduler.UdHm2bMm.js", "_app/immutable/chunks/index.KQSsc2wL.js", "_app/immutable/chunks/index.eElc9lhr.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.-oqiv04n.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
+    stylesheets = ["_app/immutable/assets/0.y_lvoMqI.css"];
     fonts = [];
   }
 });
@@ -766,10 +1566,22 @@ var error_svelte_exports = {};
 __export(error_svelte_exports, {
   default: () => Error$1
 });
-var getStores, page, Error$1;
+function get(key2, parse3 = JSON.parse) {
+  try {
+    return parse3(sessionStorage[key2]);
+  } catch {
+  }
+}
+var SNAPSHOT_KEY, SCROLL_KEY, getStores, page, Error$1;
 var init_error_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_error.svelte.js"() {
     init_ssr();
+    init_exports();
+    init_devalue();
+    SNAPSHOT_KEY = "sveltekit:snapshot";
+    SCROLL_KEY = "sveltekit:scroll";
+    get(SCROLL_KEY) ?? {};
+    get(SNAPSHOT_KEY) ?? {};
     getStores = () => {
       const stores = getContext("__svelte__");
       return {
@@ -795,7 +1607,7 @@ var init_error_svelte = __esm({
       let $page, $$unsubscribe_page;
       $$unsubscribe_page = subscribe(page, (value) => $page = value);
       $$unsubscribe_page();
-      return `<div class="h-full grid place-content-center"><h1>${escape($page.status)}: ${escape($page.error?.message)}</h1></div>`;
+      return `<main class="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8"><div class="text-center"><p class="text-base font-semibold text-primary">${escape($page.status)}</p> <h1 class="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">${escape($page.error?.message)}</h1> <p class="mt-6 text-base leading-7 text-gray-600" data-svelte-h="svelte-197pbc7">Sorry, we couldn\u2019t find the page you\u2019re looking for.</p> <div class="mt-10 flex items-center justify-center gap-x-6" data-svelte-h="svelte-1qolau7"><a href="/" class="btn btn-primary normal-case">Go back home</a> </div></div></main>`;
     });
   }
 });
@@ -814,7 +1626,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.XoHEOvnl.js", "_app/immutable/chunks/scheduler.69abA-Ez.js", "_app/immutable/chunks/index.f2uyaywR.js", "_app/immutable/chunks/singletons.K5z8Zpm_.js", "_app/immutable/chunks/index.Esrvn6KB.js"];
+    imports2 = ["_app/immutable/nodes/1.kVqSf-oC.js", "_app/immutable/chunks/scheduler.UdHm2bMm.js", "_app/immutable/chunks/index.KQSsc2wL.js", "_app/immutable/chunks/entry.rsonb6Gh.js", "_app/immutable/chunks/index.eElc9lhr.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -943,6 +1755,17 @@ var options = {
 			: localStorage.setItem('data-theme', 'night')
 
 	<\/script>
+
+	<script>
+		window.op = window.op || function (...args) { (window.op.q = window.op.q || []).push(args); };
+		window.op('init', {
+			clientId: '186b3e1c-b1b3-4846-b947-06ece923666d',
+			trackScreenViews: true,
+			trackOutgoingLinks: true,
+			trackAttributes: true,
+		});
+	<\/script>
+	<script src="https://openpanel.dev/op1.js" defer async><\/script>
 </head>
 
 <body data-sveltekit-preload-data="hover">
@@ -1018,9 +1841,9 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1aasbjl"
+  version_hash: "8tl727"
 };
-function get_hooks() {
+async function get_hooks() {
   return {};
 }
 
@@ -1107,462 +1930,9 @@ function text(body2, init2) {
   });
 }
 
-// node_modules/devalue/src/utils.js
-var escaped = {
-  "<": "\\u003C",
-  "\\": "\\\\",
-  "\b": "\\b",
-  "\f": "\\f",
-  "\n": "\\n",
-  "\r": "\\r",
-  "	": "\\t",
-  "\u2028": "\\u2028",
-  "\u2029": "\\u2029"
-};
-var DevalueError = class extends Error {
-  /**
-   * @param {string} message
-   * @param {string[]} keys
-   */
-  constructor(message, keys) {
-    super(message);
-    this.name = "DevalueError";
-    this.path = keys.join("");
-  }
-};
-function is_primitive(thing) {
-  return Object(thing) !== thing;
-}
-var object_proto_names = /* @__PURE__ */ Object.getOwnPropertyNames(
-  Object.prototype
-).sort().join("\0");
-function is_plain_object(thing) {
-  const proto = Object.getPrototypeOf(thing);
-  return proto === Object.prototype || proto === null || Object.getOwnPropertyNames(proto).sort().join("\0") === object_proto_names;
-}
-function get_type(thing) {
-  return Object.prototype.toString.call(thing).slice(8, -1);
-}
-function get_escaped_char(char) {
-  switch (char) {
-    case '"':
-      return '\\"';
-    case "<":
-      return "\\u003C";
-    case "\\":
-      return "\\\\";
-    case "\n":
-      return "\\n";
-    case "\r":
-      return "\\r";
-    case "	":
-      return "\\t";
-    case "\b":
-      return "\\b";
-    case "\f":
-      return "\\f";
-    case "\u2028":
-      return "\\u2028";
-    case "\u2029":
-      return "\\u2029";
-    default:
-      return char < " " ? `\\u${char.charCodeAt(0).toString(16).padStart(4, "0")}` : "";
-  }
-}
-function stringify_string(str) {
-  let result = "";
-  let last_pos = 0;
-  const len = str.length;
-  for (let i = 0; i < len; i += 1) {
-    const char = str[i];
-    const replacement = get_escaped_char(char);
-    if (replacement) {
-      result += str.slice(last_pos, i) + replacement;
-      last_pos = i + 1;
-    }
-  }
-  return `"${last_pos === 0 ? str : result + str.slice(last_pos)}"`;
-}
-
-// node_modules/devalue/src/uneval.js
-var chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$";
-var unsafe_chars = /[<\b\f\n\r\t\0\u2028\u2029]/g;
-var reserved = /^(?:do|if|in|for|int|let|new|try|var|byte|case|char|else|enum|goto|long|this|void|with|await|break|catch|class|const|final|float|short|super|throw|while|yield|delete|double|export|import|native|return|switch|throws|typeof|boolean|default|extends|finally|package|private|abstract|continue|debugger|function|volatile|interface|protected|transient|implements|instanceof|synchronized)$/;
-function uneval(value, replacer) {
-  const counts = /* @__PURE__ */ new Map();
-  const keys = [];
-  const custom = /* @__PURE__ */ new Map();
-  function walk(thing) {
-    if (typeof thing === "function") {
-      throw new DevalueError(`Cannot stringify a function`, keys);
-    }
-    if (!is_primitive(thing)) {
-      if (counts.has(thing)) {
-        counts.set(thing, counts.get(thing) + 1);
-        return;
-      }
-      counts.set(thing, 1);
-      if (replacer) {
-        const str2 = replacer(thing);
-        if (typeof str2 === "string") {
-          custom.set(thing, str2);
-          return;
-        }
-      }
-      const type = get_type(thing);
-      switch (type) {
-        case "Number":
-        case "BigInt":
-        case "String":
-        case "Boolean":
-        case "Date":
-        case "RegExp":
-          return;
-        case "Array":
-          thing.forEach((value2, i) => {
-            keys.push(`[${i}]`);
-            walk(value2);
-            keys.pop();
-          });
-          break;
-        case "Set":
-          Array.from(thing).forEach(walk);
-          break;
-        case "Map":
-          for (const [key2, value2] of thing) {
-            keys.push(
-              `.get(${is_primitive(key2) ? stringify_primitive(key2) : "..."})`
-            );
-            walk(value2);
-            keys.pop();
-          }
-          break;
-        default:
-          if (!is_plain_object(thing)) {
-            throw new DevalueError(
-              `Cannot stringify arbitrary non-POJOs`,
-              keys
-            );
-          }
-          if (Object.getOwnPropertySymbols(thing).length > 0) {
-            throw new DevalueError(
-              `Cannot stringify POJOs with symbolic keys`,
-              keys
-            );
-          }
-          for (const key2 in thing) {
-            keys.push(`.${key2}`);
-            walk(thing[key2]);
-            keys.pop();
-          }
-      }
-    }
-  }
-  walk(value);
-  const names = /* @__PURE__ */ new Map();
-  Array.from(counts).filter((entry) => entry[1] > 1).sort((a, b) => b[1] - a[1]).forEach((entry, i) => {
-    names.set(entry[0], get_name(i));
-  });
-  function stringify2(thing) {
-    if (names.has(thing)) {
-      return names.get(thing);
-    }
-    if (is_primitive(thing)) {
-      return stringify_primitive(thing);
-    }
-    if (custom.has(thing)) {
-      return custom.get(thing);
-    }
-    const type = get_type(thing);
-    switch (type) {
-      case "Number":
-      case "String":
-      case "Boolean":
-        return `Object(${stringify2(thing.valueOf())})`;
-      case "RegExp":
-        return `new RegExp(${stringify_string(thing.source)}, "${thing.flags}")`;
-      case "Date":
-        return `new Date(${thing.getTime()})`;
-      case "Array":
-        const members = (
-          /** @type {any[]} */
-          thing.map(
-            (v, i) => i in thing ? stringify2(v) : ""
-          )
-        );
-        const tail = thing.length === 0 || thing.length - 1 in thing ? "" : ",";
-        return `[${members.join(",")}${tail}]`;
-      case "Set":
-      case "Map":
-        return `new ${type}([${Array.from(thing).map(stringify2).join(",")}])`;
-      default:
-        const obj = `{${Object.keys(thing).map((key2) => `${safe_key(key2)}:${stringify2(thing[key2])}`).join(",")}}`;
-        const proto = Object.getPrototypeOf(thing);
-        if (proto === null) {
-          return Object.keys(thing).length > 0 ? `Object.assign(Object.create(null),${obj})` : `Object.create(null)`;
-        }
-        return obj;
-    }
-  }
-  const str = stringify2(value);
-  if (names.size) {
-    const params = [];
-    const statements = [];
-    const values = [];
-    names.forEach((name, thing) => {
-      params.push(name);
-      if (custom.has(thing)) {
-        values.push(
-          /** @type {string} */
-          custom.get(thing)
-        );
-        return;
-      }
-      if (is_primitive(thing)) {
-        values.push(stringify_primitive(thing));
-        return;
-      }
-      const type = get_type(thing);
-      switch (type) {
-        case "Number":
-        case "String":
-        case "Boolean":
-          values.push(`Object(${stringify2(thing.valueOf())})`);
-          break;
-        case "RegExp":
-          values.push(thing.toString());
-          break;
-        case "Date":
-          values.push(`new Date(${thing.getTime()})`);
-          break;
-        case "Array":
-          values.push(`Array(${thing.length})`);
-          thing.forEach((v, i) => {
-            statements.push(`${name}[${i}]=${stringify2(v)}`);
-          });
-          break;
-        case "Set":
-          values.push(`new Set`);
-          statements.push(
-            `${name}.${Array.from(thing).map((v) => `add(${stringify2(v)})`).join(".")}`
-          );
-          break;
-        case "Map":
-          values.push(`new Map`);
-          statements.push(
-            `${name}.${Array.from(thing).map(([k, v]) => `set(${stringify2(k)}, ${stringify2(v)})`).join(".")}`
-          );
-          break;
-        default:
-          values.push(
-            Object.getPrototypeOf(thing) === null ? "Object.create(null)" : "{}"
-          );
-          Object.keys(thing).forEach((key2) => {
-            statements.push(
-              `${name}${safe_prop(key2)}=${stringify2(thing[key2])}`
-            );
-          });
-      }
-    });
-    statements.push(`return ${str}`);
-    return `(function(${params.join(",")}){${statements.join(
-      ";"
-    )}}(${values.join(",")}))`;
-  } else {
-    return str;
-  }
-}
-function get_name(num) {
-  let name = "";
-  do {
-    name = chars[num % chars.length] + name;
-    num = ~~(num / chars.length) - 1;
-  } while (num >= 0);
-  return reserved.test(name) ? `${name}0` : name;
-}
-function escape_unsafe_char(c) {
-  return escaped[c] || c;
-}
-function escape_unsafe_chars(str) {
-  return str.replace(unsafe_chars, escape_unsafe_char);
-}
-function safe_key(key2) {
-  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? key2 : escape_unsafe_chars(JSON.stringify(key2));
-}
-function safe_prop(key2) {
-  return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? `.${key2}` : `[${escape_unsafe_chars(JSON.stringify(key2))}]`;
-}
-function stringify_primitive(thing) {
-  if (typeof thing === "string")
-    return stringify_string(thing);
-  if (thing === void 0)
-    return "void 0";
-  if (thing === 0 && 1 / thing < 0)
-    return "-0";
-  const str = String(thing);
-  if (typeof thing === "number")
-    return str.replace(/^(-)?0\./, "$1.");
-  if (typeof thing === "bigint")
-    return thing + "n";
-  return str;
-}
-
-// node_modules/devalue/src/constants.js
-var UNDEFINED = -1;
-var HOLE = -2;
-var NAN = -3;
-var POSITIVE_INFINITY = -4;
-var NEGATIVE_INFINITY = -5;
-var NEGATIVE_ZERO = -6;
-
-// node_modules/devalue/src/stringify.js
-function stringify(value, reducers) {
-  const stringified = [];
-  const indexes = /* @__PURE__ */ new Map();
-  const custom = [];
-  for (const key2 in reducers) {
-    custom.push({ key: key2, fn: reducers[key2] });
-  }
-  const keys = [];
-  let p = 0;
-  function flatten(thing) {
-    if (typeof thing === "function") {
-      throw new DevalueError(`Cannot stringify a function`, keys);
-    }
-    if (indexes.has(thing))
-      return indexes.get(thing);
-    if (thing === void 0)
-      return UNDEFINED;
-    if (Number.isNaN(thing))
-      return NAN;
-    if (thing === Infinity)
-      return POSITIVE_INFINITY;
-    if (thing === -Infinity)
-      return NEGATIVE_INFINITY;
-    if (thing === 0 && 1 / thing < 0)
-      return NEGATIVE_ZERO;
-    const index4 = p++;
-    indexes.set(thing, index4);
-    for (const { key: key2, fn } of custom) {
-      const value2 = fn(thing);
-      if (value2) {
-        stringified[index4] = `["${key2}",${flatten(value2)}]`;
-        return index4;
-      }
-    }
-    let str = "";
-    if (is_primitive(thing)) {
-      str = stringify_primitive2(thing);
-    } else {
-      const type = get_type(thing);
-      switch (type) {
-        case "Number":
-        case "String":
-        case "Boolean":
-          str = `["Object",${stringify_primitive2(thing)}]`;
-          break;
-        case "BigInt":
-          str = `["BigInt",${thing}]`;
-          break;
-        case "Date":
-          str = `["Date","${thing.toISOString()}"]`;
-          break;
-        case "RegExp":
-          const { source, flags } = thing;
-          str = flags ? `["RegExp",${stringify_string(source)},"${flags}"]` : `["RegExp",${stringify_string(source)}]`;
-          break;
-        case "Array":
-          str = "[";
-          for (let i = 0; i < thing.length; i += 1) {
-            if (i > 0)
-              str += ",";
-            if (i in thing) {
-              keys.push(`[${i}]`);
-              str += flatten(thing[i]);
-              keys.pop();
-            } else {
-              str += HOLE;
-            }
-          }
-          str += "]";
-          break;
-        case "Set":
-          str = '["Set"';
-          for (const value2 of thing) {
-            str += `,${flatten(value2)}`;
-          }
-          str += "]";
-          break;
-        case "Map":
-          str = '["Map"';
-          for (const [key2, value2] of thing) {
-            keys.push(
-              `.get(${is_primitive(key2) ? stringify_primitive2(key2) : "..."})`
-            );
-            str += `,${flatten(key2)},${flatten(value2)}`;
-          }
-          str += "]";
-          break;
-        default:
-          if (!is_plain_object(thing)) {
-            throw new DevalueError(
-              `Cannot stringify arbitrary non-POJOs`,
-              keys
-            );
-          }
-          if (Object.getOwnPropertySymbols(thing).length > 0) {
-            throw new DevalueError(
-              `Cannot stringify POJOs with symbolic keys`,
-              keys
-            );
-          }
-          if (Object.getPrototypeOf(thing) === null) {
-            str = '["null"';
-            for (const key2 in thing) {
-              keys.push(`.${key2}`);
-              str += `,${stringify_string(key2)},${flatten(thing[key2])}`;
-              keys.pop();
-            }
-            str += "]";
-          } else {
-            str = "{";
-            let started = false;
-            for (const key2 in thing) {
-              if (started)
-                str += ",";
-              started = true;
-              keys.push(`.${key2}`);
-              str += `${stringify_string(key2)}:${flatten(thing[key2])}`;
-              keys.pop();
-            }
-            str += "}";
-          }
-      }
-    }
-    stringified[index4] = str;
-    return index4;
-  }
-  const index3 = flatten(value);
-  if (index3 < 0)
-    return `${index3}`;
-  return `[${stringified.join(",")}]`;
-}
-function stringify_primitive2(thing) {
-  const type = typeof thing;
-  if (type === "string")
-    return stringify_string(thing);
-  if (thing instanceof String)
-    return stringify_string(thing.toString());
-  if (thing === void 0)
-    return UNDEFINED.toString();
-  if (thing === 0 && 1 / thing < 0)
-    return NEGATIVE_ZERO.toString();
-  if (type === "bigint")
-    return `["BigInt","${thing}"]`;
-  return String(thing);
-}
-
 // .svelte-kit/output/server/index.js
+init_exports();
+init_devalue();
 init_ssr();
 var import_cookie = __toESM(require_cookie(), 1);
 var set_cookie_parser = __toESM(require_set_cookie(), 1);
@@ -1785,123 +2155,6 @@ function compact(arr) {
     /** @returns {val is NonNullable<T>} */
     (val) => val != null
   );
-}
-var internal = new URL("sveltekit-internal://");
-function resolve(base2, path) {
-  if (path[0] === "/" && path[1] === "/")
-    return path;
-  let url = new URL(base2, internal);
-  url = new URL(path, url);
-  return url.protocol === internal.protocol ? url.pathname + url.search + url.hash : url.href;
-}
-function normalize_path(path, trailing_slash) {
-  if (path === "/" || trailing_slash === "ignore")
-    return path;
-  if (trailing_slash === "never") {
-    return path.endsWith("/") ? path.slice(0, -1) : path;
-  } else if (trailing_slash === "always" && !path.endsWith("/")) {
-    return path + "/";
-  }
-  return path;
-}
-function decode_pathname(pathname) {
-  return pathname.split("%25").map(decodeURI).join("%25");
-}
-function decode_params(params) {
-  for (const key2 in params) {
-    params[key2] = decodeURIComponent(params[key2]);
-  }
-  return params;
-}
-var tracked_url_properties = (
-  /** @type {const} */
-  [
-    "href",
-    "pathname",
-    "search",
-    "toString",
-    "toJSON"
-  ]
-);
-function make_trackable(url, callback, search_params_callback) {
-  const tracked = new URL(url);
-  Object.defineProperty(tracked, "searchParams", {
-    value: new Proxy(tracked.searchParams, {
-      get(obj, key2) {
-        if (key2 === "get" || key2 === "getAll" || key2 === "has") {
-          return (param) => {
-            search_params_callback(param);
-            return obj[key2](param);
-          };
-        }
-        callback();
-        const value = Reflect.get(obj, key2);
-        return typeof value === "function" ? value.bind(obj) : value;
-      }
-    }),
-    enumerable: true,
-    configurable: true
-  });
-  for (const property of tracked_url_properties) {
-    Object.defineProperty(tracked, property, {
-      get() {
-        callback();
-        return url[property];
-      },
-      enumerable: true,
-      configurable: true
-    });
-  }
-  {
-    tracked[Symbol.for("nodejs.util.inspect.custom")] = (depth, opts, inspect) => {
-      return inspect(url, opts);
-    };
-  }
-  disable_hash(tracked);
-  return tracked;
-}
-function disable_hash(url) {
-  allow_nodejs_console_log(url);
-  Object.defineProperty(url, "hash", {
-    get() {
-      throw new Error(
-        "Cannot access event.url.hash. Consider using `$page.url.hash` inside a component instead"
-      );
-    }
-  });
-}
-function disable_search(url) {
-  allow_nodejs_console_log(url);
-  for (const property of ["search", "searchParams"]) {
-    Object.defineProperty(url, property, {
-      get() {
-        throw new Error(`Cannot access url.${property} on a page with prerendering enabled`);
-      }
-    });
-  }
-}
-function allow_nodejs_console_log(url) {
-  {
-    url[Symbol.for("nodejs.util.inspect.custom")] = (depth, opts, inspect) => {
-      return inspect(new URL(url), opts);
-    };
-  }
-}
-var DATA_SUFFIX = "/__data.json";
-var HTML_DATA_SUFFIX = ".html__data.json";
-function has_data_suffix(pathname) {
-  return pathname.endsWith(DATA_SUFFIX) || pathname.endsWith(HTML_DATA_SUFFIX);
-}
-function add_data_suffix(pathname) {
-  if (pathname.endsWith(".html"))
-    return pathname.replace(/\.html$/, HTML_DATA_SUFFIX);
-  return pathname.replace(/\/$/, "") + DATA_SUFFIX;
-}
-function strip_data_suffix(pathname) {
-  if (pathname.endsWith(HTML_DATA_SUFFIX)) {
-    return pathname.slice(0, -HTML_DATA_SUFFIX.length) + ".html";
-  }
-  return pathname.slice(0, -DATA_SUFFIX.length);
 }
 function is_action_json_request(event) {
   const accept = negotiate(event.request.headers.get("accept") ?? "*/*", [
@@ -2316,10 +2569,10 @@ function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
       }
     });
     if (csr) {
-      const get = response.headers.get;
+      const get2 = response.headers.get;
       response.headers.get = (key2) => {
         const lower = key2.toLowerCase();
-        const value = get.call(response.headers, lower);
+        const value = get2.call(response.headers, lower);
         if (value && !lower.startsWith("x-sveltekit-")) {
           const included = resolve_opts.filterSerializedResponseHeaders(lower, value);
           if (!included) {
@@ -2633,7 +2886,7 @@ var quoted = /* @__PURE__ */ new Set([
   "script"
 ]);
 var crypto_pattern = /^(nonce|sha\d\d\d)-/;
-var _use_hashes, _script_needs_csp, _style_needs_csp, _directives, _script_src, _style_src, _nonce;
+var _use_hashes, _script_needs_csp, _style_needs_csp, _directives, _script_src, _script_src_elem, _style_src, _style_src_attr, _style_src_elem, _nonce;
 var BaseProvider = class {
   /**
    * @param {boolean} use_hashes
@@ -2652,18 +2905,30 @@ var BaseProvider = class {
     /** @type {import('types').Csp.Source[]} */
     __privateAdd(this, _script_src, void 0);
     /** @type {import('types').Csp.Source[]} */
+    __privateAdd(this, _script_src_elem, void 0);
+    /** @type {import('types').Csp.Source[]} */
     __privateAdd(this, _style_src, void 0);
+    /** @type {import('types').Csp.Source[]} */
+    __privateAdd(this, _style_src_attr, void 0);
+    /** @type {import('types').Csp.Source[]} */
+    __privateAdd(this, _style_src_elem, void 0);
     /** @type {string} */
     __privateAdd(this, _nonce, void 0);
     __privateSet(this, _use_hashes, use_hashes);
     __privateSet(this, _directives, directives);
     const d = __privateGet(this, _directives);
     __privateSet(this, _script_src, []);
+    __privateSet(this, _script_src_elem, []);
     __privateSet(this, _style_src, []);
+    __privateSet(this, _style_src_attr, []);
+    __privateSet(this, _style_src_elem, []);
     const effective_script_src = d["script-src"] || d["default-src"];
+    const script_src_elem = d["script-src-elem"];
     const effective_style_src = d["style-src"] || d["default-src"];
-    __privateSet(this, _script_needs_csp, !!effective_script_src && effective_script_src.filter((value) => value !== "unsafe-inline").length > 0);
-    __privateSet(this, _style_needs_csp, !!effective_style_src && effective_style_src.filter((value) => value !== "unsafe-inline").length > 0);
+    const style_src_attr = d["style-src-attr"];
+    const style_src_elem = d["style-src-elem"];
+    __privateSet(this, _script_needs_csp, !!effective_script_src && effective_script_src.filter((value) => value !== "unsafe-inline").length > 0 || !!script_src_elem && script_src_elem.filter((value) => value !== "unsafe-inline").length > 0);
+    __privateSet(this, _style_needs_csp, !!effective_style_src && effective_style_src.filter((value) => value !== "unsafe-inline").length > 0 || !!style_src_attr && style_src_attr.filter((value) => value !== "unsafe-inline").length > 0 || !!style_src_elem && style_src_elem.filter((value) => value !== "unsafe-inline").length > 0);
     this.script_needs_nonce = __privateGet(this, _script_needs_csp) && !__privateGet(this, _use_hashes);
     this.style_needs_nonce = __privateGet(this, _style_needs_csp) && !__privateGet(this, _use_hashes);
     __privateSet(this, _nonce, nonce);
@@ -2671,20 +2936,53 @@ var BaseProvider = class {
   /** @param {string} content */
   add_script(content) {
     if (__privateGet(this, _script_needs_csp)) {
+      const d = __privateGet(this, _directives);
       if (__privateGet(this, _use_hashes)) {
-        __privateGet(this, _script_src).push(`sha256-${sha256(content)}`);
-      } else if (__privateGet(this, _script_src).length === 0) {
-        __privateGet(this, _script_src).push(`nonce-${__privateGet(this, _nonce)}`);
+        const hash2 = sha256(content);
+        __privateGet(this, _script_src).push(`sha256-${hash2}`);
+        if (d["script-src-elem"]?.length) {
+          __privateGet(this, _script_src_elem).push(`sha256-${hash2}`);
+        }
+      } else {
+        if (__privateGet(this, _script_src).length === 0) {
+          __privateGet(this, _script_src).push(`nonce-${__privateGet(this, _nonce)}`);
+        }
+        if (d["script-src-elem"]?.length) {
+          __privateGet(this, _script_src_elem).push(`nonce-${__privateGet(this, _nonce)}`);
+        }
       }
     }
   }
   /** @param {string} content */
   add_style(content) {
     if (__privateGet(this, _style_needs_csp)) {
+      const empty_comment_hash = "9OlNO0DNEeaVzHL4RZwCLsBHA8WBQ8toBp/4F5XV2nc=";
+      const d = __privateGet(this, _directives);
       if (__privateGet(this, _use_hashes)) {
-        __privateGet(this, _style_src).push(`sha256-${sha256(content)}`);
-      } else if (__privateGet(this, _style_src).length === 0) {
-        __privateGet(this, _style_src).push(`nonce-${__privateGet(this, _nonce)}`);
+        const hash2 = sha256(content);
+        __privateGet(this, _style_src).push(`sha256-${hash2}`);
+        if (d["style-src-attr"]?.length) {
+          __privateGet(this, _style_src_attr).push(`sha256-${hash2}`);
+        }
+        if (d["style-src-elem"]?.length) {
+          if (hash2 !== empty_comment_hash && !d["style-src-elem"].includes(`sha256-${empty_comment_hash}`)) {
+            __privateGet(this, _style_src_elem).push(`sha256-${empty_comment_hash}`);
+          }
+          __privateGet(this, _style_src_elem).push(`sha256-${hash2}`);
+        }
+      } else {
+        if (__privateGet(this, _style_src).length === 0 && !d["style-src"]?.includes("unsafe-inline")) {
+          __privateGet(this, _style_src).push(`nonce-${__privateGet(this, _nonce)}`);
+        }
+        if (d["style-src-attr"]?.length) {
+          __privateGet(this, _style_src_attr).push(`nonce-${__privateGet(this, _nonce)}`);
+        }
+        if (d["style-src-elem"]?.length) {
+          if (!d["style-src-elem"].includes(`sha256-${empty_comment_hash}`)) {
+            __privateGet(this, _style_src_elem).push(`sha256-${empty_comment_hash}`);
+          }
+          __privateGet(this, _style_src_elem).push(`nonce-${__privateGet(this, _nonce)}`);
+        }
       }
     }
   }
@@ -2700,10 +2998,28 @@ var BaseProvider = class {
         ...__privateGet(this, _style_src)
       ];
     }
+    if (__privateGet(this, _style_src_attr).length > 0) {
+      directives["style-src-attr"] = [
+        ...directives["style-src-attr"] || [],
+        ...__privateGet(this, _style_src_attr)
+      ];
+    }
+    if (__privateGet(this, _style_src_elem).length > 0) {
+      directives["style-src-elem"] = [
+        ...directives["style-src-elem"] || [],
+        ...__privateGet(this, _style_src_elem)
+      ];
+    }
     if (__privateGet(this, _script_src).length > 0) {
       directives["script-src"] = [
         ...directives["script-src"] || directives["default-src"] || [],
         ...__privateGet(this, _script_src)
+      ];
+    }
+    if (__privateGet(this, _script_src_elem).length > 0) {
+      directives["script-src-elem"] = [
+        ...directives["script-src-elem"] || [],
+        ...__privateGet(this, _script_src_elem)
       ];
     }
     for (const key2 in directives) {
@@ -2736,7 +3052,10 @@ _script_needs_csp = new WeakMap();
 _style_needs_csp = new WeakMap();
 _directives = new WeakMap();
 _script_src = new WeakMap();
+_script_src_elem = new WeakMap();
 _style_src = new WeakMap();
+_style_src_attr = new WeakMap();
+_style_src_elem = new WeakMap();
 _nonce = new WeakMap();
 var CspProvider = class extends BaseProvider {
   get_meta() {
@@ -3010,11 +3329,14 @@ async function render_response({
       }
     }
     const blocks = [];
-    const properties = [
-      assets && `assets: ${s(assets)}`,
-      `base: ${base_expression}`,
-      `env: ${!client.uses_env_dynamic_public || state.prerendering ? null : s(public_env)}`
-    ].filter(Boolean);
+    const load_env_eagerly = client.uses_env_dynamic_public && state.prerendering;
+    const properties = [`base: ${base_expression}`];
+    if (assets) {
+      properties.push(`assets: ${s(assets)}`);
+    }
+    if (client.uses_env_dynamic_public) {
+      properties.push(`env: ${load_env_eagerly ? "null" : s(public_env)}`);
+    }
     if (chunks) {
       blocks.push("const deferred = new Map();");
       properties.push(`defer: (id) => new Promise((fulfil, reject) => {
@@ -3058,16 +3380,31 @@ async function render_response({
       if (options2.embedded) {
         hydrate.push(`params: ${uneval(event.params)}`, `route: ${s(event.route)}`);
       }
+      const indent = "	".repeat(load_env_eagerly ? 7 : 6);
       args.push(`{
-							${hydrate.join(",\n							")}
-						}`);
+${indent}	${hydrate.join(`,
+${indent}	`)}
+${indent}}`);
     }
-    blocks.push(`Promise.all([
+    if (load_env_eagerly) {
+      blocks.push(`import(${s(`${base$1}/${options2.app_dir}/env.js`)}).then(({ env }) => {
+						${global}.env = env;
+
+						Promise.all([
+							import(${s(prefixed(client.start))}),
+							import(${s(prefixed(client.app))})
+						]).then(([kit, app]) => {
+							kit.start(${args.join(", ")});
+						});
+					});`);
+    } else {
+      blocks.push(`Promise.all([
 						import(${s(prefixed(client.start))}),
 						import(${s(prefixed(client.app))})
 					]).then(([kit, app]) => {
 						kit.start(${args.join(", ")});
 					});`);
+    }
     if (options2.service_worker) {
       const opts = "";
       blocks.push(`if ('serviceWorker' in navigator) {
@@ -4029,71 +4366,6 @@ function normalize_fetch_input(info, init2, url) {
   }
   return new Request(typeof info === "string" ? new URL(info, url) : info, init2);
 }
-function validator(expected) {
-  function validate(module, file) {
-    if (!module)
-      return;
-    for (const key2 in module) {
-      if (key2[0] === "_" || expected.has(key2))
-        continue;
-      const values = [...expected.values()];
-      const hint = hint_for_supported_files(key2, file?.slice(file.lastIndexOf("."))) ?? `valid exports are ${values.join(", ")}, or anything with a '_' prefix`;
-      throw new Error(`Invalid export '${key2}'${file ? ` in ${file}` : ""} (${hint})`);
-    }
-  }
-  return validate;
-}
-function hint_for_supported_files(key2, ext = ".js") {
-  const supported_files = [];
-  if (valid_layout_exports.has(key2)) {
-    supported_files.push(`+layout${ext}`);
-  }
-  if (valid_page_exports.has(key2)) {
-    supported_files.push(`+page${ext}`);
-  }
-  if (valid_layout_server_exports.has(key2)) {
-    supported_files.push(`+layout.server${ext}`);
-  }
-  if (valid_page_server_exports.has(key2)) {
-    supported_files.push(`+page.server${ext}`);
-  }
-  if (valid_server_exports.has(key2)) {
-    supported_files.push(`+server${ext}`);
-  }
-  if (supported_files.length > 0) {
-    return `'${key2}' is a valid export in ${supported_files.slice(0, -1).join(", ")}${supported_files.length > 1 ? " or " : ""}${supported_files.at(-1)}`;
-  }
-}
-var valid_layout_exports = /* @__PURE__ */ new Set([
-  "load",
-  "prerender",
-  "csr",
-  "ssr",
-  "trailingSlash",
-  "config"
-]);
-var valid_page_exports = /* @__PURE__ */ new Set([...valid_layout_exports, "entries"]);
-var valid_layout_server_exports = /* @__PURE__ */ new Set([...valid_layout_exports]);
-var valid_page_server_exports = /* @__PURE__ */ new Set([...valid_layout_server_exports, "actions", "entries"]);
-var valid_server_exports = /* @__PURE__ */ new Set([
-  "GET",
-  "POST",
-  "PATCH",
-  "PUT",
-  "DELETE",
-  "OPTIONS",
-  "HEAD",
-  "fallback",
-  "prerender",
-  "trailingSlash",
-  "config",
-  "entries"
-]);
-var validate_layout_exports = validator(valid_layout_exports);
-var validate_page_exports = validator(valid_page_exports);
-var validate_layout_server_exports = validator(valid_layout_server_exports);
-var validate_page_server_exports = validator(valid_page_server_exports);
-var validate_server_exports = validator(valid_server_exports);
 var body;
 var etag;
 var headers;
@@ -4129,9 +4401,17 @@ async function respond(request, options2, manifest2, state) {
       return text(csrf_error.body.message, { status: csrf_error.status });
     }
   }
+  let rerouted_path;
+  try {
+    rerouted_path = options2.hooks.reroute({ url: new URL(url) }) ?? url.pathname;
+  } catch (e) {
+    return text("Internal Server Error", {
+      status: 500
+    });
+  }
   let decoded;
   try {
-    decoded = decode_pathname(url.pathname);
+    decoded = decode_pathname(rerouted_path);
   } catch {
     return text("Malformed URI", { status: 400 });
   }
@@ -4145,6 +4425,9 @@ async function respond(request, options2, manifest2, state) {
   }
   if (decoded === `/${options2.app_dir}/env.js`) {
     return get_public_env(request);
+  }
+  if (decoded.startsWith(`/${options2.app_dir}`)) {
+    return text("Not found", { status: 404 });
   }
   const is_data_request = has_data_suffix(decoded);
   let invalidated_data_nodes;
@@ -4514,7 +4797,9 @@ var Server = class {
         __privateGet(this, _options).hooks = {
           handle: module.handle || (({ event, resolve: resolve2 }) => resolve2(event)),
           handleError: module.handleError || (({ error }) => console.error(error)),
-          handleFetch: module.handleFetch || (({ request, fetch: fetch2 }) => fetch2(request))
+          handleFetch: module.handleFetch || (({ request, fetch: fetch2 }) => fetch2(request)),
+          reroute: module.reroute || (() => {
+          })
         };
       } catch (error) {
         {
@@ -4547,10 +4832,10 @@ var manifest = (() => {
   return {
     appDir: "_app",
     appPath: "_app",
-    assets: /* @__PURE__ */ new Set(["asset/Benjamin CV Fullstack Typescript - 2023.pdf", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "favicon.png"]),
+    assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.TBUlksMs.js", "app": "_app/immutable/entry/app.0eHtfYgF.js", "imports": ["_app/immutable/entry/start.TBUlksMs.js", "_app/immutable/chunks/scheduler.69abA-Ez.js", "_app/immutable/chunks/singletons.K5z8Zpm_.js", "_app/immutable/chunks/index.Esrvn6KB.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.0eHtfYgF.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.69abA-Ez.js", "_app/immutable/chunks/index.f2uyaywR.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.mWS3KHU4.js", "app": "_app/immutable/entry/app.VCwl9hQQ.js", "imports": ["_app/immutable/entry/start.mWS3KHU4.js", "_app/immutable/chunks/entry.rsonb6Gh.js", "_app/immutable/chunks/scheduler.UdHm2bMm.js", "_app/immutable/chunks/index.eElc9lhr.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.VCwl9hQQ.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.UdHm2bMm.js", "_app/immutable/chunks/index.KQSsc2wL.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2)))
@@ -4562,7 +4847,7 @@ var manifest = (() => {
     }
   };
 })();
-var prerendered = /* @__PURE__ */ new Set(["/", "/about", "/blog", "/api/posts", "/contact", "/second-post", "/first-post", "/rich-dad-poor-dad-summery"]);
+var prerendered = /* @__PURE__ */ new Set(["/", "/about", "/blog", "/api/posts", "/contact", "/portfolio", "/api/portfolio", "/embrace-the-suck", "/how-to-type-faster-100-wpm-in-22-days", "/the-alchemist-summary", "/unlocking-video-success-my-3-pillars-day-30", "/why-you-should-start-reading-aloud", "/rich-dad-poor-dad-summary", "/portfolio/buffet-diet", "/portfolio/ecarx", "/portfolio/astrazeneca", "/portfolio/skf", "/portfolio/rise", "/portfolio/coboom"]);
 
 // .svelte-kit/netlify-tmp/entry.js
 var server = new Server(manifest);
