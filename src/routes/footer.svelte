@@ -9,7 +9,7 @@
             Oh, this is a footer? <img
                 class="w-12 inline"
                 src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Monocle.png"
-                alt="Star-Struck"
+                alt="Face with Monocle"
             />
         </h3>
         <p class="max-w-prose mt-5 text-sm leading-6">
@@ -18,14 +18,17 @@
             some of it interesting too.
         </p>
 
-        <ul class="mt-16 grid grid-flow-col gap-8 font-bold text-sm">
-            <li class="">
+        <ul class="mt-16 flex flex-wrap gap-4 font-bold text-sm">
+            <li>
                 <a class="btn btn-ghost inherit" href="/">Home</a>
             </li>
-            <li class="">
+            <li>
                 <a class="btn btn-ghost inherit" href="/blog">Blog</a>
             </li>
-            <li class="">
+            <li>
+                <a class="btn btn-ghost inherit" href="/portfolio">Portfolio</a>
+            </li>
+            <li>
                 <a class="btn btn-ghost inherit" href="/about">About</a>
             </li>
         </ul>
@@ -36,7 +39,7 @@
     >
         <p>
             &copy {new Date().getFullYear()}
-            {config.title}, All right reserved.
+            {config.title}, All rights reserved.
         </p>
         <ul class="grid grid-flow-col gap-4">
             <li>

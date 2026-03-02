@@ -14,7 +14,7 @@ This page might be a tad self-indulgent, but it's my canvas. I hope you discover
 4. 🚲 Beyond the digital realm, I craft tangible creations. One notable project involved handcrafting a towering bicycle, navigating the streets of Gothenburg adorned with snippets of national and local news, and radio broadcasts.
 5. 🧑‍🏫 My passion extends to teaching; explore my Advent of Wisdom on [Instagram](https://www.instagram.com/benjimink_/reels/) or [TikTok](https://www.tiktok.com/@benji.karlsson_/video/7314702498151927073).
 6. 💪 Health and fitness are paramount; I delve into diets and training regimens. Presently, it's the carnivore diet coupled with calisthenics.
-7. 🪑 A 30-year-old soul, born in May 1994 in Sweden, I now call various places my home.
+7. 🪑 Born in May 1994 in Sweden, I now call various places my home.
 
 ## In the Limelight
 
