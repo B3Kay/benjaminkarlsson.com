@@ -219,6 +219,7 @@
                 "bounce",
                 1000
             );
+            submitToWall(); // fire-and-forget: submit conversation for Hall of Fame
             return;
         }
 
@@ -277,6 +278,7 @@
 
             if (isCelebration) {
                 triggerConfetti();
+                submitToWall();
             }
         } catch {
             loading = false;
@@ -285,6 +287,25 @@
                 "blip",
                 500
             );
+        }
+    }
+
+    async function submitToWall() {
+        // Send the actual conversation (non-local messages) for highlight curation
+        const apiMessages = messages
+            .filter((m) => !m.local)
+            .map((m) => ({ role: m.role, content: m.content }));
+
+        if (apiMessages.length < 2) return; // need at least one exchange
+
+        try {
+            await fetch("/api/wall", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ messages: apiMessages }),
+            });
+        } catch {
+            // Fire-and-forget, don't block the UX
         }
     }
 
