@@ -17,6 +17,7 @@
   import JestIcon from "~icons/cib/jest";
 
   import ChatBot from "$lib/components/ChatBot.svelte";
+  import ChatWall from "$lib/components/ChatWall.svelte";
 </script>
 
 <svelte:head>
@@ -111,3 +112,5 @@
     </div>
   </div>
 </div>
+
+<ChatWall />

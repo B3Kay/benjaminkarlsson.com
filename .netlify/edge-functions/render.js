@@ -235,7 +235,7 @@ function create_ssr_component(fn) {
       return {
         html,
         css: {
-          code: Array.from(result.css).map((css) => css.code).join("\n"),
+          code: Array.from(result.css).map((css2) => css2.code).join("\n"),
           map: null
           // TODO
         },
@@ -1662,8 +1662,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
     universal_id = "src/routes/+layout.ts";
-    imports = ["_app/immutable/nodes/0.CalGU74c.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.BSsncVet.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
-    stylesheets = ["_app/immutable/assets/0.X42Gp5NG.css"];
+    imports = ["_app/immutable/nodes/0.4ky4lSMn.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.BSsncVet.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
+    stylesheets = ["_app/immutable/assets/0.40tCE0iA.css"];
     fonts = [];
   }
 });
@@ -1733,7 +1733,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.n78VDoPR.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/entry.jHFKyKrj.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
+    imports2 = ["_app/immutable/nodes/1.JbMDIizB.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/entry.95uxU2hc.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -1756,7 +1756,7 @@ var page_svelte_exports = {};
 __export(page_svelte_exports, {
   default: () => Page
 });
-var Send, Send$1, Sparkles, Sparkles$1, Arrow_right_line, Svelte, React, Storybook, Git, Typescript, Javascript, Css3_shiled, Html5_shield, Firebase, Figma, Redux, Jest, MAX_MESSAGES, MAX_INPUT_LENGTH, ChatBot, Page;
+var Send, Send$1, Sparkles, Sparkles$1, Arrow_right_line, Svelte, React, Storybook, Git, Typescript, Javascript, Css3_shiled, Html5_shield, Firebase, Figma, Redux, Jest, MAX_MESSAGES, MAX_INPUT_LENGTH, ChatBot, css, ChatWall, Page;
 var init_page_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_page.svelte.js"() {
     init_ssr();
@@ -1963,6 +1963,14 @@ var init_page_svelte = __esm({
         0
       )} class="input input-bordered flex-1 input-sm md:input-md" ${"disabled"}${add_attribute("value", input, 0)}> <button type="submit" class="btn btn-primary btn-sm md:btn-md btn-square" ${"disabled"}>${validate_component(Send$1, "Send").$$render($$result, { size: 18 }, {}, {})}</button></form> <p class="text-xs text-base-content/40 mt-1 text-right">${escape(userMessageCount)}/${escape(MAX_MESSAGES)} messages</p>`}</div></div></div></div>`;
     });
+    css = {
+      code: ".wall-marquee-container.svelte-1qx4wbm{mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        );-webkit-mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        )}.wall-marquee-track.svelte-1qx4wbm{animation:svelte-1qx4wbm-marquee-scroll 40s linear infinite;width:-moz-max-content;width:max-content}.wall-marquee-track.svelte-1qx4wbm:hover{animation-play-state:paused}@keyframes svelte-1qx4wbm-marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}",
+      map: null
+    };
+    ChatWall = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      $$result.css.add(css);
+      return `${``}`;
+    });
     Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${$$result.head += `<!-- HEAD_svelte-btmkba_START -->${$$result.title = `<title>${escape(title)} - Freelance Full Stack Developer</title>`, ""}<meta name="description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work."><meta property="og:type" content="website"><meta property="og:title" content="${escape(title, true) + " - Freelance Full Stack Developer"}"><meta property="og:description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work."><meta property="og:url"${add_attribute("content", url, 0)}><!-- HEAD_svelte-btmkba_END -->`, ""} <div class="hero min-h-screen"><div class="hero-content block lg:flex gap-8 p-0"><div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left"><div class="badge badge-accent badge-outline mb-4 animate-fade-in-up" data-svelte-h="svelte-119drau">Remote First</div> <h1 class="lg:text-7xl md:text-6xl text-4xl font-black animate-fade-in-up-delay-1" data-svelte-h="svelte-kqi0y1"><span class="brightness-150 contrast-150">Freelancing Full Stack Developer</span> <img class="w-16 inline" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck"></h1> <p class="py-9 text-base animate-fade-in-up-delay-2" data-svelte-h="svelte-5qrhm2">Senior with 5+ years experience in front-end development, specializing
         in TypeScript, React.js, and advanced patterns like hooks, Redux, and
@@ -2052,7 +2060,7 @@ var init_page_svelte = __esm({
         },
         {},
         {}
-      )}</div></div> <div class="join-vertical join md:join-horizontal gap-2 animate-fade-in-up-delay-3"><a class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary" href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf" target="_blank" data-svelte-h="svelte-17n9nt4">Read my cv</a> <a class="btn btn-lg md:btn-md btn-primary btn-wide normal-case" href="#chat-with-ai">Chat with my AI ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div> <div class="h-24 lg:hidden"></div> <div id="chat-with-ai">${validate_component(ChatBot, "ChatBot").$$render($$result, {}, {}, {})}</div></div></div>`;
+      )}</div></div> <div class="join-vertical join md:join-horizontal gap-2 animate-fade-in-up-delay-3"><a class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary" href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf" target="_blank" data-svelte-h="svelte-17n9nt4">Read my cv</a> <a class="btn btn-lg md:btn-md btn-primary btn-wide normal-case" href="#chat-with-ai">Chat with my AI ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div> <div class="h-24 lg:hidden"></div> <div id="chat-with-ai">${validate_component(ChatBot, "ChatBot").$$render($$result, {}, {}, {})}</div></div></div> ${validate_component(ChatWall, "ChatWall").$$render($$result, {}, {}, {})}`;
     });
   }
 });
@@ -2075,8 +2083,8 @@ var init__3 = __esm({
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
     universal_id2 = "src/routes/+page.ts";
-    imports3 = ["_app/immutable/nodes/2.5-8YEV4p.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/Icon.BSsncVet.js"];
-    stylesheets3 = [];
+    imports3 = ["_app/immutable/nodes/2.xXF6q6xt.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/Icon.BSsncVet.js"];
+    stylesheets3 = ["_app/immutable/assets/2.MG_WFKMa.css"];
     fonts3 = [];
   }
 });
@@ -2235,6 +2243,188 @@ var init_server_ts = __esm({
       } catch (err) {
         console.error("Chat API error:", err);
         return json({ error: "Chat service is temporarily unavailable." }, { status: 502 });
+      }
+    };
+  }
+});
+
+// .svelte-kit/output/server/entries/endpoints/api/wall/_server.ts.js
+var server_ts_exports2 = {};
+__export(server_ts_exports2, {
+  GET: () => GET,
+  POST: () => POST2
+});
+function isCleanContent(text2) {
+  const lower = text2.toLowerCase();
+  return !CONTENT_FILTER_WORDS.some((word) => lower.includes(word));
+}
+function getBlobUrl(key2) {
+  const siteId = process.env.SITE_ID || "";
+  process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN || "";
+  const apiUrl = process.env.NETLIFY_BLOBS_CONTEXT || `https://api.netlify.com/api/v1/blobs/${siteId}/store/${STORE_NAME}`;
+  return `${apiUrl}/${key2}`;
+}
+function getBlobHeaders() {
+  const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN || "";
+  return {
+    "Authorization": `Bearer ${token}`,
+    "Content-Type": "application/json"
+  };
+}
+async function getBlob(key2) {
+  try {
+    const res = await fetch(getBlobUrl(key2), { headers: getBlobHeaders() });
+    if (!res.ok)
+      return null;
+    return await res.text();
+  } catch {
+    return null;
+  }
+}
+async function setBlob(key2, value) {
+  try {
+    await fetch(getBlobUrl(key2), {
+      method: "PUT",
+      headers: getBlobHeaders(),
+      body: value
+    });
+  } catch (err) {
+    console.error("Blob write error:", err);
+  }
+}
+var XAI_API_URL2, MODEL2, STORE_NAME, HIGHLIGHTS_KEY, MAX_WALL_ITEMS, CONTENT_FILTER_WORDS, GET, POST2;
+var init_server_ts2 = __esm({
+  ".svelte-kit/output/server/entries/endpoints/api/wall/_server.ts.js"() {
+    init_chunks();
+    XAI_API_URL2 = "https://api.x.ai/v1/chat/completions";
+    MODEL2 = "grok-2-fast";
+    STORE_NAME = "chat-wall";
+    HIGHLIGHTS_KEY = "highlights";
+    MAX_WALL_ITEMS = 30;
+    CONTENT_FILTER_WORDS = [
+      "fuck",
+      "shit",
+      "ass",
+      "dick",
+      "porn",
+      "sex",
+      "nude",
+      "kill",
+      "hate",
+      "racist",
+      "nazi",
+      "slur",
+      "n-word",
+      "faggot",
+      "retard"
+    ];
+    GET = async () => {
+      try {
+        const raw = await getBlob(HIGHLIGHTS_KEY);
+        const highlights = raw ? JSON.parse(raw) : [];
+        return json({ highlights });
+      } catch (err) {
+        console.error("Wall GET error:", err);
+        return json({ highlights: [] });
+      }
+    };
+    POST2 = async ({ request }) => {
+      const apiKey = process.env.XAI_API_KEY;
+      if (!apiKey) {
+        return json({ error: "Not configured" }, { status: 503 });
+      }
+      let body2;
+      try {
+        body2 = await request.json();
+      } catch {
+        return json({ error: "Invalid body" }, { status: 400 });
+      }
+      const { messages } = body2;
+      if (!messages || !Array.isArray(messages) || messages.length < 2) {
+        return json({ error: "Need at least one exchange" }, { status: 400 });
+      }
+      const conversationText = messages.map((m) => `${m.role === "user" ? "Visitor" : "AI"}: ${m.content}`).join("\n");
+      try {
+        const response = await fetch(XAI_API_URL2, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            model: MODEL2,
+            messages: [
+              {
+                role: "system",
+                content: `You are a curator for a "Chat Hall of Fame" wall on a developer's portfolio website. You review conversations between visitors and an AI chatbot and decide if anything is wall-worthy.
+
+## Your job:
+1. Read the conversation below
+2. Decide if there's a funny, interesting, wholesome, or memorable moment worth displaying
+3. If YES: Extract a SHORT snippet (max 80 characters) that captures the moment. This should be entertaining to read on a scrolling wall. It can be the visitor's question, the AI's witty response, or a paraphrased summary.
+4. Pick a single emoji that fits the vibe
+5. If NO: The conversation was too boring or generic
+
+## Rules:
+- REJECT anything inappropriate, offensive, or containing personal information
+- REJECT generic/boring exchanges ("What skills do you have?" is not wall-worthy)
+- PREFER funny questions, unexpected topics, clever wordplay, or wholesome moments
+- The snippet should make someone smile when they read it on the wall
+- Keep it anonymous \u2014 never include names, emails, or identifying info
+
+## Response format (JSON only, no other text):
+If wall-worthy: {"worthy": true, "snippet": "the funny/interesting line", "emoji": "\u{1F3AF}"}
+If not worthy: {"worthy": false}`
+              },
+              {
+                role: "user",
+                content: `Here's the conversation:
+
+${conversationText}`
+              }
+            ],
+            max_tokens: 150,
+            temperature: 0.7
+          })
+        });
+        if (!response.ok) {
+          return json({ saved: false });
+        }
+        const data = await response.json();
+        const content = data.choices?.[0]?.message?.content?.trim();
+        if (!content) {
+          return json({ saved: false });
+        }
+        let result;
+        try {
+          const cleaned = content.replace(/```json\n?|\n?```/g, "").trim();
+          result = JSON.parse(cleaned);
+        } catch {
+          return json({ saved: false });
+        }
+        if (!result.worthy || !result.snippet || !result.emoji) {
+          return json({ saved: false });
+        }
+        if (!isCleanContent(result.snippet)) {
+          return json({ saved: false });
+        }
+        const snippet = result.snippet.slice(0, 80);
+        const emoji = result.emoji.slice(0, 4);
+        const raw = await getBlob(HIGHLIGHTS_KEY);
+        const highlights = raw ? JSON.parse(raw) : [];
+        const newHighlight = {
+          id: crypto.randomUUID(),
+          snippet,
+          emoji,
+          timestamp: Date.now()
+        };
+        highlights.unshift(newHighlight);
+        const trimmed = highlights.slice(0, MAX_WALL_ITEMS);
+        await setBlob(HIGHLIGHTS_KEY, JSON.stringify(trimmed));
+        return json({ saved: true, highlight: newHighlight });
+      } catch (err) {
+        console.error("Wall POST error:", err);
+        return json({ saved: false });
       }
     };
   }
@@ -2449,7 +2639,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "18bqtod"
+  version_hash: "75uawu"
 };
 async function get_hooks() {
   return {};
@@ -5361,7 +5551,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.ga0usBGU.js", "app": "_app/immutable/entry/app.6INNvBaa.js", "imports": ["_app/immutable/entry/start.ga0usBGU.js", "_app/immutable/chunks/entry.jHFKyKrj.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.6INNvBaa.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.tpSiMIgH.js", "app": "_app/immutable/entry/app.BzpMsLTC.js", "imports": ["_app/immutable/entry/start.tpSiMIgH.js", "_app/immutable/chunks/entry.95uxU2hc.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.BzpMsLTC.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
@@ -5381,6 +5571,13 @@ var manifest = (() => {
           params: [],
           page: null,
           endpoint: __memo(() => Promise.resolve().then(() => (init_server_ts(), server_ts_exports)))
+        },
+        {
+          id: "/api/wall",
+          pattern: /^\/api\/wall\/?$/,
+          params: [],
+          page: null,
+          endpoint: __memo(() => Promise.resolve().then(() => (init_server_ts2(), server_ts_exports2)))
         }
       ],
       matchers: async () => {
