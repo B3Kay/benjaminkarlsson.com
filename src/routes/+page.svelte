@@ -1,4 +1,5 @@
 <script lang="ts">
+  import * as config from "$lib/config";
   import IconLinkedin from "~icons/mingcute/linkedin-fill";
   import IconArrowRight from "~icons/mingcute/arrow-right-line";
 
@@ -23,12 +24,21 @@
   };
 </script>
 
+<svelte:head>
+  <title>{config.title} - Freelance Full Stack Developer</title>
+  <meta name="description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{config.title} - Freelance Full Stack Developer" />
+  <meta property="og:description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work." />
+  <meta property="og:url" content={config.url} />
+</svelte:head>
+
 <div class="hero min-h-screen">
   <div class="hero-content block lg:flex gap-8 p-0">
     <div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left">
-      <div class=" badge badge-accent badge-outline mb-4">Remote First</div>
+      <div class="badge badge-accent badge-outline mb-4 animate-fade-in-up">Remote First</div>
 
-      <h1 class="lg:text-7xl md:text-6xl text-4xl font-black">
+      <h1 class="lg:text-7xl md:text-6xl text-4xl font-black animate-fade-in-up-delay-1">
         <span class="brightness-150 contrast-150">
           Freelancing Full Stack Developer
         </span>
@@ -38,7 +48,7 @@
           alt="Star-Struck"
         />
       </h1>
-      <p class="py-9 text-base">
+      <p class="py-9 text-base animate-fade-in-up-delay-2">
         Senior with 5+ years experience in front-end development, specializing
         in TypeScript, React.js, and advanced patterns like hooks, Redux, and
         routing. Dedicated to creating user-friendly, feature-rich websites.
@@ -87,7 +97,7 @@
         </div>
       </div>
 
-      <div class=" join-vertical join md:join-horizontal gap-2">
+      <div class="join-vertical join md:join-horizontal gap-2 animate-fade-in-up-delay-3">
         <a
           class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary"
           href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf"

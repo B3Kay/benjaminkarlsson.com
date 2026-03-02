@@ -6,7 +6,11 @@
 </script>
 
 <svelte:head>
-    <title>{config.title}</title>
+    <title>Blog - {config.title}</title>
+    <meta name="description" content="Articles about productivity, business, health & fitness, and software development by Benjamin Karlsson." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog - {config.title}" />
+    <meta property="og:description" content="Articles about productivity, business, health & fitness, and software development by Benjamin Karlsson." />
 </svelte:head>
 
 <section class="ms-auto me-auto container max-w-7xl">
@@ -15,7 +19,7 @@
         <img
             class="w-12 inline"
             src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Monocle.png"
-            alt="Star-Struck"
+            alt="Face with Monocle"
         />
     </h1>
     <p class="mt-2 prose">
@@ -32,6 +36,7 @@
             <li
                 class="max-is-prose
                 last:mb-16
+                pl-4 border-l-2 border-transparent hover:border-primary transition-colors duration-300
                 "
             >
                 <div class="flex flex-wrap items-center gap-x-4 mt-2 mb-2">

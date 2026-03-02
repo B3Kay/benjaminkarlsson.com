@@ -5,7 +5,8 @@
 </script>
 
 <svelte:head>
-    <title>{data.meta.title}</title>
+    <title>{data.meta.title} - Benjamin Karlsson</title>
+    <meta name="description" content={data.meta.description} />
     <meta property="og:type" content="article" />
     <meta property="og:title" content={data.meta.title} />
     <meta property="og:description" content={data.meta.description} />

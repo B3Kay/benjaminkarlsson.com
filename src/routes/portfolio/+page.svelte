@@ -7,7 +7,11 @@
 </script>
 
 <svelte:head>
-    <title>{config.title}</title>
+    <title>Portfolio - {config.title}</title>
+    <meta name="description" content="Portfolio of projects by Benjamin Karlsson. Full stack web applications built with React, TypeScript, Svelte, and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio - {config.title}" />
+    <meta property="og:description" content="Portfolio of projects by Benjamin Karlsson. Full stack web applications built with React, TypeScript, Svelte, and more." />
 </svelte:head>
 
 <div class="container mx-auto px-4 py-8 md:py-10">
@@ -19,7 +23,7 @@
             <img
                 class="w-12 inline"
                 src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png"
-                alt="Star-Struck"
+                alt="Robot"
             />
         </h1>
         <p class="text-lg md:text-xl text-muted-foreground">
@@ -30,7 +34,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {#each data.portfolio as project}
             <div
-                class="bg-white/10 rounded-lg overflow-hidden border border-gray-700 shadow-none transition-all duration-300 hover:shadow-xl h-fit"
+                class="bg-white/10 rounded-lg overflow-hidden border border-gray-700 shadow-none transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-fit"
             >
                 <a href={`/portfolio/${project.slug}`} class="block group">
                     {#if project.imageUrl && project.imageUrl.trim() !== ""}
