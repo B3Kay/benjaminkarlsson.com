@@ -1,6 +1,5 @@
 <script lang="ts">
   import * as config from "$lib/config";
-  import IconLinkedin from "~icons/mingcute/linkedin-fill";
   import IconArrowRight from "~icons/mingcute/arrow-right-line";
 
   import SveleIcon from "~icons/cib/svelte";
@@ -17,11 +16,7 @@
   import ReduxIcon from "~icons/cib/redux";
   import JestIcon from "~icons/cib/jest";
 
-  let inputRef: HTMLAnchorElement;
-
-  const onClickFocus = () => {
-    inputRef.focus();
-  };
+  import ChatBot from "$lib/components/ChatBot.svelte";
 </script>
 
 <svelte:head>
@@ -104,121 +99,15 @@
           target="_blank">Read my cv</a
         >
         <a
-          on:click={onClickFocus}
           class="btn btn-lg md:btn-md btn-primary btn-wide normal-case"
-          href="#contact-info-benjamin">Get in touch <IconArrowRight /></a
+          href="#chat-with-ai">Chat with my AI <IconArrowRight /></a
         >
       </div>
     </div>
     <div class="h-24 lg:hidden" />
 
-    <div class="mockup-window border border-base-300 backdrop-blur">
-      <div
-        class="flex justify-center px-4 py-8 md:py-16 border-t border-base-300"
-      >
-        <div class="text-base">
-          <div class="chat pt-4 md:pt-1 chat-start">
-            <div class="chat-image avatar">
-              <div class="w-10 rounded-full">
-                <img
-                  alt="Recruiter profile"
-                  src="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fGZhY2UlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-                />
-              </div>
-            </div>
-
-            <div class="chat-bubble">👋Hi Benji! Impressed by your skills!</div>
-          </div>
-          <div class="chat pt-4 md:pt-1 chat-end">
-            <div class="chat-image avatar">
-              <div class="w-10 rounded-full">
-                <img
-                  alt="Benjamin Karlsson Profile"
-                  src="/asset/cv-no-smile-fancy-500.jpg"
-                />
-              </div>
-            </div>
-
-            <div class="chat-bubble chat-bubble-primary">
-              Thanks! Nice to hear that 😁
-            </div>
-          </div>
-
-          <div class="chat pt-4 md:pt-1 chat-start">
-            <div class="chat-image avatar">
-              <div class="w-10 rounded-full">
-                <img
-                  alt="Recruiter profile"
-                  src="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fGZhY2UlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
-                />
-              </div>
-            </div>
-
-            <div class="chat-bubble">
-              Interested in a chat? Drop your email. <br />
-              I'll send an invite for the call 😉
-            </div>
-          </div>
-          <div class="chat pt-4 md:pt-1 chat-end">
-            <div class="chat-image avatar">
-              <div class="w-10 rounded-full" />
-            </div>
-
-            <div
-              class="relative block rounded-2xl min-h-[2.75rem] min-w-6 px-4 py-2 max-w-9/10
-            chat-bubble-primary
-            focus-within:bg-primary-focus
-            focus-within:text-slate
-            focus-within:ring-2
-            ring-primary
-            ring-offset-2
-            ring-offset-slate-900
-            "
-              id="contact-info-benjamin"
-              tabindex="-1"
-            >
-              <p>
-                Sure 👍, here it is
-
-                <a
-                  bind:this={inputRef}
-                  class="link font-semibold inline-block"
-                  href="mailto:hi@benjaminkarlsson.com"
-                  target="_blank"
-                  rel="noopener noreferrer">hi@benjaminkarlsson.com</a
-                >
-                or reach me at
-                <a
-                  class="link font-semibold inline-block"
-                  href="https://www.linkedin.com/in/benjik/"
-                  target="_blank"
-                  rel="noopener noreferrer">linkedin.com/in/benjik</a
-                >
-                and
-                <a
-                  class="link font-semibold inline-block"
-                  href="tel:+46-73 182 86 65">+46-73 182 86 65</a
-                >
-              </p>
-            </div>
-          </div>
-          <div class="chat pt-4 md:pt-1 chat-end">
-            <div class="chat-image avatar">
-              <div class="w-10 rounded-full">
-                <img
-                  alt="Benjamin Karlsson profile"
-                  src="/asset/cv-no-smile-fancy-500.jpg"
-                />
-              </div>
-            </div>
-            <div class="chat-header" />
-            <div class="chat-bubble chat-bubble-primary">
-              Have a good time! 😉😁
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="chat-with-ai">
+      <ChatBot />
     </div>
-    <!-- End of chat window -->
   </div>
 </div>
