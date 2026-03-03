@@ -347,12 +347,12 @@
     >
         <div
             class="flex flex-col border-t border-base-300"
-            style="min-height: 160px; max-height: 480px;"
+            style="height: 420px;"
         >
             <!-- Messages area -->
             <div
                 bind:this={chatContainer}
-                class="overflow-y-auto px-4 py-4"
+                class="flex-1 overflow-y-auto px-4 py-4"
             >
                 {#each messages as message, i (i)}
                     {#if message.role === "assistant"}
