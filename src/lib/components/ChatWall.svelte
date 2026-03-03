@@ -74,7 +74,7 @@
 </script>
 
 {#if loaded && highlights.length > 0}
-    <div class="mt-16 mb-8">
+    <div class="wall-outer mt-16 mb-8">
         <div class="flex items-center justify-center gap-2 mb-6">
             <MessageCircle size={20} class="text-primary" />
             <h2 class="text-lg font-bold brightness-150 contrast-150">
@@ -88,7 +88,7 @@
         </p>
 
         <!-- Scrolling marquee -->
-        <div class="wall-marquee-container overflow-hidden relative">
+        <div class="wall-marquee-container relative">
             <!-- Fade edges -->
             <div
                 class="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
@@ -128,7 +128,13 @@
 {/if}
 
 <style>
+    .wall-outer {
+        max-width: 100vw;
+        overflow: hidden;
+    }
+
     .wall-marquee-container {
+        overflow: hidden;
         mask-image: linear-gradient(
             to right,
             transparent,
