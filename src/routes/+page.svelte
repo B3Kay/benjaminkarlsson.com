@@ -21,9 +21,13 @@
   import KubernetesIcon from "~icons/cib/kubernetes";
   import AwsIcon from "~icons/cib/amazon-aws";
   import PostgresqlIcon from "~icons/cib/postgresql";
-  import FirebaseIcon from "~icons/cib/firebase";
   import GitIcon from "~icons/cib/git";
-  import FigmaIcon from "~icons/cib/figma";
+
+  // What I Do card icons
+  import IconGroup from "~icons/mingcute/group-line";
+  import IconCode from "~icons/mingcute/code-line";
+  import IconBrain from "~icons/mingcute/brain-line";
+  import IconHammer from "~icons/mingcute/hammer-line";
 
   import ChatBot from "$lib/components/ChatBot.svelte";
   import ChatWall from "$lib/components/ChatWall.svelte";
@@ -136,7 +140,7 @@
 
     <div class="grid md:grid-cols-2 gap-px bg-base-300 border border-base-300 rounded-xl overflow-hidden">
       <div class="bg-base-100 p-8">
-        <KubernetesIcon class="w-8 text-base-content/30 mb-4" />
+        <IconGroup class="w-6 text-base-content/30 mb-4" />
         <h3 class="text-base font-semibold mb-3">Tech & Team Leadership</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
           Leading engineering teams, defining architecture, and owning delivery end-to-end. Sprint planning, code reviews, mentoring, and shipping to production.
@@ -144,7 +148,7 @@
       </div>
 
       <div class="bg-base-100 p-8">
-        <TypescriptIcon class="w-8 text-base-content/30 mb-4" />
+        <IconCode class="w-6 text-base-content/30 mb-4" />
         <h3 class="text-base font-semibold mb-3">Full Stack Development</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
           React, Next.js, Svelte, Node, Python, Go. Databases, APIs, Docker, AWS. Whatever it takes to ship the product.
@@ -152,7 +156,7 @@
       </div>
 
       <div class="bg-base-100 p-8">
-        <AwsIcon class="w-8 text-base-content/30 mb-4" />
+        <IconBrain class="w-6 text-base-content/30 mb-4" />
         <h3 class="text-base font-semibold mb-3">AI-Driven Development</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
           Building with AI agents, Claude Code, Codex, and agentic workflows. Using the latest tooling to move at startup speed.
@@ -160,7 +164,7 @@
       </div>
 
       <div class="bg-base-100 p-8">
-        <FigmaIcon class="w-8 text-base-content/30 mb-4" />
+        <IconHammer class="w-6 text-base-content/30 mb-4" />
         <h3 class="text-base font-semibold mb-3">Builder & Creator</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
           Side projects, content creation, and creative experiments. From a 2-meter-tall bicycle featured in Expressen to AI-powered apps.
