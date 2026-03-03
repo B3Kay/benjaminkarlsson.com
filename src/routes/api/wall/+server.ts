@@ -2,7 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 const XAI_API_URL = 'https://api.x.ai/v1/chat/completions';
-const MODEL = 'grok-2-fast';
+const MODEL = 'grok-4-1-fast-non-reasoning';
 const STORE_NAME = 'chat-wall';
 const HIGHLIGHTS_KEY = 'highlights';
 const MAX_WALL_ITEMS = 30;

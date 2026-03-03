@@ -1733,7 +1733,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.zbbzJT8U.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/entry.Yj1iewsx.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
+    imports2 = ["_app/immutable/nodes/1.M-bMCh5V.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/entry.R7fRgyUZ.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -2119,7 +2119,7 @@ var init_server_ts = __esm({
     XAI_API_URL = "https://api.x.ai/v1/chat/completions";
     MAX_USER_MESSAGE_LENGTH = 500;
     MAX_MESSAGES_PER_REQUEST = 20;
-    MODEL = "grok-2-fast";
+    MODEL = "grok-4-1-fast-non-reasoning";
     SYSTEM_PROMPT = `You are an AI assistant on Benjamin Karlsson's personal portfolio website. You represent Benjamin and answer questions about him in a friendly, professional tone. Speak in third person about Benjamin unless it feels more natural to say "I" (as if you are Benjamin's digital representative).
 
 ## About Benjamin Karlsson
@@ -2297,7 +2297,7 @@ var init_server_ts2 = __esm({
   ".svelte-kit/output/server/entries/endpoints/api/wall/_server.ts.js"() {
     init_chunks();
     XAI_API_URL2 = "https://api.x.ai/v1/chat/completions";
-    MODEL2 = "grok-2-fast";
+    MODEL2 = "grok-4-1-fast-non-reasoning";
     STORE_NAME = "chat-wall";
     HIGHLIGHTS_KEY = "highlights";
     MAX_WALL_ITEMS = 30;
@@ -2639,7 +2639,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "wq7a8u"
+  version_hash: "2p0aws"
 };
 async function get_hooks() {
   return {};
@@ -5551,7 +5551,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.b9yrpx91.js", "app": "_app/immutable/entry/app.z6ocif56.js", "imports": ["_app/immutable/entry/start.b9yrpx91.js", "_app/immutable/chunks/entry.Yj1iewsx.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.z6ocif56.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.KOsuKoMg.js", "app": "_app/immutable/entry/app.uUucX7rg.js", "imports": ["_app/immutable/entry/start.KOsuKoMg.js", "_app/immutable/chunks/entry.R7fRgyUZ.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.uUucX7rg.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),

@@ -4,7 +4,7 @@ import type { RequestHandler } from './$types';
 const XAI_API_URL = 'https://api.x.ai/v1/chat/completions';
 const MAX_USER_MESSAGE_LENGTH = 500;
 const MAX_MESSAGES_PER_REQUEST = 20; // 10 user + 10 assistant messages
-const MODEL = 'grok-2-fast';
+const MODEL = 'grok-4-1-fast-non-reasoning';
 
 const SYSTEM_PROMPT = `You are an AI assistant on Benjamin Karlsson's personal portfolio website. You represent Benjamin and answer questions about him in a friendly, professional tone. Speak in third person about Benjamin unless it feels more natural to say "I" (as if you are Benjamin's digital representative).
 
