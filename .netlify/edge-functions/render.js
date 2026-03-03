@@ -1662,8 +1662,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
     universal_id = "src/routes/+layout.ts";
-    imports = ["_app/immutable/nodes/0.FO7mVK7L.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.BSsncVet.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
-    stylesheets = ["_app/immutable/assets/0.HtQITyGG.css"];
+    imports = ["_app/immutable/nodes/0.rrbrEqAg.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
+    stylesheets = ["_app/immutable/assets/0.vcC3rbYB.css"];
     fonts = [];
   }
 });
@@ -1733,7 +1733,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.YPmAvNwI.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/entry.U3gmLwS5.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
+    imports2 = ["_app/immutable/nodes/1.0q5H_ETp.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/entry.esL3-OD5.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -2083,7 +2083,7 @@ var init__3 = __esm({
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
     universal_id2 = "src/routes/+page.ts";
-    imports3 = ["_app/immutable/nodes/2.MIokoDjc.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/Icon.BSsncVet.js"];
+    imports3 = ["_app/immutable/nodes/2.FmeGerrJ.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/Icon.cp6pJciN.js"];
     stylesheets3 = ["_app/immutable/assets/2.bahBWmEb.css"];
     fonts3 = [];
   }
@@ -2639,7 +2639,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "u4aqr5"
+  version_hash: "1p5c512"
 };
 async function get_hooks() {
   return {};
@@ -5551,7 +5551,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.KKH5efvi.js", "app": "_app/immutable/entry/app.JbNiRNnA.js", "imports": ["_app/immutable/entry/start.KKH5efvi.js", "_app/immutable/chunks/entry.U3gmLwS5.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.JbNiRNnA.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.Jl2Zv7nA.js", "app": "_app/immutable/entry/app.aZCbR3-_.js", "imports": ["_app/immutable/entry/start.Jl2Zv7nA.js", "_app/immutable/chunks/entry.esL3-OD5.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.aZCbR3-_.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
