@@ -141,7 +141,7 @@
 
     function triggerConfetti() {
         showConfetti = true;
-        spawnSparkles(12);
+        spawnSparkles(4);
         setTimeout(() => (showConfetti = false), 2500);
     }
 
@@ -152,17 +152,13 @@
 
     // --- Intro sequence ---
     onMount(async () => {
-        // Beat 1: Window buzzes
-        await delay(800);
-        triggerWiggle();
-
-        // Beat 2: Typing dots appear
-        await delay(400);
+        // Brief pause, then typing indicator
+        await delay(600);
         showTyping = true;
         scrollToBottom();
 
-        // Beat 3: First message blips in
-        await delay(1800);
+        // First message fades in
+        await delay(1200);
         showTyping = false;
         messages = [
             { role: "assistant", content: INTRO_MESSAGES[0], animation: "blip", local: true },
@@ -170,13 +166,13 @@
         await tick();
         scrollToBottom();
 
-        // Beat 4: Short pause, then typing again
-        await delay(1000);
+        // Short pause, then typing again
+        await delay(800);
         showTyping = true;
         scrollToBottom();
 
-        // Beat 5: Second message bounces in
-        await delay(2000);
+        // Second message fades in
+        await delay(1400);
         showTyping = false;
         messages = [
             ...messages,
@@ -189,7 +185,6 @@
         ];
         await tick();
         scrollToBottom();
-        spawnSparkles(4);
 
         // Enable input and start idle timer
         inputDisabledUntilReady = false;
@@ -243,13 +238,7 @@
 
             await showTypingThenMessage(wittyLine, "blip", 800);
 
-            if (isFast) {
-                spawnSparkles(4);
-            } else {
-                triggerWiggle();
-            }
-
-            await delay(600);
+            await delay(300);
         }
 
         loading = true;
@@ -335,7 +324,7 @@
 
     <!-- Confetti -->
     {#if showConfetti}
-        {#each Array(24) as _, i}
+        {#each Array(10) as _, i}
             <div
                 class="confetti-piece"
                 style="
@@ -358,12 +347,12 @@
     >
         <div
             class="flex flex-col border-t border-base-300"
-            style="height: 420px;"
+            style="min-height: 160px; max-height: 480px;"
         >
             <!-- Messages area -->
             <div
                 bind:this={chatContainer}
-                class="flex-1 overflow-y-auto px-4 py-4"
+                class="overflow-y-auto px-4 py-4"
             >
                 {#each messages as message, i (i)}
                     {#if message.role === "assistant"}

@@ -1662,8 +1662,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
     universal_id = "src/routes/+layout.ts";
-    imports = ["_app/immutable/nodes/0.4ky4lSMn.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.BSsncVet.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
-    stylesheets = ["_app/immutable/assets/0.40tCE0iA.css"];
+    imports = ["_app/immutable/nodes/0.FO7mVK7L.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.BSsncVet.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
+    stylesheets = ["_app/immutable/assets/0.HtQITyGG.css"];
     fonts = [];
   }
 });
@@ -1733,7 +1733,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.JbMDIizB.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/entry.95uxU2hc.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
+    imports2 = ["_app/immutable/nodes/1.YPmAvNwI.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/entry.U3gmLwS5.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -1952,7 +1952,7 @@ var init_page_svelte = __esm({
       })}  ${``} <div class="${[
         "mockup-window border border-base-300 backdrop-blur transition-transform",
         ""
-      ].join(" ").trim()}"${add_attribute("this", windowEl, 0)}><div class="flex flex-col border-t border-base-300" style="height: 420px;"> <div class="flex-1 overflow-y-auto px-4 py-4"${add_attribute("this", chatContainer, 0)}>${each(messages, (message, i) => {
+      ].join(" ").trim()}"${add_attribute("this", windowEl, 0)}><div class="flex flex-col border-t border-base-300" style="min-height: 160px; max-height: 480px;"> <div class="overflow-y-auto px-4 py-4"${add_attribute("this", chatContainer, 0)}>${each(messages, (message, i) => {
         return `${message.role === "assistant" ? `<div class="${"chat pt-2 chat-start " + escape(
           message.animation === "blip" ? "chat-blip" : "chat-bounce-in",
           true
@@ -1964,7 +1964,7 @@ var init_page_svelte = __esm({
       )} class="input input-bordered flex-1 input-sm md:input-md" ${"disabled"}${add_attribute("value", input, 0)}> <button type="submit" class="btn btn-primary btn-sm md:btn-md btn-square" ${"disabled"}>${validate_component(Send$1, "Send").$$render($$result, { size: 18 }, {}, {})}</button></form> <p class="text-xs text-base-content/40 mt-1 text-right">${escape(userMessageCount)}/${escape(MAX_MESSAGES)} messages</p>`}</div></div></div></div>`;
     });
     css = {
-      code: ".wall-marquee-container.svelte-1qx4wbm{mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        );-webkit-mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        )}.wall-marquee-track.svelte-1qx4wbm{animation:svelte-1qx4wbm-marquee-scroll 40s linear infinite;width:-moz-max-content;width:max-content}.wall-marquee-track.svelte-1qx4wbm:hover{animation-play-state:paused}@keyframes svelte-1qx4wbm-marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}",
+      code: ".wall-outer.svelte-dlt3ka{max-width:100vw;overflow:hidden}.wall-marquee-container.svelte-dlt3ka{overflow:hidden;mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        );-webkit-mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        )}.wall-marquee-track.svelte-dlt3ka{animation:svelte-dlt3ka-marquee-scroll 40s linear infinite;width:-moz-max-content;width:max-content}.wall-marquee-track.svelte-dlt3ka:hover{animation-play-state:paused}@keyframes svelte-dlt3ka-marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}",
       map: null
     };
     ChatWall = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -2083,8 +2083,8 @@ var init__3 = __esm({
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
     universal_id2 = "src/routes/+page.ts";
-    imports3 = ["_app/immutable/nodes/2.xXF6q6xt.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/Icon.BSsncVet.js"];
-    stylesheets3 = ["_app/immutable/assets/2.MG_WFKMa.css"];
+    imports3 = ["_app/immutable/nodes/2.MIokoDjc.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.hPFQ9RmQ.js", "_app/immutable/chunks/Icon.BSsncVet.js"];
+    stylesheets3 = ["_app/immutable/assets/2.bahBWmEb.css"];
     fonts3 = [];
   }
 });
@@ -2639,7 +2639,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "75uawu"
+  version_hash: "u4aqr5"
 };
 async function get_hooks() {
   return {};
@@ -5551,7 +5551,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.tpSiMIgH.js", "app": "_app/immutable/entry/app.BzpMsLTC.js", "imports": ["_app/immutable/entry/start.tpSiMIgH.js", "_app/immutable/chunks/entry.95uxU2hc.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.BzpMsLTC.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.KKH5efvi.js", "app": "_app/immutable/entry/app.JbNiRNnA.js", "imports": ["_app/immutable/entry/start.KKH5efvi.js", "_app/immutable/chunks/entry.U3gmLwS5.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.lLIqb9fm.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.JbNiRNnA.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.Ff1TxRNn.js", "_app/immutable/chunks/index.pzKLEkqp.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
