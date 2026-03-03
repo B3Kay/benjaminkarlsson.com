@@ -23,10 +23,8 @@
   import PostgresqlIcon from "~icons/cib/postgresql";
   import GitIcon from "~icons/cib/git";
 
-  // What I Do card icons
+  // How I Work card icons
   import IconGroup from "~icons/mingcute/group-line";
-  import IconCode from "~icons/mingcute/code-line";
-  import IconBrain from "~icons/mingcute/brain-line";
   import IconHammer from "~icons/mingcute/hammer-line";
 
   import ChatBot from "$lib/components/ChatBot.svelte";
@@ -130,45 +128,52 @@
   </div>
 </section>
 
-<!-- What I Do -->
+<!-- How I Work -->
 <section class="py-24 px-4">
   <div class="max-w-5xl mx-auto">
     <div class="mb-16">
-      <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Services</p>
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">What I Do</h2>
+      <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Engagement</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">How I Work</h2>
+      <p class="text-sm text-base-content/40 mt-4 max-w-lg">
+        Two ways to work together, depending on what you need.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-px bg-base-300 border border-base-300 rounded-xl overflow-hidden">
-      <div class="bg-base-100 p-8">
-        <IconGroup class="w-6 text-base-content/30 mb-4" />
-        <h3 class="text-base font-semibold mb-3">Tech & Team Leadership</h3>
-        <p class="text-sm text-base-content/40 leading-relaxed">
-          Leading engineering teams, defining architecture, and owning delivery end-to-end. Sprint planning, code reviews, mentoring, and shipping to production.
+    <div class="grid md:grid-cols-2 gap-4">
+      <!-- Path 1: Embed -->
+      <div class="rounded-lg border border-base-300 p-8 md:p-10 flex flex-col">
+        <IconGroup class="w-6 text-base-content/30 mb-6" />
+        <h3 class="text-xl font-semibold mb-2">Embed in your team</h3>
+        <p class="text-sm text-base-content/40 leading-relaxed mb-6">
+          I join your existing team as a Tech Lead, senior engineer, or fractional CTO. I bring structure, ship features, and level up your developers.
         </p>
+        <ul class="text-sm text-base-content/40 space-y-2 mb-8 flex-1">
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Tech & team leadership</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Architecture & code reviews</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Full stack development</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> AI workflow integration</li>
+        </ul>
+        <a href="mailto:hi@benjaminkarlsson.com?subject=Embed in our team" class="text-sm font-medium text-center py-3 border border-base-300 rounded-lg hover:border-base-content/30 transition-colors">
+          Get in touch
+        </a>
       </div>
 
-      <div class="bg-base-100 p-8">
-        <IconCode class="w-6 text-base-content/30 mb-4" />
-        <h3 class="text-base font-semibold mb-3">Full Stack Development</h3>
-        <p class="text-sm text-base-content/40 leading-relaxed">
-          React, Next.js, Svelte, Node, Python, Go. Databases, APIs, Docker, AWS. Whatever it takes to ship the product.
+      <!-- Path 2: Own -->
+      <div class="rounded-lg border border-base-content/20 bg-base-200 p-8 md:p-10 flex flex-col">
+        <IconHammer class="w-6 text-base-content/50 mb-6" />
+        <h3 class="text-xl font-semibold mb-2">Own the delivery</h3>
+        <p class="text-sm text-base-content/40 leading-relaxed mb-6">
+          I take full project responsibility. Define the architecture, assemble the right team, and ship your product from zero to production.
         </p>
-      </div>
-
-      <div class="bg-base-100 p-8">
-        <IconBrain class="w-6 text-base-content/30 mb-4" />
-        <h3 class="text-base font-semibold mb-3">AI-Driven Development</h3>
-        <p class="text-sm text-base-content/40 leading-relaxed">
-          Building with AI agents, Claude Code, Codex, and agentic workflows. Using the latest tooling to move at startup speed.
-        </p>
-      </div>
-
-      <div class="bg-base-100 p-8">
-        <IconHammer class="w-6 text-base-content/30 mb-4" />
-        <h3 class="text-base font-semibold mb-3">Builder & Creator</h3>
-        <p class="text-sm text-base-content/40 leading-relaxed">
-          Side projects, content creation, and creative experiments. From a 2-meter-tall bicycle featured in Expressen to AI-powered apps.
-        </p>
+        <ul class="text-sm text-base-content/40 space-y-2 mb-8 flex-1">
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> End-to-end project ownership</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Team assembly & coordination</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> AI-accelerated development</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Architecture to production deploy</li>
+        </ul>
+        <a href="mailto:hi@benjaminkarlsson.com?subject=Project inquiry" class="text-sm font-medium text-center py-3 bg-base-content text-base-100 rounded-lg hover:opacity-90 transition-opacity">
+          Discuss a project
+        </a>
       </div>
     </div>
   </div>
