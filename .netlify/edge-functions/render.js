@@ -1631,15 +1631,13 @@ var init_layout_svelte = __esm({
       return `<label class="swap swap-rotate"><input aria-label="Toggle Theme" type="checkbox" class="theme-controller w-10" value="synthwave"> ${validate_component(Sun$1, "Sun").$$render($$result, { class: "swap-on" }, {}, {})} ${validate_component(Moon$1, "Moon").$$render($$result, { class: "swap-off" }, {}, {})}</label>`;
     });
     Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return ` <div class="navbar bg-base-100 px-6"><div class="navbar-start" data-svelte-h="svelte-1m4w4ha"><a class="btn btn-ghost normal-case" href="/">Benjamin Karlsson</a></div> <div class="navbar-center hidden md:flex" data-svelte-h="svelte-70sb8j"><ul class="menu menu-horizontal px-1"><li class=""><a class="inherit decoration-0" href="/">Home</a></li> <li class=""><a class="inherit decoration-0" href="/blog">Blog</a></li> <li class=""><a class="inherit decoration-0" href="/portfolio">Portfolio</a></li> <li class=""><a class="inherit decoration-0" href="/about">About</a></li></ul></div> <div class="navbar-end"><div class="hidden md:flex">${validate_component(Toggle, "Toggle").$$render($$result, {}, {}, {})}</div> <div class="dropdown dropdown-bottom dropdown-end block md:hidden"><div tabindex="0" role="button" class="btn m-1 btn-ghost btn-square sm:btn-sm">${validate_component(Menu$1, "Menu").$$render($$result, {}, {}, {})}</div>      <ul tabindex="0" class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"><li class="" data-svelte-h="svelte-f7ff05"><a class="inherit decoration-0" href="/">Home</a></li> <li class="" data-svelte-h="svelte-1ohni4"><a class="inherit decoration-0" href="/blog">Blog</a></li> <li class="" data-svelte-h="svelte-n29uw8"><a class="inherit decoration-0" href="/portfolio">Portfolio</a></li> <li class="" data-svelte-h="svelte-1ibgiay"><a class="inherit decoration-0" href="/about">About</a></li> <li class=""><button class="inherit decoration-0" data-svelte-h="svelte-ax5pvz">Toggle theme</button></li></ul></div></div></div>`;
+      return `<nav class="flex items-center justify-between px-6 py-4 border-b border-base-300"><a class="text-sm font-semibold tracking-tight hover:opacity-70 transition-opacity" href="/" data-svelte-h="svelte-drn1l0">Benjamin Karlsson</a> <div class="hidden md:flex items-center gap-8"><a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/" data-svelte-h="svelte-1xi2sxa">Home</a> <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/blog" data-svelte-h="svelte-1pwkpln">Blog</a> <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/portfolio" data-svelte-h="svelte-111npr">Portfolio</a> <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/about" data-svelte-h="svelte-1d0b4c5">About</a> ${validate_component(Toggle, "Toggle").$$render($$result, {}, {}, {})}</div> <div class="dropdown dropdown-bottom dropdown-end block md:hidden"><div tabindex="0" role="button" class="p-2 hover:opacity-70 transition-opacity">${validate_component(Menu$1, "Menu").$$render($$result, { size: 20 }, {}, {})}</div>  <ul tabindex="0" class="p-3 shadow-lg dropdown-content z-[1] bg-base-200 border border-base-300 rounded-lg w-48 mt-2"><li data-svelte-h="svelte-3hf4b8"><a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/">Home</a></li> <li data-svelte-h="svelte-1mqc6ul"><a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/blog">Blog</a></li> <li data-svelte-h="svelte-1s4ixn5"><a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/portfolio">Portfolio</a></li> <li data-svelte-h="svelte-qacc1r"><a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/about">About</a></li> <li class="border-t border-base-300 mt-2 pt-2"><button class="block w-full text-left py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" data-svelte-h="svelte-9xyxon">Toggle theme</button></li></ul></div></nav>`;
     });
     Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `<footer class="block px-6 py-24 sm:py-32 bg-base-200 justify-center"><div class="m-auto max-w-7xl" data-svelte-h="svelte-1ff9665"><h3 class="text-3xl font-bold tracking-tight sm:text-xl">Oh, this is a footer? <img class="w-12 inline" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Monocle.png" alt="Face with Monocle"></h3> <p class="max-w-prose mt-5 text-sm leading-6">I like to blog about stuff like productivity, business, health &amp;
-            fitness, and other stuff I&#39;m interested in. Hopefully you&#39;ll find
-            some of it interesting too.</p> <ul class="mt-16 flex flex-wrap gap-4 font-bold text-sm"><li><a class="btn btn-ghost inherit" href="/">Home</a></li> <li><a class="btn btn-ghost inherit" href="/blog">Blog</a></li> <li><a class="btn btn-ghost inherit" href="/portfolio">Portfolio</a></li> <li><a class="btn btn-ghost inherit" href="/about">About</a></li></ul></div> <div class="max-w-7xl m-auto flex justify-between pt-10 mt-10 border-t-base-300 border-t-1 text-neutral-600"><p>\xA9 ${escape((/* @__PURE__ */ new Date()).getFullYear())} ${escape(title)}, All rights reserved.</p> <ul class="grid grid-flow-col gap-4"><li><a href="https://www.instagram.com/BENJIMINK_" target="_blank" rel="noopener noreferrer">${validate_component(Instagram$1, "Instagram").$$render($$result, {}, {}, {})}</a></li> <li><a href="https://github.com/B3Kay" target="_blank" rel="noopener noreferrer">${validate_component(Github$1, "Github").$$render($$result, {}, {}, {})}</a></li> <li><a href="https://www.linkedin.com/in/benjik/" target="_blank" rel="noopener noreferrer">${validate_component(Linkedin$1, "Linkedin").$$render($$result, {}, {}, {})}</a></li></ul></div></footer>`;
+      return `<footer class="border-t border-base-300 px-6 py-16"><div class="m-auto max-w-5xl"><div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10" data-svelte-h="svelte-1gv5338"><div><p class="text-sm font-semibold tracking-tight">Benjamin Karlsson</p> <p class="text-sm text-base-content/40 mt-2 max-w-xs">Tech Lead, builder, and full stack developer. Writing about tech, productivity, and things I find interesting.</p></div> <div class="flex gap-12"><div class="flex flex-col gap-2"><p class="text-xs text-base-content/30 uppercase tracking-wider mb-1">Navigation</p> <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/">Home</a> <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/blog">Blog</a> <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/portfolio">Portfolio</a> <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/about">About</a></div> <div class="flex flex-col gap-2"><p class="text-xs text-base-content/30 uppercase tracking-wider mb-1">Connect</p> <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="https://github.com/B3Kay" target="_blank" rel="noopener noreferrer">GitHub</a> <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="https://www.linkedin.com/in/benjik/" target="_blank" rel="noopener noreferrer">LinkedIn</a> <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="https://www.instagram.com/BENJIMINK_" target="_blank" rel="noopener noreferrer">Instagram</a></div></div></div> <div class="flex justify-between items-center pt-10 mt-10 border-t border-base-300 text-xs text-base-content/30"><p>\xA9 ${escape((/* @__PURE__ */ new Date()).getFullYear())} ${escape(title)}</p> <div class="flex gap-4"><a href="https://github.com/B3Kay" target="_blank" rel="noopener noreferrer" class="hover:text-base-content transition-colors">${validate_component(Github$1, "Github").$$render($$result, { size: 16 }, {}, {})}</a> <a href="https://www.linkedin.com/in/benjik/" target="_blank" rel="noopener noreferrer" class="hover:text-base-content transition-colors">${validate_component(Linkedin$1, "Linkedin").$$render($$result, { size: 16 }, {}, {})}</a> <a href="https://www.instagram.com/BENJIMINK_" target="_blank" rel="noopener noreferrer" class="hover:text-base-content transition-colors">${validate_component(Instagram$1, "Instagram").$$render($$result, { size: 16 }, {}, {})}</a></div></div></div></footer>`;
     });
     Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${$$result.head += `<!-- HEAD_svelte-1j6j911_START --><script data-goatcounter="https://benjaminkarlsson.goatcounter.com/count" async src="//gc.zgo.at/count.js" data-svelte-h="svelte-19ze9uc"><\/script><!-- HEAD_svelte-1j6j911_END -->`, ""} <div class="h-full max-w-screen-sxl grid grid-rows-layout">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main class="p-0 md:p-9 m-6">${slots.default ? slots.default({}) : ``}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
+      return `${$$result.head += `<!-- HEAD_svelte-1j6j911_START --><script data-goatcounter="https://benjaminkarlsson.goatcounter.com/count" async src="//gc.zgo.at/count.js" data-svelte-h="svelte-19ze9uc"><\/script><!-- HEAD_svelte-1j6j911_END -->`, ""} <div class="min-h-screen flex flex-col">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main class="flex-1">${slots.default ? slots.default({}) : ``}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
     });
   }
 });
@@ -1662,8 +1660,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
     universal_id = "src/routes/+layout.ts";
-    imports = ["_app/immutable/nodes/0.qflmWwsD.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
-    stylesheets = ["_app/immutable/assets/0.92DD8YAx.css"];
+    imports = ["_app/immutable/nodes/0.Cch7FeDY.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
+    stylesheets = ["_app/immutable/assets/0.ZgLybH2k.css"];
     fonts = [];
   }
 });
@@ -1733,7 +1731,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.HcIzwJSg.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/entry.d5xqwznv.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
+    imports2 = ["_app/immutable/nodes/1.n4l_LCfc.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/entry.pQD0mB5Z.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -2031,18 +2029,18 @@ var init_page_svelte = __esm({
       return `<div class="relative"${add_attribute("this", chatWrapper, 0)}> ${each(sparkles, (sparkle) => {
         return `<div class="sparkle" style="${"left: " + escape(sparkle.x, true) + "px; bottom: 60px;"}"><div class="sparkle-inner">${validate_component(Sparkles$1, "Sparkles").$$render($$result, { size: 14, color: sparkle.color }, {}, {})}</div> </div>`;
       })}  ${``} <div class="${[
-        "mockup-window border border-base-300 backdrop-blur transition-transform",
+        "rounded-lg border border-base-300 overflow-hidden transition-transform",
         ""
-      ].join(" ").trim()}"${add_attribute("this", windowEl, 0)}><div class="flex flex-col border-t border-base-300" style="height: 420px;"> <div class="flex-1 overflow-y-auto px-4 py-4"${add_attribute("this", chatContainer, 0)}>${each(messages, (message, i) => {
-        return `${message.role === "assistant" ? `<div class="${"chat pt-2 chat-start " + escape(
+      ].join(" ").trim()}"${add_attribute("this", windowEl, 0)}><div class="px-4 py-3 border-b border-base-300 flex items-center gap-2" data-svelte-h="svelte-1hoirb7"><div class="w-2 h-2 rounded-full bg-base-content/10"></div> <div class="w-2 h-2 rounded-full bg-base-content/10"></div> <div class="w-2 h-2 rounded-full bg-base-content/10"></div> <span class="text-xs text-base-content/30 ml-2">Chat with Benji&#39;s AI</span></div> <div class="flex flex-col" style="height: 400px;"> <div class="flex-1 overflow-y-auto px-4 py-4"${add_attribute("this", chatContainer, 0)}>${each(messages, (message, i) => {
+        return `${message.role === "assistant" ? `<div class="${"flex gap-3 pt-3 " + escape(
           message.animation === "blip" ? "chat-blip" : "chat-bounce-in",
           true
-        )}"><div class="chat-image avatar" data-svelte-h="svelte-qkcb4q"><div class="w-10 rounded-full"><img alt="Benji's AI" src="/asset/cv-no-smile-fancy-500.jpg"> </div></div> <div class="chat-bubble">${escape(message.content)}</div> </div>` : `<div class="chat pt-2 chat-end chat-bounce-in"><div class="chat-bubble chat-bubble-primary">${escape(message.content)}</div> </div>`}`;
+        )}"><div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0" data-svelte-h="svelte-1n4zk0p"><img alt="Benji's AI" src="/asset/cv-no-smile-fancy-500.jpg" class="w-full h-full object-cover"></div> <div class="text-sm text-base-content/70 bg-base-200 rounded-lg rounded-tl-none px-3 py-2 max-w-[80%]">${escape(message.content)}</div> </div>` : `<div class="flex justify-end pt-3 chat-bounce-in"><div class="text-sm bg-base-content text-base-100 rounded-lg rounded-tr-none px-3 py-2 max-w-[80%]">${escape(message.content)}</div> </div>`}`;
       })} ${``}</div>  <div class="border-t border-base-300 p-3">${`<form class="flex gap-2 items-center"><input type="text"${add_attribute("maxlength", MAX_INPUT_LENGTH, 0)}${add_attribute(
         "placeholder",
-        "Benji's AI is waking up...",
+        "Waking up...",
         0
-      )} class="input input-bordered flex-1 input-sm md:input-md" ${"disabled"}${add_attribute("value", input, 0)}> <button type="submit" class="btn btn-primary btn-sm md:btn-md btn-square" ${"disabled"}>${validate_component(Send$1, "Send").$$render($$result, { size: 18 }, {}, {})}</button></form> <p class="text-xs text-base-content/40 mt-1 text-right">${escape(userMessageCount)}/${escape(MAX_MESSAGES)} messages</p>`}</div></div></div></div>`;
+      )} class="flex-1 bg-base-200 border border-base-300 rounded-md px-3 py-2 text-sm placeholder:text-base-content/20 focus:outline-none focus:border-base-content/30 transition-colors" ${"disabled"}${add_attribute("value", input, 0)}> <button type="submit" class="p-2 rounded-md bg-base-content text-base-100 hover:opacity-80 transition-opacity disabled:opacity-30" ${"disabled"}>${validate_component(Send$1, "Send").$$render($$result, { size: 16 }, {}, {})}</button></form> <p class="text-xs text-base-content/20 mt-1 text-right">${escape(userMessageCount)}/${escape(MAX_MESSAGES)}</p>`}</div></div></div></div>`;
     });
     css = {
       code: ".wall-outer.svelte-dlt3ka{max-width:100vw;overflow:hidden}.wall-marquee-container.svelte-dlt3ka{overflow:hidden;mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        );-webkit-mask-image:linear-gradient(\n            to right,\n            transparent,\n            black 10%,\n            black 90%,\n            transparent\n        )}.wall-marquee-track.svelte-dlt3ka{animation:svelte-dlt3ka-marquee-scroll 40s linear infinite;width:-moz-max-content;width:max-content}.wall-marquee-track.svelte-dlt3ka:hover{animation-play-state:paused}@keyframes svelte-dlt3ka-marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}",
@@ -2059,130 +2057,130 @@ var init_page_svelte = __esm({
       const yearsExperience = currentYear - careerStartYear;
       if ($$props.data === void 0 && $$bindings.data && data !== void 0)
         $$bindings.data(data);
-      return `${$$result.head += `<!-- HEAD_svelte-17srt6d_START -->${$$result.title = `<title>${escape(title)} - Tech Lead &amp; Full Stack Developer</title>`, ""}<meta name="description" content="${"Tech Lead & Full Stack Developer with " + escape(yearsExperience, true) + "+ years experience. Currently leading engineering at a NYC startup. Specializing in TypeScript, React, Svelte, and AI-driven development."}"><meta property="og:type" content="website"><meta property="og:title" content="${escape(title, true) + " - Tech Lead & Full Stack Developer"}"><meta property="og:description" content="${"Tech Lead & Full Stack Developer with " + escape(yearsExperience, true) + "+ years experience. Currently leading engineering at a NYC startup."}"><meta property="og:url"${add_attribute("content", url, 0)}><!-- HEAD_svelte-17srt6d_END -->`, ""}  <div class="hero min-h-screen"><div class="hero-content block lg:flex gap-8 p-0"><div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left"><div class="badge badge-accent badge-outline mb-4 animate-fade-in-up" data-svelte-h="svelte-bbv8mp">NYC Startup</div> <h1 class="lg:text-7xl md:text-6xl text-4xl font-black animate-fade-in-up-delay-1" data-svelte-h="svelte-15bvagn"><span class="brightness-150 contrast-150">Tech Lead &amp; Full Stack Developer</span> <img class="w-16 inline" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck"></h1> <p class="py-9 text-base animate-fade-in-up-delay-2">Builder and engineer with ${escape(yearsExperience)}+ years in tech. Currently
-        Tech Lead at a New York-based startup, shipping project management and
-        finance tools. I build things end-to-end, from architecture to deploy,
-        leveraging AI agents and agentic workflows to move fast.</p> <div class="carousel carousel-end mb-9 w-full max-w-80 md:max-w-full text-neutral-600"><div class="carousel-item">${validate_component(Typescript, "TypescriptIcon").$$render(
+      return `${$$result.head += `<!-- HEAD_svelte-17srt6d_START -->${$$result.title = `<title>${escape(title)} - Tech Lead &amp; Full Stack Developer</title>`, ""}<meta name="description" content="${"Tech Lead & Full Stack Developer with " + escape(yearsExperience, true) + "+ years experience. Currently leading engineering at a NYC startup. Specializing in TypeScript, React, Svelte, and AI-driven development."}"><meta property="og:type" content="website"><meta property="og:title" content="${escape(title, true) + " - Tech Lead & Full Stack Developer"}"><meta property="og:description" content="${"Tech Lead & Full Stack Developer with " + escape(yearsExperience, true) + "+ years experience. Currently leading engineering at a NYC startup."}"><meta property="og:url"${add_attribute("content", url, 0)}><!-- HEAD_svelte-17srt6d_END -->`, ""}  <section class="min-h-[90vh] flex items-center"><div class="w-full max-w-5xl mx-auto px-4 py-20"><div class="grid lg:grid-cols-2 gap-16 items-center"><div class="text-center lg:text-left"><p class="text-xs uppercase tracking-widest text-base-content/30 mb-6 animate-fade-in-up" data-svelte-h="svelte-1p4y2ux">NYC Startup / Tech Lead</p> <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.1] animate-fade-in-up-delay-1" data-svelte-h="svelte-1f51o9z">Tech Lead &amp;<br>Full Stack Developer</h1> <p class="mt-6 text-base text-base-content/50 leading-relaxed max-w-md mx-auto lg:mx-0 animate-fade-in-up-delay-2">Builder and engineer with ${escape(yearsExperience)}+ years in tech. Currently
+          Tech Lead at a New York-based startup, shipping project management and
+          finance tools. I build things end-to-end, leveraging AI agents and
+          agentic workflows to move fast.</p>  <div class="flex flex-wrap gap-3 mt-8 justify-center lg:justify-start text-base-content/20 animate-fade-in-up-delay-2">${validate_component(Typescript, "TypescriptIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(React, "ReactIcon").$$render(
+      )} ${validate_component(React, "ReactIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Next_js, "NextJsIcon").$$render(
+      )} ${validate_component(Next_js, "NextJsIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Svelte, "SveleIcon").$$render(
+      )} ${validate_component(Svelte, "SveleIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Node_js, "NodeJsIcon").$$render(
+      )} ${validate_component(Node_js, "NodeJsIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Python, "PythonIcon").$$render(
+      )} ${validate_component(Python, "PythonIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Go, "GoIcon").$$render(
+      )} ${validate_component(Go, "GoIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Graphql, "GraphqlIcon").$$render(
+      )} ${validate_component(Graphql, "GraphqlIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Docker, "DockerIcon").$$render(
+      )} ${validate_component(Docker, "DockerIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Kubernetes, "KubernetesIcon").$$render(
+      )} ${validate_component(Kubernetes, "KubernetesIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Amazon_aws, "AwsIcon").$$render(
+      )} ${validate_component(Amazon_aws, "AwsIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Postgresql, "PostgresqlIcon").$$render(
+      )} ${validate_component(Postgresql, "PostgresqlIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Redux, "ReduxIcon").$$render(
+      )} ${validate_component(Redux, "ReduxIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Jest, "JestIcon").$$render(
+      )} ${validate_component(Jest, "JestIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Storybook, "StorybookIcon").$$render(
+      )} ${validate_component(Storybook, "StorybookIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div> <div class="carousel-item">${validate_component(Git, "GitIcon").$$render(
+      )} ${validate_component(Git, "GitIcon").$$render(
         $$result,
         {
-          class: "w-12 md:w-16 hover:text-neutral-content"
+          class: "w-8 hover:text-base-content/60 transition-colors"
         },
         {},
         {}
-      )}</div></div> <div class="join-vertical join md:join-horizontal gap-2 animate-fade-in-up-delay-3"><a class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary" href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf" target="_blank" data-svelte-h="svelte-17n9nt4">Read my cv</a> <a class="btn btn-lg md:btn-md btn-primary btn-wide normal-case" href="#chat-with-ai">Chat with my AI ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div> <div class="h-24 lg:hidden"></div> <div id="chat-with-ai">${validate_component(ChatBot, "ChatBot").$$render($$result, {}, {}, {})}</div></div></div>  <section class="py-16 border-y border-base-300"><div class="max-w-5xl mx-auto px-4"><div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"><div><div class="text-4xl md:text-5xl font-black text-primary">${escape(yearsExperience)}+</div> <div class="text-sm text-base-content/50 mt-2" data-svelte-h="svelte-14bys6m">Years Experience</div></div> <div data-svelte-h="svelte-5yolih"><div class="text-4xl md:text-5xl font-black text-primary">20+</div> <div class="text-sm text-base-content/50 mt-2">Technologies</div></div> <div data-svelte-h="svelte-1vfc9da"><div class="text-4xl md:text-5xl font-black text-primary">6+</div> <div class="text-sm text-base-content/50 mt-2">Products Shipped</div></div> <div data-svelte-h="svelte-1fdoftr"><div class="text-4xl md:text-5xl font-black text-primary">5</div> <div class="text-sm text-base-content/50 mt-2">Countries Worked From</div></div></div></div></section>  <section class="py-20 px-4"><div class="max-w-5xl mx-auto"><div class="text-center mb-14" data-svelte-h="svelte-1j5bb9g"><div class="badge badge-accent badge-outline mb-4">Services</div> <h2 class="text-3xl md:text-4xl font-black"><span class="brightness-150 contrast-150">What I Do</span></h2></div> <div class="grid md:grid-cols-2 gap-6"><div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="text-3xl mb-4">${validate_component(Kubernetes, "KubernetesIcon").$$render($$result, { class: "w-10 text-primary" }, {}, {})}</div> <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150" data-svelte-h="svelte-1e4ljyl">Tech &amp; Team Leadership</h3> <p class="text-sm text-base-content/50 leading-relaxed" data-svelte-h="svelte-1onnqi9">Leading engineering teams, defining architecture, and owning delivery end-to-end. Sprint planning, code reviews, mentoring, and shipping to production.</p></div> <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="text-3xl mb-4">${validate_component(Typescript, "TypescriptIcon").$$render($$result, { class: "w-10 text-primary" }, {}, {})}</div> <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150" data-svelte-h="svelte-v2p66r">Full Stack Development</h3> <p class="text-sm text-base-content/50 leading-relaxed" data-svelte-h="svelte-1hadrku">React, Next.js, Svelte, Node, Python, Go. Databases, APIs, Docker, AWS. Whatever it takes to ship the product.</p></div> <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="text-3xl mb-4">${validate_component(Amazon_aws, "AwsIcon").$$render($$result, { class: "w-10 text-primary" }, {}, {})}</div> <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150" data-svelte-h="svelte-oksy4v">AI-Driven Development</h3> <p class="text-sm text-base-content/50 leading-relaxed" data-svelte-h="svelte-1o59lrv">Building with AI agents, Claude Code, Codex, and agentic workflows. Using the latest tooling to move at startup speed.</p></div> <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="text-3xl mb-4">${validate_component(Figma, "FigmaIcon").$$render($$result, { class: "w-10 text-primary" }, {}, {})}</div> <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150" data-svelte-h="svelte-gs4f94">Builder &amp; Creator</h3> <p class="text-sm text-base-content/50 leading-relaxed" data-svelte-h="svelte-121svjv">Side projects, content creation, and creative experiments. From a 2-meter-tall bicycle featured in Expressen to AI-powered apps. I like making things.</p></div></div></div></section>  <section class="py-20 px-4 border-t border-base-300"><div class="max-w-5xl mx-auto"><div class="flex items-end justify-between mb-14"><div data-svelte-h="svelte-1eut3p5"><div class="badge badge-accent badge-outline mb-4">Portfolio</div> <h2 class="text-3xl md:text-4xl font-black"><span class="brightness-150 contrast-150">Featured Projects</span></h2></div> <a href="/portfolio" class="btn btn-ghost btn-sm normal-case gap-1 hidden md:flex">View all ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div> <div class="flex flex-col gap-6">${each(data.featuredProjects, (project) => {
-        return `<a href="${"/portfolio/" + escape(project.slug, true)}" class="group block"><div class="rounded-xl border border-base-300 overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="flex flex-col md:flex-row">${project.imageUrl && project.imageUrl.trim() !== "" ? `<div class="md:w-2/5 overflow-hidden bg-base-200"><img${add_attribute("src", project.imageUrl, 0)}${add_attribute("alt", project.title, 0)} class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"> </div>` : ``} <div class="flex-1 p-6 md:p-8 flex flex-col justify-between"><div><h3 class="text-xl md:text-2xl font-bold brightness-150 contrast-150 group-hover:text-primary transition-colors duration-300 mb-3">${escape(project.title)}</h3> <p class="text-base-content/50 text-sm md:text-base mb-5 leading-relaxed line-clamp-2">${escape(project.description)} </p></div> <div class="flex flex-wrap gap-1.5">${each(project.categories.slice(0, 5), (category) => {
-          return `<span class="badge badge-sm badge-neutral">${escape(category)}</span>`;
-        })} ${project.categories.length > 5 ? `<span class="badge badge-sm badge-ghost">+${escape(project.categories.length - 5)} </span>` : ``} </div></div> </div></div> </a>`;
-      })}</div> <div class="text-center mt-8 md:hidden"><a href="/portfolio" class="btn btn-ghost btn-sm normal-case gap-1">View all projects ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div></section>  <section class="py-20 px-4 border-t border-base-300"><div class="max-w-5xl mx-auto"><div class="flex items-end justify-between mb-14"><div data-svelte-h="svelte-gwjd99"><div class="badge badge-accent badge-outline mb-4">Blog</div> <h2 class="text-3xl md:text-4xl font-black"><span class="brightness-150 contrast-150">Latest Posts</span></h2></div> <a href="/blog" class="btn btn-ghost btn-sm normal-case gap-1 hidden md:flex">Read all ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div> <div class="grid md:grid-cols-3 gap-6">${each(data.featuredPosts, (post) => {
-        return `<a${add_attribute("href", post.slug, 0)} class="group rounded-xl border border-base-300 p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><time class="text-xs text-base-content/40">${escape(formatDate(post.date))}</time> <h3 class="text-lg font-bold mt-2 mb-3 brightness-150 contrast-150 group-hover:text-primary transition-colors duration-300 line-clamp-2">${escape(post.title)}</h3> <p class="text-sm text-base-content/50 leading-relaxed line-clamp-3">${escape(post.description)}</p> <div class="flex flex-wrap gap-1.5 mt-4">${each(post.categories, (category) => {
-          return `<span class="badge badge-sm badge-ghost">${escape(category)}</span>`;
+      )}</div> <div class="flex flex-col sm:flex-row gap-3 mt-10 justify-center lg:justify-start animate-fade-in-up-delay-3"><a class="px-6 py-3 text-sm font-medium border border-base-300 rounded-lg hover:border-base-content/30 transition-colors" href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf" target="_blank" data-svelte-h="svelte-1kjfb84">Read my CV</a> <a class="px-6 py-3 text-sm font-medium bg-base-content text-base-100 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2" href="#chat-with-ai">Chat with my AI ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div> <div id="chat-with-ai">${validate_component(ChatBot, "ChatBot").$$render($$result, {}, {}, {})}</div></div></div></section>  <section class="py-16 border-y border-base-300"><div class="max-w-5xl mx-auto px-4"><div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"><div><div class="text-3xl md:text-4xl font-bold tracking-tight">${escape(yearsExperience)}+</div> <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider" data-svelte-h="svelte-1vo9wma">Years Experience</div></div> <div data-svelte-h="svelte-ovkjqn"><div class="text-3xl md:text-4xl font-bold tracking-tight">20+</div> <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Technologies</div></div> <div data-svelte-h="svelte-1qieog4"><div class="text-3xl md:text-4xl font-bold tracking-tight">6+</div> <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Products Shipped</div></div> <div data-svelte-h="svelte-1v23oc1"><div class="text-3xl md:text-4xl font-bold tracking-tight">5</div> <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Countries Worked From</div></div></div></div></section>  <section class="py-24 px-4"><div class="max-w-5xl mx-auto"><div class="mb-16" data-svelte-h="svelte-bf0va2"><p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Services</p> <h2 class="text-3xl md:text-4xl font-bold tracking-tight">What I Do</h2></div> <div class="grid md:grid-cols-2 gap-px bg-base-300 border border-base-300 rounded-xl overflow-hidden"><div class="bg-base-100 p-8">${validate_component(Kubernetes, "KubernetesIcon").$$render($$result, { class: "w-8 text-base-content/30 mb-4" }, {}, {})} <h3 class="text-base font-semibold mb-3" data-svelte-h="svelte-1xp0ukg">Tech &amp; Team Leadership</h3> <p class="text-sm text-base-content/40 leading-relaxed" data-svelte-h="svelte-kpbn38">Leading engineering teams, defining architecture, and owning delivery end-to-end. Sprint planning, code reviews, mentoring, and shipping to production.</p></div> <div class="bg-base-100 p-8">${validate_component(Typescript, "TypescriptIcon").$$render($$result, { class: "w-8 text-base-content/30 mb-4" }, {}, {})} <h3 class="text-base font-semibold mb-3" data-svelte-h="svelte-j6wr8i">Full Stack Development</h3> <p class="text-sm text-base-content/40 leading-relaxed" data-svelte-h="svelte-4vdcgb">React, Next.js, Svelte, Node, Python, Go. Databases, APIs, Docker, AWS. Whatever it takes to ship the product.</p></div> <div class="bg-base-100 p-8">${validate_component(Amazon_aws, "AwsIcon").$$render($$result, { class: "w-8 text-base-content/30 mb-4" }, {}, {})} <h3 class="text-base font-semibold mb-3" data-svelte-h="svelte-1nawteu">AI-Driven Development</h3> <p class="text-sm text-base-content/40 leading-relaxed" data-svelte-h="svelte-2ny6ry">Building with AI agents, Claude Code, Codex, and agentic workflows. Using the latest tooling to move at startup speed.</p></div> <div class="bg-base-100 p-8">${validate_component(Figma, "FigmaIcon").$$render($$result, { class: "w-8 text-base-content/30 mb-4" }, {}, {})} <h3 class="text-base font-semibold mb-3" data-svelte-h="svelte-1uhtjy1">Builder &amp; Creator</h3> <p class="text-sm text-base-content/40 leading-relaxed" data-svelte-h="svelte-ve98fs">Side projects, content creation, and creative experiments. From a 2-meter-tall bicycle featured in Expressen to AI-powered apps.</p></div></div></div></section>  <section class="py-24 px-4 border-t border-base-300"><div class="max-w-5xl mx-auto"><div class="flex items-end justify-between mb-16"><div data-svelte-h="svelte-fzuqwc"><p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Portfolio</p> <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Featured Projects</h2></div> <a href="/portfolio" class="text-sm text-base-content/40 hover:text-base-content transition-colors hidden md:flex items-center gap-1">View all ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div> <div class="flex flex-col gap-4">${each(data.featuredProjects, (project) => {
+        return `<a href="${"/portfolio/" + escape(project.slug, true)}" class="group block"><div class="rounded-lg border border-base-300 overflow-hidden transition-all duration-200 hover:border-base-content/20"><div class="flex flex-col md:flex-row">${project.imageUrl && project.imageUrl.trim() !== "" ? `<div class="md:w-2/5 overflow-hidden bg-base-200"><img${add_attribute("src", project.imageUrl, 0)}${add_attribute("alt", project.title, 0)} class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"> </div>` : ``} <div class="flex-1 p-6 md:p-8 flex flex-col justify-between"><div><h3 class="text-lg font-semibold group-hover:text-base-content/70 transition-colors duration-200 mb-3">${escape(project.title)}</h3> <p class="text-base-content/40 text-sm mb-5 leading-relaxed line-clamp-2">${escape(project.description)} </p></div> <div class="flex flex-wrap gap-1.5">${each(project.categories.slice(0, 5), (category) => {
+          return `<span class="text-xs px-2 py-1 rounded-md bg-base-200 text-base-content/40">${escape(category)}</span>`;
+        })} ${project.categories.length > 5 ? `<span class="text-xs px-2 py-1 rounded-md bg-base-200 text-base-content/30">+${escape(project.categories.length - 5)} </span>` : ``} </div></div> </div></div> </a>`;
+      })}</div> <div class="text-center mt-8 md:hidden"><a href="/portfolio" class="text-sm text-base-content/40 hover:text-base-content transition-colors flex items-center justify-center gap-1">View all projects ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div></section>  <section class="py-24 px-4 border-t border-base-300"><div class="max-w-5xl mx-auto"><div class="flex items-end justify-between mb-16"><div data-svelte-h="svelte-1dctrw6"><p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Blog</p> <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Latest Posts</h2></div> <a href="/blog" class="text-sm text-base-content/40 hover:text-base-content transition-colors hidden md:flex items-center gap-1">Read all ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div> <div class="grid md:grid-cols-3 gap-4">${each(data.featuredPosts, (post) => {
+        return `<a${add_attribute("href", post.slug, 0)} class="group rounded-lg border border-base-300 p-6 transition-all duration-200 hover:border-base-content/20"><time class="text-xs text-base-content/30">${escape(formatDate(post.date))}</time> <h3 class="text-base font-semibold mt-3 mb-3 group-hover:text-base-content/70 transition-colors duration-200 line-clamp-2">${escape(post.title)}</h3> <p class="text-sm text-base-content/40 leading-relaxed line-clamp-3">${escape(post.description)}</p> <div class="flex flex-wrap gap-1.5 mt-4">${each(post.categories, (category) => {
+          return `<span class="text-xs px-2 py-1 rounded-md bg-base-200 text-base-content/30">${escape(category)}</span>`;
         })}</div> </a>`;
-      })}</div> <div class="text-center mt-8 md:hidden"><a href="/blog" class="btn btn-ghost btn-sm normal-case gap-1">Read all posts ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div></section>  ${validate_component(ChatWall, "ChatWall").$$render($$result, {}, {}, {})}`;
+      })}</div> <div class="text-center mt-8 md:hidden"><a href="/blog" class="text-sm text-base-content/40 hover:text-base-content transition-colors flex items-center justify-center gap-1">Read all posts ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div></section>  ${validate_component(ChatWall, "ChatWall").$$render($$result, {}, {}, {})}`;
     });
   }
 });
@@ -2205,7 +2203,7 @@ var init__3 = __esm({
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
     universal_id2 = "src/routes/+page.ts";
-    imports3 = ["_app/immutable/nodes/2.NWIM6KB0.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/utils.ICqXycyL.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js"];
+    imports3 = ["_app/immutable/nodes/2.wVJb4lwv.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/utils.ICqXycyL.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js"];
     stylesheets3 = ["_app/immutable/assets/2.bahBWmEb.css"];
     fonts3 = [];
   }
@@ -2680,14 +2678,14 @@ var options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body: body2, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en" class="scroll-smooth focus:scroll-auto" data-theme="night">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.png" />\n	<meta name="viewport" content="width=device-width" />\n	<link rel="icon" href="https://fav.farm/\u{1F525}" />\n	' + head + `
+    app: ({ head, body: body2, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en" class="scroll-smooth focus:scroll-auto" data-theme="dark">\n\n<head>\n	<meta charset="utf-8" />\n	<link rel="icon" href="' + assets2 + '/favicon.png" />\n	<meta name="viewport" content="width=device-width" />\n	<link rel="icon" href="https://fav.farm/\u{1F525}" />\n	' + head + `
 
 	<script type="module">
 		const theme = localStorage.getItem('data-theme')
 
 		theme ? document.documentElement.setAttribute
 			('data-theme', theme)
-			: localStorage.setItem('data-theme', 'night')
+			: localStorage.setItem('data-theme', 'dark')
 
 	<\/script>
 
@@ -2776,7 +2774,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "z2ak8p"
+  version_hash: "ytpjpa"
 };
 async function get_hooks() {
   return {};
@@ -5688,7 +5686,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.87tOrbY6.js", "app": "_app/immutable/entry/app.rrXZGass.js", "imports": ["_app/immutable/entry/start.87tOrbY6.js", "_app/immutable/chunks/entry.d5xqwznv.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.rrXZGass.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.KsoFj0BJ.js", "app": "_app/immutable/entry/app.m3l1FyvV.js", "imports": ["_app/immutable/entry/start.KsoFj0BJ.js", "_app/immutable/chunks/entry.pQD0mB5Z.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.m3l1FyvV.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),

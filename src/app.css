@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body {
-    height: 100%
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* === Page transition animations === */
@@ -141,9 +143,9 @@ body {
     animation-delay: var(--fall-delay, 0s);
 }
 
-/* === Subtle glow on avatar when thinking === */
+/* === Subtle indicator when thinking === */
 
-.avatar-thinking .rounded-full {
-    box-shadow: 0 0 8px 2px oklch(var(--p) / 0.15);
-    transition: box-shadow 0.3s ease;
+.avatar-thinking {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
 }

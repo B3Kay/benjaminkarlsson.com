@@ -342,12 +342,18 @@
 
     <div
         bind:this={windowEl}
-        class="mockup-window border border-base-300 backdrop-blur transition-transform"
+        class="rounded-lg border border-base-300 overflow-hidden transition-transform"
         class:chat-wiggle={wiggling}
     >
+        <div class="px-4 py-3 border-b border-base-300 flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-base-content/10"></div>
+            <div class="w-2 h-2 rounded-full bg-base-content/10"></div>
+            <div class="w-2 h-2 rounded-full bg-base-content/10"></div>
+            <span class="text-xs text-base-content/30 ml-2">Chat with Benji's AI</span>
+        </div>
         <div
-            class="flex flex-col border-t border-base-300"
-            style="height: 420px;"
+            class="flex flex-col"
+            style="height: 400px;"
         >
             <!-- Messages area -->
             <div
@@ -357,21 +363,20 @@
                 {#each messages as message, i (i)}
                     {#if message.role === "assistant"}
                         <div
-                            class="chat pt-2 chat-start {message.animation === 'blip' ? 'chat-blip' : 'chat-bounce-in'}"
+                            class="flex gap-3 pt-3 {message.animation === 'blip' ? 'chat-blip' : 'chat-bounce-in'}"
                         >
-                            <div class="chat-image avatar">
-                                <div class="w-10 rounded-full">
-                                    <img
-                                        alt="Benji's AI"
-                                        src="/asset/cv-no-smile-fancy-500.jpg"
-                                    />
-                                </div>
+                            <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                                <img
+                                    alt="Benji's AI"
+                                    src="/asset/cv-no-smile-fancy-500.jpg"
+                                    class="w-full h-full object-cover"
+                                />
                             </div>
-                            <div class="chat-bubble">{message.content}</div>
+                            <div class="text-sm text-base-content/70 bg-base-200 rounded-lg rounded-tl-none px-3 py-2 max-w-[80%]">{message.content}</div>
                         </div>
                     {:else}
-                        <div class="chat pt-2 chat-end chat-bounce-in">
-                            <div class="chat-bubble chat-bubble-primary">
+                        <div class="flex justify-end pt-3 chat-bounce-in">
+                            <div class="text-sm bg-base-content text-base-100 rounded-lg rounded-tr-none px-3 py-2 max-w-[80%]">
                                 {message.content}
                             </div>
                         </div>
@@ -379,19 +384,15 @@
                 {/each}
 
                 {#if showTyping || loading}
-                    <div class="chat pt-2 chat-start chat-bounce-in">
-                        <div
-                            class="chat-image avatar"
-                            class:avatar-thinking={loading}
-                        >
-                            <div class="w-10 rounded-full">
-                                <img
-                                    alt="Benji's AI"
-                                    src="/asset/cv-no-smile-fancy-500.jpg"
-                                />
-                            </div>
+                    <div class="flex gap-3 pt-3 chat-bounce-in">
+                        <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                            <img
+                                alt="Benji's AI"
+                                src="/asset/cv-no-smile-fancy-500.jpg"
+                                class="w-full h-full object-cover"
+                            />
                         </div>
-                        <div class="chat-bubble">
+                        <div class="text-sm bg-base-200 rounded-lg rounded-tl-none px-3 py-2">
                             <span class="flex gap-1 items-center py-1 px-1">
                                 <span class="typing-dot"></span>
                                 <span class="typing-dot"></span>
@@ -406,14 +407,14 @@
             <div class="border-t border-base-300 p-3">
                 {#if limitReached}
                     <div
-                        class="text-center text-sm text-base-content/60 py-2 chat-bounce-in"
+                        class="text-center text-xs text-base-content/40 py-2 chat-bounce-in"
                     >
-                        Session complete! —
+                        Session complete!
                         <a
                             href="mailto:hi@benjaminkarlsson.com"
-                            class="link link-primary font-semibold"
-                            >email Benjamin</a
-                        > to continue the conversation! 🎉
+                            class="underline hover:text-base-content transition-colors"
+                            >Email Benjamin</a
+                        > to continue.
                     </div>
                 {:else}
                     <form
@@ -426,25 +427,25 @@
                             on:keydown={handleKeydown}
                             maxlength={MAX_INPUT_LENGTH}
                             placeholder={inputDisabledUntilReady
-                                ? "Benji's AI is waking up..."
-                                : "Ask about Benji's skills, travels, projects..."}
-                            class="input input-bordered flex-1 input-sm md:input-md"
+                                ? "Waking up..."
+                                : "Ask about Benji..."}
+                            class="flex-1 bg-base-200 border border-base-300 rounded-md px-3 py-2 text-sm placeholder:text-base-content/20 focus:outline-none focus:border-base-content/30 transition-colors"
                             disabled={loading || inputDisabledUntilReady}
                         />
                         <button
                             type="submit"
-                            class="btn btn-primary btn-sm md:btn-md btn-square"
+                            class="p-2 rounded-md bg-base-content text-base-100 hover:opacity-80 transition-opacity disabled:opacity-30"
                             disabled={loading ||
                                 inputDisabledUntilReady ||
                                 !input.trim()}
                         >
-                            <Send size={18} />
+                            <Send size={16} />
                         </button>
                     </form>
                     <p
-                        class="text-xs text-base-content/40 mt-1 text-right"
+                        class="text-xs text-base-content/20 mt-1 text-right"
                     >
-                        {userMessageCount}/{MAX_MESSAGES} messages
+                        {userMessageCount}/{MAX_MESSAGES}
                     </p>
                 {/if}
             </div>

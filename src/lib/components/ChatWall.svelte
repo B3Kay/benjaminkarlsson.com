@@ -74,50 +74,29 @@
 </script>
 
 {#if loaded && highlights.length > 0}
-    <div class="wall-outer mt-16 mb-8">
-        <div class="flex items-center justify-center gap-2 mb-6">
-            <MessageCircle size={20} class="text-primary" />
-            <h2 class="text-lg font-bold brightness-150 contrast-150">
-                Chat Hall of Fame
-            </h2>
-            <MessageCircle size={20} class="text-primary" />
+    <div class="wall-outer py-16 border-t border-base-300">
+        <div class="text-center mb-8">
+            <p class="text-xs uppercase tracking-widest text-base-content/20 mb-2">Chat Hall of Fame</p>
+            <p class="text-sm text-base-content/30">
+                Memorable moments from visitors chatting with Benji's AI
+            </p>
         </div>
 
-        <p class="text-center text-sm text-base-content/50 mb-6">
-            Memorable moments from visitors chatting with Benji's AI
-        </p>
-
-        <!-- Scrolling marquee -->
         <div class="wall-marquee-container relative">
-            <!-- Fade edges -->
-            <div
-                class="absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
-                style="background: linear-gradient(to right, oklch(var(--b1)), transparent);"
-            />
-            <div
-                class="absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none"
-                style="background: linear-gradient(to left, oklch(var(--b1)), transparent);"
-            />
-
-            <div class="wall-marquee-track flex gap-4 py-2">
-                <!-- Double the items for seamless loop -->
+            <div class="wall-marquee-track flex gap-3 py-2">
                 {#each [...highlights, ...highlights] as highlight (highlight.id + Math.random())}
                     <div
-                        class="wall-card flex-shrink-0 bg-base-200 rounded-xl px-4 py-3 border border-base-300
-                               hover:border-primary/40 hover:scale-105 transition-all duration-300 cursor-default
+                        class="wall-card flex-shrink-0 rounded-lg px-4 py-3 border border-base-300
+                               hover:border-base-content/20 transition-all duration-200 cursor-default
                                max-w-[280px] min-w-[220px]"
                     >
                         <div class="flex items-start gap-2">
-                            <span class="text-xl flex-shrink-0"
-                                >{highlight.emoji}</span
-                            >
-                            <p class="text-sm leading-snug">
+                            <span class="text-base flex-shrink-0">{highlight.emoji}</span>
+                            <p class="text-sm text-base-content/50 leading-snug">
                                 {highlight.snippet}
                             </p>
                         </div>
-                        <p
-                            class="text-xs text-base-content/30 mt-2 text-right"
-                        >
+                        <p class="text-xs text-base-content/20 mt-2 text-right">
                             {timeAgo(highlight.timestamp)}
                         </p>
                     </div>
