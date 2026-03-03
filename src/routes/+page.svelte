@@ -3,19 +3,27 @@
   import { formatDate } from "$lib/utils";
   import IconArrowRight from "~icons/mingcute/arrow-right-line";
 
+  // Frontend
   import SveleIcon from "~icons/cib/svelte";
   import ReactIcon from "~icons/cib/react";
-  import StorybookIcon from "~icons/cib/storybook";
-  import GitIcon from "~icons/cib/git";
+  import NextJsIcon from "~icons/cib/next-js";
   import TypescriptIcon from "~icons/cib/typescript";
-  import JavascriptIcon from "~icons/cib/javascript";
-  import CssIcon from "~icons/cib/css3-shiled";
-  import HtmlIcon from "~icons/cib/html5-shield";
-  import FirebaseIcon from "~icons/cib/firebase";
-  import FigmaIcon from "~icons/cib/figma";
-
   import ReduxIcon from "~icons/cib/redux";
+  import GraphqlIcon from "~icons/cib/graphql";
+  import StorybookIcon from "~icons/cib/storybook";
   import JestIcon from "~icons/cib/jest";
+
+  // Backend & Infra
+  import NodeJsIcon from "~icons/cib/node-js";
+  import PythonIcon from "~icons/cib/python";
+  import GoIcon from "~icons/cib/go";
+  import DockerIcon from "~icons/cib/docker";
+  import KubernetesIcon from "~icons/cib/kubernetes";
+  import AwsIcon from "~icons/cib/amazon-aws";
+  import PostgresqlIcon from "~icons/cib/postgresql";
+  import FirebaseIcon from "~icons/cib/firebase";
+  import GitIcon from "~icons/cib/git";
+  import FigmaIcon from "~icons/cib/figma";
 
   import ChatBot from "$lib/components/ChatBot.svelte";
   import ChatWall from "$lib/components/ChatWall.svelte";
@@ -53,50 +61,62 @@
         />
       </h1>
       <p class="py-9 text-base animate-fade-in-up-delay-2">
-        {yearsExperience}+ years in tech. Currently Tech Lead at a New York-based
-        startup, building project management and finance tools. Passionate about
-        AI-driven development, agentic workflows, and shipping fast with
-        TypeScript, React, and Svelte.
+        Builder and engineer with {yearsExperience}+ years in tech. Currently
+        Tech Lead at a New York-based startup, shipping project management and
+        finance tools. I build things end-to-end, from architecture to deploy,
+        leveraging AI agents and agentic workflows to move fast.
       </p>
 
       <div
         class="carousel carousel-end mb-9 w-full max-w-80 md:max-w-full text-neutral-600"
       >
         <div class="carousel-item">
-          <SveleIcon class="w-12 md:w-16 hover:text-neutral-content" />
+          <TypescriptIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
           <ReactIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
+          <NextJsIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <SveleIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <NodeJsIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <PythonIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <GoIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <GraphqlIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <DockerIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <KubernetesIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <AwsIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
+          <PostgresqlIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
           <ReduxIcon class="w-12 md:w-16 hover:text-neutral-content" />
-        </div>
-        <div class="carousel-item">
-          <StorybookIcon class="w-12 md:w-16 hover:text-neutral-content" />
-        </div>
-        <div class="carousel-item">
-          <TypescriptIcon class="w-12 md:w-16 hover:text-neutral-content" />
-        </div>
-        <div class="carousel-item">
-          <JavascriptIcon class="w-12 md:w-16 hover:text-neutral-content" />
-        </div>
-        <div class="carousel-item">
-          <CssIcon class="w-12 md:w-16 hover:text-neutral-content" />
-        </div>
-        <div class="carousel-item">
-          <HtmlIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
           <JestIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
         <div class="carousel-item">
+          <StorybookIcon class="w-12 md:w-16 hover:text-neutral-content" />
+        </div>
+        <div class="carousel-item">
           <GitIcon class="w-12 md:w-16 hover:text-neutral-content" />
-        </div>
-        <div class="carousel-item">
-          <FirebaseIcon class="w-12 md:w-16 hover:text-neutral-content" />
-        </div>
-        <div class="carousel-item">
-          <FigmaIcon class="w-12 md:w-16 hover:text-neutral-content" />
         </div>
       </div>
 
@@ -129,15 +149,15 @@
         <div class="text-sm text-base-content/50 mt-2">Years Experience</div>
       </div>
       <div>
-        <div class="text-4xl md:text-5xl font-black text-primary">12+</div>
+        <div class="text-4xl md:text-5xl font-black text-primary">20+</div>
         <div class="text-sm text-base-content/50 mt-2">Technologies</div>
       </div>
       <div>
         <div class="text-4xl md:text-5xl font-black text-primary">6+</div>
-        <div class="text-sm text-base-content/50 mt-2">Projects Shipped</div>
+        <div class="text-sm text-base-content/50 mt-2">Products Shipped</div>
       </div>
       <div>
-        <div class="text-4xl md:text-5xl font-black text-primary">3</div>
+        <div class="text-4xl md:text-5xl font-black text-primary">5</div>
         <div class="text-sm text-base-content/50 mt-2">Countries Worked From</div>
       </div>
     </div>
@@ -154,24 +174,34 @@
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-2 gap-6">
       <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
         <div class="text-3xl mb-4">
-          <SveleIcon class="w-10 text-primary" />
+          <KubernetesIcon class="w-10 text-primary" />
         </div>
-        <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150">Tech Leadership</h3>
+        <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150">Tech & Team Leadership</h3>
         <p class="text-sm text-base-content/50 leading-relaxed">
-          Leading engineering teams, defining architecture, and shipping products. From sprint planning to production deploys.
+          Leading engineering teams, defining architecture, and owning delivery end-to-end. Sprint planning, code reviews, mentoring, and shipping to production.
         </p>
       </div>
 
       <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
         <div class="text-3xl mb-4">
-          <FirebaseIcon class="w-10 text-primary" />
+          <TypescriptIcon class="w-10 text-primary" />
         </div>
         <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150">Full Stack Development</h3>
         <p class="text-sm text-base-content/50 leading-relaxed">
-          End-to-end web apps with TypeScript, React, Svelte, and modern cloud infrastructure. From idea to production.
+          React, Next.js, Svelte, Node, Python, Go. Databases, APIs, Docker, AWS. Whatever it takes to ship the product.
+        </p>
+      </div>
+
+      <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+        <div class="text-3xl mb-4">
+          <AwsIcon class="w-10 text-primary" />
+        </div>
+        <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150">AI-Driven Development</h3>
+        <p class="text-sm text-base-content/50 leading-relaxed">
+          Building with AI agents, Claude Code, Codex, and agentic workflows. Using the latest tooling to move at startup speed.
         </p>
       </div>
 
@@ -179,9 +209,9 @@
         <div class="text-3xl mb-4">
           <FigmaIcon class="w-10 text-primary" />
         </div>
-        <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150">AI-Driven Development</h3>
+        <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150">Builder & Creator</h3>
         <p class="text-sm text-base-content/50 leading-relaxed">
-          Building with AI agents, Claude Code, Codex, and agentic workflows. Shipping faster by leveraging the latest AI tooling.
+          Side projects, content creation, and creative experiments. From a 2-meter-tall bicycle featured in Expressen to AI-powered apps. I like making things.
         </p>
       </div>
     </div>
