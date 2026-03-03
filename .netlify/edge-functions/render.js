@@ -1662,8 +1662,8 @@ var init__ = __esm({
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
     universal_id = "src/routes/+layout.ts";
-    imports = ["_app/immutable/nodes/0.rrbrEqAg.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
-    stylesheets = ["_app/immutable/assets/0.vcC3rbYB.css"];
+    imports = ["_app/immutable/nodes/0.q1g-_X3R.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js"];
+    stylesheets = ["_app/immutable/assets/0.bA71bRj4.css"];
     fonts = [];
   }
 });
@@ -1733,7 +1733,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.M-bMCh5V.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/entry.R7fRgyUZ.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
+    imports2 = ["_app/immutable/nodes/1.v0DqHPgI.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/entry.3LPQvlUl.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -1742,12 +1742,37 @@ var init__2 = __esm({
 // .svelte-kit/output/server/entries/pages/_page.ts.js
 var page_ts_exports = {};
 __export(page_ts_exports, {
+  load: () => load,
   prerender: () => prerender2
 });
+async function load({ fetch: fetch2 }) {
+  const [postsRes, portfolioRes] = await Promise.all([
+    fetch2("/api/posts"),
+    fetch2("/api/portfolio")
+  ]);
+  const posts = await postsRes.json();
+  const portfolio = await portfolioRes.json();
+  return {
+    featuredPosts: posts.slice(0, 3),
+    featuredProjects: portfolio.slice(0, 3)
+  };
+}
 var prerender2;
 var init_page_ts = __esm({
   ".svelte-kit/output/server/entries/pages/_page.ts.js"() {
     prerender2 = false;
+  }
+});
+
+// .svelte-kit/output/server/chunks/utils.js
+function formatDate(date, dateStyle = "medium", locales = "en") {
+  const formatter = new Intl.DateTimeFormat(locales, {
+    dateStyle
+  });
+  return formatter.format(new Date(date));
+}
+var init_utils2 = __esm({
+  ".svelte-kit/output/server/chunks/utils.js"() {
   }
 });
 
@@ -1756,11 +1781,12 @@ var page_svelte_exports = {};
 __export(page_svelte_exports, {
   default: () => Page
 });
-var Send, Send$1, Sparkles, Sparkles$1, Arrow_right_line, Svelte, React, Storybook, Git, Typescript, Javascript, Css3_shiled, Html5_shield, Firebase, Figma, Redux, Jest, MAX_MESSAGES, MAX_INPUT_LENGTH, ChatBot, css, ChatWall, Page;
+var Send, Send$1, Sparkles, Sparkles$1, Arrow_right_line, Svelte, React, Storybook, Git, Typescript, Javascript, Css3_shiled, Html5_shield, Firebase, Figma, Redux, Jest, MAX_MESSAGES, MAX_INPUT_LENGTH, ChatBot, css, ChatWall, careerStartYear, Page;
 var init_page_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_page.svelte.js"() {
     init_ssr();
     init_config();
+    init_utils2();
     init_Icon();
     Send = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       const iconNode = [["path", { "d": "m22 2-7 20-4-9-9-4Z" }], ["path", { "d": "M22 2 11 13" }]];
@@ -1971,12 +1997,17 @@ var init_page_svelte = __esm({
       $$result.css.add(css);
       return `${``}`;
     });
+    careerStartYear = 2019;
     Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${$$result.head += `<!-- HEAD_svelte-btmkba_START -->${$$result.title = `<title>${escape(title)} - Freelance Full Stack Developer</title>`, ""}<meta name="description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work."><meta property="og:type" content="website"><meta property="og:title" content="${escape(title, true) + " - Freelance Full Stack Developer"}"><meta property="og:description" content="Senior Full Stack Developer with 5+ years experience specializing in TypeScript, React, and Svelte. Available for freelance work."><meta property="og:url"${add_attribute("content", url, 0)}><!-- HEAD_svelte-btmkba_END -->`, ""} <div class="hero min-h-screen"><div class="hero-content block lg:flex gap-8 p-0"><div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left"><div class="badge badge-accent badge-outline mb-4 animate-fade-in-up" data-svelte-h="svelte-119drau">Remote First</div> <h1 class="lg:text-7xl md:text-6xl text-4xl font-black animate-fade-in-up-delay-1" data-svelte-h="svelte-kqi0y1"><span class="brightness-150 contrast-150">Freelancing Full Stack Developer</span> <img class="w-16 inline" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck"></h1> <p class="py-9 text-base animate-fade-in-up-delay-2" data-svelte-h="svelte-5qrhm2">Senior with 5+ years experience in front-end development, specializing
-        in TypeScript, React.js, and advanced patterns like hooks, Redux, and
-        routing. Dedicated to creating user-friendly, feature-rich websites.
-        Proficient in Mono repo tools, Styled components, Jest, Storybook, and
-        Git.</p> <div class="carousel carousel-end mb-9 w-full max-w-80 md:max-w-full text-neutral-600"><div class="carousel-item">${validate_component(Svelte, "SveleIcon").$$render(
+      let { data } = $$props;
+      const currentYear = /* @__PURE__ */ (/* @__PURE__ */ new Date()).getFullYear();
+      const yearsExperience = currentYear - careerStartYear;
+      if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+        $$bindings.data(data);
+      return `${$$result.head += `<!-- HEAD_svelte-17srt6d_START -->${$$result.title = `<title>${escape(title)} - Tech Lead &amp; Full Stack Developer</title>`, ""}<meta name="description" content="${"Tech Lead & Full Stack Developer with " + escape(yearsExperience, true) + "+ years experience. Currently leading engineering at a NYC startup. Specializing in TypeScript, React, Svelte, and AI-driven development."}"><meta property="og:type" content="website"><meta property="og:title" content="${escape(title, true) + " - Tech Lead & Full Stack Developer"}"><meta property="og:description" content="${"Tech Lead & Full Stack Developer with " + escape(yearsExperience, true) + "+ years experience. Currently leading engineering at a NYC startup."}"><meta property="og:url"${add_attribute("content", url, 0)}><!-- HEAD_svelte-17srt6d_END -->`, ""}  <div class="hero min-h-screen"><div class="hero-content block lg:flex gap-8 p-0"><div class="mt-12 sm:mt-0 max-w-lg text-center md:text-left"><div class="badge badge-accent badge-outline mb-4 animate-fade-in-up" data-svelte-h="svelte-bbv8mp">NYC Startup</div> <h1 class="lg:text-7xl md:text-6xl text-4xl font-black animate-fade-in-up-delay-1" data-svelte-h="svelte-15bvagn"><span class="brightness-150 contrast-150">Tech Lead &amp; Full Stack Developer</span> <img class="w-16 inline" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck"></h1> <p class="py-9 text-base animate-fade-in-up-delay-2">${escape(yearsExperience)}+ years in tech. Currently Tech Lead at a New York-based
+        startup, building project management and finance tools. Passionate about
+        AI-driven development, agentic workflows, and shipping fast with
+        TypeScript, React, and Svelte.</p> <div class="carousel carousel-end mb-9 w-full max-w-80 md:max-w-full text-neutral-600"><div class="carousel-item">${validate_component(Svelte, "SveleIcon").$$render(
         $$result,
         {
           class: "w-12 md:w-16 hover:text-neutral-content"
@@ -2060,7 +2091,15 @@ var init_page_svelte = __esm({
         },
         {},
         {}
-      )}</div></div> <div class="join-vertical join md:join-horizontal gap-2 animate-fade-in-up-delay-3"><a class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary" href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf" target="_blank" data-svelte-h="svelte-17n9nt4">Read my cv</a> <a class="btn btn-lg md:btn-md btn-primary btn-wide normal-case" href="#chat-with-ai">Chat with my AI ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div> <div class="h-24 lg:hidden"></div> <div id="chat-with-ai">${validate_component(ChatBot, "ChatBot").$$render($$result, {}, {}, {})}</div></div></div> ${validate_component(ChatWall, "ChatWall").$$render($$result, {}, {}, {})}`;
+      )}</div></div> <div class="join-vertical join md:join-horizontal gap-2 animate-fade-in-up-delay-3"><a class="btn btn-lg md:btn-md btn-neutral btn-wide normal-case ring-primary" href="/asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf" target="_blank" data-svelte-h="svelte-17n9nt4">Read my cv</a> <a class="btn btn-lg md:btn-md btn-primary btn-wide normal-case" href="#chat-with-ai">Chat with my AI ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div> <div class="h-24 lg:hidden"></div> <div id="chat-with-ai">${validate_component(ChatBot, "ChatBot").$$render($$result, {}, {}, {})}</div></div></div>  <section class="py-16 border-y border-base-300"><div class="max-w-5xl mx-auto px-4"><div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"><div><div class="text-4xl md:text-5xl font-black text-primary">${escape(yearsExperience)}+</div> <div class="text-sm text-base-content/50 mt-2" data-svelte-h="svelte-14bys6m">Years Experience</div></div> <div data-svelte-h="svelte-1ejrk88"><div class="text-4xl md:text-5xl font-black text-primary">12+</div> <div class="text-sm text-base-content/50 mt-2">Technologies</div></div> <div data-svelte-h="svelte-ebytxo"><div class="text-4xl md:text-5xl font-black text-primary">6+</div> <div class="text-sm text-base-content/50 mt-2">Projects Shipped</div></div> <div data-svelte-h="svelte-12f21zp"><div class="text-4xl md:text-5xl font-black text-primary">3</div> <div class="text-sm text-base-content/50 mt-2">Countries Worked From</div></div></div></div></section>  <section class="py-20 px-4"><div class="max-w-5xl mx-auto"><div class="text-center mb-14" data-svelte-h="svelte-1j5bb9g"><div class="badge badge-accent badge-outline mb-4">Services</div> <h2 class="text-3xl md:text-4xl font-black"><span class="brightness-150 contrast-150">What I Do</span></h2></div> <div class="grid md:grid-cols-3 gap-6"><div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="text-3xl mb-4">${validate_component(Svelte, "SveleIcon").$$render($$result, { class: "w-10 text-primary" }, {}, {})}</div> <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150" data-svelte-h="svelte-1pmszum">Tech Leadership</h3> <p class="text-sm text-base-content/50 leading-relaxed" data-svelte-h="svelte-6p3lwm">Leading engineering teams, defining architecture, and shipping products. From sprint planning to production deploys.</p></div> <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="text-3xl mb-4">${validate_component(Firebase, "FirebaseIcon").$$render($$result, { class: "w-10 text-primary" }, {}, {})}</div> <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150" data-svelte-h="svelte-v2p66r">Full Stack Development</h3> <p class="text-sm text-base-content/50 leading-relaxed" data-svelte-h="svelte-1hdhb7l">End-to-end web apps with TypeScript, React, Svelte, and modern cloud infrastructure. From idea to production.</p></div> <div class="rounded-xl border border-base-300 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="text-3xl mb-4">${validate_component(Figma, "FigmaIcon").$$render($$result, { class: "w-10 text-primary" }, {}, {})}</div> <h3 class="text-lg font-bold mb-3 brightness-150 contrast-150" data-svelte-h="svelte-oksy4v">AI-Driven Development</h3> <p class="text-sm text-base-content/50 leading-relaxed" data-svelte-h="svelte-6iqmiw">Building with AI agents, Claude Code, Codex, and agentic workflows. Shipping faster by leveraging the latest AI tooling.</p></div></div></div></section>  <section class="py-20 px-4 border-t border-base-300"><div class="max-w-5xl mx-auto"><div class="flex items-end justify-between mb-14"><div data-svelte-h="svelte-1eut3p5"><div class="badge badge-accent badge-outline mb-4">Portfolio</div> <h2 class="text-3xl md:text-4xl font-black"><span class="brightness-150 contrast-150">Featured Projects</span></h2></div> <a href="/portfolio" class="btn btn-ghost btn-sm normal-case gap-1 hidden md:flex">View all ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div> <div class="flex flex-col gap-6">${each(data.featuredProjects, (project) => {
+        return `<a href="${"/portfolio/" + escape(project.slug, true)}" class="group block"><div class="rounded-xl border border-base-300 overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><div class="flex flex-col md:flex-row">${project.imageUrl && project.imageUrl.trim() !== "" ? `<div class="md:w-2/5 overflow-hidden bg-base-200"><img${add_attribute("src", project.imageUrl, 0)}${add_attribute("alt", project.title, 0)} class="w-full h-48 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"> </div>` : ``} <div class="flex-1 p-6 md:p-8 flex flex-col justify-between"><div><h3 class="text-xl md:text-2xl font-bold brightness-150 contrast-150 group-hover:text-primary transition-colors duration-300 mb-3">${escape(project.title)}</h3> <p class="text-base-content/50 text-sm md:text-base mb-5 leading-relaxed line-clamp-2">${escape(project.description)} </p></div> <div class="flex flex-wrap gap-1.5">${each(project.categories.slice(0, 5), (category) => {
+          return `<span class="badge badge-sm badge-neutral">${escape(category)}</span>`;
+        })} ${project.categories.length > 5 ? `<span class="badge badge-sm badge-ghost">+${escape(project.categories.length - 5)} </span>` : ``} </div></div> </div></div> </a>`;
+      })}</div> <div class="text-center mt-8 md:hidden"><a href="/portfolio" class="btn btn-ghost btn-sm normal-case gap-1">View all projects ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div></section>  <section class="py-20 px-4 border-t border-base-300"><div class="max-w-5xl mx-auto"><div class="flex items-end justify-between mb-14"><div data-svelte-h="svelte-gwjd99"><div class="badge badge-accent badge-outline mb-4">Blog</div> <h2 class="text-3xl md:text-4xl font-black"><span class="brightness-150 contrast-150">Latest Posts</span></h2></div> <a href="/blog" class="btn btn-ghost btn-sm normal-case gap-1 hidden md:flex">Read all ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div> <div class="grid md:grid-cols-3 gap-6">${each(data.featuredPosts, (post) => {
+        return `<a${add_attribute("href", post.slug, 0)} class="group rounded-xl border border-base-300 p-6 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"><time class="text-xs text-base-content/40">${escape(formatDate(post.date))}</time> <h3 class="text-lg font-bold mt-2 mb-3 brightness-150 contrast-150 group-hover:text-primary transition-colors duration-300 line-clamp-2">${escape(post.title)}</h3> <p class="text-sm text-base-content/50 leading-relaxed line-clamp-3">${escape(post.description)}</p> <div class="flex flex-wrap gap-1.5 mt-4">${each(post.categories, (category) => {
+          return `<span class="badge badge-sm badge-ghost">${escape(category)}</span>`;
+        })}</div> </a>`;
+      })}</div> <div class="text-center mt-8 md:hidden"><a href="/blog" class="btn btn-ghost btn-sm normal-case gap-1">Read all posts ${validate_component(Arrow_right_line, "IconArrowRight").$$render($$result, {}, {}, {})}</a></div></div></section>  ${validate_component(ChatWall, "ChatWall").$$render($$result, {}, {}, {})}`;
     });
   }
 });
@@ -2083,7 +2122,7 @@ var init__3 = __esm({
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
     universal_id2 = "src/routes/+page.ts";
-    imports3 = ["_app/immutable/nodes/2.WkzY5F3i.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/Icon.cp6pJciN.js"];
+    imports3 = ["_app/immutable/nodes/2.GG2CsvuB.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js", "_app/immutable/chunks/each.2ollwW2m.js", "_app/immutable/chunks/config.2WcxcVNV.js", "_app/immutable/chunks/utils.ICqXycyL.js", "_app/immutable/chunks/spread.rEx3vLA9.js", "_app/immutable/chunks/Icon.cp6pJciN.js"];
     stylesheets3 = ["_app/immutable/assets/2.bahBWmEb.css"];
     fonts3 = [];
   }
@@ -2123,7 +2162,9 @@ var init_server_ts = __esm({
     SYSTEM_PROMPT = `You are an AI assistant on Benjamin Karlsson's personal portfolio website. You represent Benjamin and answer questions about him in a friendly, professional tone. Speak in third person about Benjamin unless it feels more natural to say "I" (as if you are Benjamin's digital representative).
 
 ## About Benjamin Karlsson
-- Senior Full Stack Developer with 5+ years in the IT industry
+- Tech Lead & Full Stack Developer with ${(/* @__PURE__ */ new Date()).getFullYear() - 2019}+ years in the IT industry
+- Currently Tech Lead and Team Lead at a New York-based startup (since February 2025), building project management and finance tools
+- Passionate about AI-driven development, utilizing AI agents, Claude Code, Codex, and agentic workflows
 - Specializes in TypeScript, React.js, Svelte, and advanced frontend patterns (hooks, Redux, routing)
 - Proficient in monorepo tools, styled components, Jest, Storybook, and Git
 - Graduated from military service in Sweden
@@ -2132,7 +2173,6 @@ var init_server_ts = __esm({
 - Born May 1994 in Sweden
 - Passionate about health & fitness, teaching, and building creative projects
 - Built a 2-meter-tall bicycle and was featured in Expressen (Swedish newspaper)
-- Available for freelance work (remote first)
 - Contact: hi@benjaminkarlsson.com | LinkedIn: linkedin.com/in/benjik | GitHub: github.com/B3Kay
 
 ## Rules \u2014 you MUST follow these strictly:
@@ -2639,7 +2679,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "2p0aws"
+  version_hash: "1yrf1qx"
 };
 async function get_hooks() {
   return {};
@@ -5551,7 +5591,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["asset/Standard - Senior Full stack developer - Benjamin Karlsson.pdf", "asset/about/hogcykel.jpg", "asset/blog/httf/100wpm-screenshot-big.png", "asset/blog/httf/100wpm-screenshot.png", "asset/blog/httf/avarage-speed.png", "asset/blog/httf/keybr.png", "asset/blog/httf/monkeytype-stats.png", "asset/blog/httf/schedule.png", "asset/blog/rdpd/richdadpoordad.jpg", "asset/blog/theAlchemist/alchemist-cover-fb.png", "asset/cv-no-smile-fancy-500.jpg", "asset/cv-no-smile-pic.jpg", "asset/cv-smile-pic-500.jpg", "asset/portfolio/buffetdiet/landing_page.png", "asset/portfolio/buffetdiet/login.png", "asset/portfolio/buffetdiet/restaurant_view.png", "asset/portfolio/buffetdiet/restaurants_view.png", "asset/portfolio/buffetdiet/review_restaurant.png", "asset/portfolio/buffetdiet/search.png", "asset/portfolio/ecarx/commit_list.png", "asset/portfolio/ecarx/compare_bundles.png", "asset/portfolio/ecarx/component_details.png", "asset/portfolio/ecarx/dependancy_big.png", "asset/portfolio/ecarx/dependancy_many.png", "asset/portfolio/ecarx/dependancy_tree.png", "asset/portfolio/ecarx/graph_aggregated_suites.png", "asset/portfolio/ecarx/manifest_tree.png", "favicon.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".jpg": "image/jpeg", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.KOsuKoMg.js", "app": "_app/immutable/entry/app.uUucX7rg.js", "imports": ["_app/immutable/entry/start.KOsuKoMg.js", "_app/immutable/chunks/entry.R7fRgyUZ.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.uUucX7rg.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
+      client: { "start": "_app/immutable/entry/start.64kWCGeB.js", "app": "_app/immutable/entry/app.mwp5-pU7.js", "imports": ["_app/immutable/entry/start.64kWCGeB.js", "_app/immutable/chunks/entry.3LPQvlUl.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.mxgT9ICR.js", "_app/immutable/chunks/control.pJ1mnnAb.js", "_app/immutable/entry/app.mwp5-pU7.js", "_app/immutable/chunks/preload-helper.0HuHagjb.js", "_app/immutable/chunks/scheduler.mHtcUcVz.js", "_app/immutable/chunks/index.EMpJy5LW.js"], "stylesheets": [], "fonts": [], "uses_env_dynamic_public": false },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
