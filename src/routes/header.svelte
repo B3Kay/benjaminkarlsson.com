@@ -5,68 +5,49 @@
     import { toggleTheme } from "$lib/theme";
 </script>
 
-<!-- New nav -->
-<div class="navbar bg-base-100 px-6">
-    <div class="navbar-start">
-        <a class="btn btn-ghost normal-case" href="/">Benjamin Karlsson</a>
+<nav class="flex items-center justify-between px-6 py-4 border-b border-base-300">
+    <a class="text-sm font-semibold tracking-tight hover:opacity-70 transition-opacity" href="/">
+        Benjamin Karlsson
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+        <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/">Home</a>
+        <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/blog">Blog</a>
+        <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/portfolio">Portfolio</a>
+        <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/about">About</a>
+        <Toggle />
     </div>
-    <div class="navbar-center hidden md:flex">
-        <ul class="menu menu-horizontal px-1">
-            <li class="">
-                <a class="inherit decoration-0" href="/">Home</a>
+
+    <div class="dropdown dropdown-bottom dropdown-end block md:hidden">
+        <div
+            tabindex="0"
+            role="button"
+            class="p-2 hover:opacity-70 transition-opacity"
+        >
+            <Menu size={20} />
+        </div>
+        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+        <ul
+            tabindex="0"
+            class="p-3 shadow-lg dropdown-content z-[1] bg-base-200 border border-base-300 rounded-lg w-48 mt-2"
+        >
+            <li>
+                <a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/">Home</a>
             </li>
-            <li class="">
-                <a class="inherit decoration-0" href="/blog">Blog</a>
+            <li>
+                <a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/blog">Blog</a>
             </li>
-            <li class="">
-                <a class="inherit decoration-0" href="/portfolio">Portfolio</a>
+            <li>
+                <a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/portfolio">Portfolio</a>
             </li>
-            <li class="">
-                <a class="inherit decoration-0" href="/about">About</a>
+            <li>
+                <a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/about">About</a>
+            </li>
+            <li class="border-t border-base-300 mt-2 pt-2">
+                <button on:click={toggleTheme} class="block w-full text-left py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors">
+                    Toggle theme
+                </button>
             </li>
         </ul>
     </div>
-    <div class="navbar-end">
-        <div class="hidden md:flex">
-            <Toggle />
-        </div>
-        <div class="dropdown dropdown-bottom dropdown-end block md:hidden">
-            <div
-                tabindex="0"
-                role="button"
-                class="btn m-1 btn-ghost btn-square sm:btn-sm"
-            >
-                <Menu />
-            </div>
-            <!-- We can't use <button> here because Safari has a bug that prevents the button from being focused. -->
-            <!-- <div role="button" tabindex="0"> is a workaround for this bug. -->
-            <!-- It is accessible and works in all browsers. -->
-            <!-- https://bugs.webkit.org/show_bug.cgi?id=22261 -->
-            <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-            <ul
-                tabindex="0"
-                class="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52"
-            >
-                <li class="">
-                    <a class="inherit decoration-0" href="/">Home</a>
-                </li>
-                <li class="">
-                    <a class="inherit decoration-0" href="/blog">Blog</a>
-                </li>
-                <li class="">
-                    <a class="inherit decoration-0" href="/portfolio"
-                        >Portfolio</a
-                    >
-                </li>
-                <li class="">
-                    <a class="inherit decoration-0" href="/about">About</a>
-                </li>
-                <li class="">
-                    <button on:click={toggleTheme} class="inherit decoration-0"
-                        >Toggle theme</button
-                    >
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+</nav>

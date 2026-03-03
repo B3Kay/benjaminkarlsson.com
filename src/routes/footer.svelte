@@ -3,66 +3,40 @@
     import { Github, Instagram, Linkedin } from "lucide-svelte";
 </script>
 
-<footer class="block px-6 py-24 sm:py-32 bg-base-200 justify-center">
-    <div class="m-auto max-w-7xl">
-        <h3 class="text-3xl font-bold tracking-tight sm:text-xl">
-            Oh, this is a footer? <img
-                class="w-12 inline"
-                src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Monocle.png"
-                alt="Face with Monocle"
-            />
-        </h3>
-        <p class="max-w-prose mt-5 text-sm leading-6">
-            I like to blog about stuff like productivity, business, health &
-            fitness, and other stuff I'm interested in. Hopefully you'll find
-            some of it interesting too.
-        </p>
+<footer class="border-t border-base-300 px-6 py-16">
+    <div class="m-auto max-w-5xl">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+            <div>
+                <p class="text-sm font-semibold tracking-tight">Benjamin Karlsson</p>
+                <p class="text-sm text-base-content/40 mt-2 max-w-xs">
+                    Tech Lead, builder, and full stack developer. Writing about tech, productivity, and things I find interesting.
+                </p>
+            </div>
 
-        <ul class="mt-16 flex flex-wrap gap-4 font-bold text-sm">
-            <li>
-                <a class="btn btn-ghost inherit" href="/">Home</a>
-            </li>
-            <li>
-                <a class="btn btn-ghost inherit" href="/blog">Blog</a>
-            </li>
-            <li>
-                <a class="btn btn-ghost inherit" href="/portfolio">Portfolio</a>
-            </li>
-            <li>
-                <a class="btn btn-ghost inherit" href="/about">About</a>
-            </li>
-        </ul>
-    </div>
+            <div class="flex gap-12">
+                <div class="flex flex-col gap-2">
+                    <p class="text-xs text-base-content/30 uppercase tracking-wider mb-1">Navigation</p>
+                    <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/">Home</a>
+                    <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/blog">Blog</a>
+                    <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/portfolio">Portfolio</a>
+                    <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="/about">About</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <p class="text-xs text-base-content/30 uppercase tracking-wider mb-1">Connect</p>
+                    <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="https://github.com/B3Kay" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="https://www.linkedin.com/in/benjik/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a class="text-sm text-base-content/50 hover:text-base-content transition-colors" href="https://www.instagram.com/BENJIMINK_" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </div>
 
-    <div
-        class="max-w-7xl m-auto flex justify-between pt-10 mt-10 border-t-base-300 border-t-1 text-neutral-600"
-    >
-        <p>
-            &copy {new Date().getFullYear()}
-            {config.title}, All rights reserved.
-        </p>
-        <ul class="grid grid-flow-col gap-4">
-            <li>
-                <a
-                    href="https://www.instagram.com/BENJIMINK_"
-                    target="_blank"
-                    rel="noopener noreferrer"><Instagram /></a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://github.com/B3Kay"
-                    target="_blank"
-                    rel="noopener noreferrer"><Github /></a
-                >
-            </li>
-            <li>
-                <a
-                    href="https://www.linkedin.com/in/benjik/"
-                    target="_blank"
-                    rel="noopener noreferrer"><Linkedin /></a
-                >
-            </li>
-        </ul>
+        <div class="flex justify-between items-center pt-10 mt-10 border-t border-base-300 text-xs text-base-content/30">
+            <p>&copy; {new Date().getFullYear()} {config.title}</p>
+            <div class="flex gap-4">
+                <a href="https://github.com/B3Kay" target="_blank" rel="noopener noreferrer" class="hover:text-base-content transition-colors"><Github size={16} /></a>
+                <a href="https://www.linkedin.com/in/benjik/" target="_blank" rel="noopener noreferrer" class="hover:text-base-content transition-colors"><Linkedin size={16} /></a>
+                <a href="https://www.instagram.com/BENJIMINK_" target="_blank" rel="noopener noreferrer" class="hover:text-base-content transition-colors"><Instagram size={16} /></a>
+            </div>
+        </div>
     </div>
 </footer>

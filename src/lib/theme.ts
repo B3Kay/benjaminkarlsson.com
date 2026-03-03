@@ -2,14 +2,14 @@ import { browser } from "$app/environment"
 import { writable } from "svelte/store"
 
 
-type Theme = 'cmyk' | 'night'
+type Theme = 'light' | 'dark'
 
 const userTheme = browser && localStorage.getItem('data-theme')
-export const theme = writable(userTheme ?? 'night')
+export const theme = writable(userTheme ?? 'dark')
 
 export function toggleTheme() {
     theme.update(currentTheme => {
-        const newTheme: Theme = currentTheme === 'night' ? 'cmyk' : 'night'
+        const newTheme: Theme = currentTheme === 'dark' ? 'light' : 'dark'
         document.documentElement.setAttribute('data-theme',
             newTheme)
         localStorage.setItem('data-theme', newTheme)

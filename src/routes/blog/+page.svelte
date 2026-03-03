@@ -13,50 +13,34 @@
     <meta property="og:description" content="Articles about productivity, business, health & fitness, and software development by Benjamin Karlsson." />
 </svelte:head>
 
-<section class="ms-auto me-auto container max-w-7xl">
-    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
-        <span class="brightness-150 contrast-150"> All Posts </span>
-        <img
-            class="w-12 inline"
-            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Monocle.png"
-            alt="Face with Monocle"
-        />
-    </h1>
-    <p class="mt-2 prose">
-        I like to blog about stuff like productivity, business, health &
-        fitness, and other stuff I'm interested in. Hopefully you'll find some
-        of it interesting too.
-    </p>
-    <ul
-        class="grid gap-16 border-t-1
-    border-base-300
-    pt-16 mt-16"
-    >
+<div class="max-w-3xl mx-auto px-4 py-16 md:py-24">
+    <header class="mb-16">
+        <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">{data.posts.length} Posts</p>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Blog</h1>
+        <p class="mt-4 text-base-content/40 text-sm max-w-lg">
+            Writing about productivity, tech, health, and things I find interesting.
+        </p>
+    </header>
+
+    <div class="flex flex-col">
         {#each data.posts as post}
-            <li
-                class="max-is-prose
-                last:mb-16
-                pl-4 border-l-2 border-transparent hover:border-primary transition-colors duration-300
-                "
+            <a
+                href={post.slug}
+                class="group block py-6 border-b border-base-300 hover:bg-base-200/50 -mx-4 px-4 transition-colors duration-200"
             >
-                <div class="flex flex-wrap items-center gap-x-4 mt-2 mb-2">
-                    <time class="text-slate-400 text-nowrap"
-                        >{formatDate(post.date)}</time
-                    >
-                    <span class="flex flex-wrap gap-2 py-1.5">
-                        {#each post.categories as category}
-                            <span class="badge badge-ghost">{category}</span>
-                        {/each}
-                    </span>
+                <div class="flex flex-wrap items-center gap-3 mb-2">
+                    <time class="text-xs text-base-content/30">{formatDate(post.date)}</time>
+                    {#each post.categories as category}
+                        <span class="text-xs px-2 py-0.5 rounded-md bg-base-200 text-base-content/30">{category}</span>
+                    {/each}
                 </div>
-                <a
-                    class="mt-3 text-lg font-semibold leading-6 text-base-contents capitalize hover:text-primary"
-                    href={post.slug}>{post.title}</a
-                >
-                <p class="mt-5 line-clamp-3 text-sm leading-6">
+                <h2 class="text-base font-semibold group-hover:text-base-content/70 transition-colors duration-200 capitalize">
+                    {post.title}
+                </h2>
+                <p class="mt-2 text-sm text-base-content/40 leading-relaxed line-clamp-2">
                     {post.description}
                 </p>
-            </li>
+            </a>
         {/each}
-    </ul>
-</section>
+    </div>
+</div>

@@ -14,35 +14,27 @@
     <meta property="og:description" content="Portfolio of projects by Benjamin Karlsson. Full stack web applications built with React, TypeScript, Svelte, and more." />
 </svelte:head>
 
-<div class="max-w-5xl mx-auto px-4 py-12 md:py-16">
-    <!-- Header -->
-    <header class="mb-12 md:mb-16 animate-fade-in-up">
-        <div class="badge badge-accent badge-outline mb-4">
-            {data.portfolio.length} Projects
-        </div>
-        <h1 class="text-4xl md:text-5xl font-black mb-4">
-            <span class="brightness-150 contrast-150">My Projects</span>
-        </h1>
-        <p class="text-base-content/60 text-lg max-w-xl">
+<div class="max-w-5xl mx-auto px-4 py-16 md:py-24">
+    <header class="mb-16">
+        <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">{data.portfolio.length} Projects</p>
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Portfolio</h1>
+        <p class="text-base-content/40 text-sm mt-4 max-w-lg">
             Real work from real companies. Each one taught me something different about building software people actually use.
         </p>
     </header>
 
-    <!-- Project cards -->
-    <div class="flex flex-col gap-6 md:gap-8">
+    <div class="flex flex-col gap-4">
         {#each data.portfolio as project, i}
             <a
                 href={`/portfolio/${project.slug}`}
-                class="group block animate-fade-in-up"
-                style="animation-delay: {0.05 * (i + 1)}s"
+                class="group block"
             >
                 <div
-                    class="rounded-xl border border-base-300 overflow-hidden
-                           transition-all duration-300
-                           hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+                    class="rounded-lg border border-base-300 overflow-hidden
+                           transition-all duration-200
+                           hover:border-base-content/20"
                 >
                     <div class="flex flex-col md:flex-row">
-                        <!-- Image -->
                         {#if project.imageUrl && project.imageUrl.trim() !== ""}
                             <div class="md:w-2/5 overflow-hidden bg-base-200">
                                 <img
@@ -55,33 +47,32 @@
                             </div>
                         {/if}
 
-                        <!-- Content -->
                         <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                             <div>
                                 <div class="flex items-start justify-between gap-4 mb-3">
-                                    <h2 class="text-xl md:text-2xl font-bold brightness-150 contrast-150
-                                               group-hover:text-primary transition-colors duration-300">
+                                    <h2 class="text-lg font-semibold
+                                               group-hover:text-base-content/70 transition-colors duration-200">
                                         {project.title}
                                     </h2>
                                     {#if project.rating}
-                                        <div class="flex items-center gap-1 text-sm text-base-content/40 flex-shrink-0">
-                                            <Star size={14} class="fill-current text-warning" />
+                                        <div class="flex items-center gap-1 text-xs text-base-content/30 flex-shrink-0">
+                                            <Star size={12} />
                                             <span>{project.rating}</span>
                                         </div>
                                     {/if}
                                 </div>
 
-                                <p class="text-base-content/50 text-sm md:text-base mb-5 leading-relaxed">
+                                <p class="text-base-content/40 text-sm mb-5 leading-relaxed">
                                     {project.description}
                                 </p>
                             </div>
 
                             <div class="flex flex-wrap gap-1.5">
                                 {#each project.categories.slice(0, 6) as category}
-                                    <span class="badge badge-sm badge-neutral">{category}</span>
+                                    <span class="text-xs px-2 py-1 rounded-md bg-base-200 text-base-content/40">{category}</span>
                                 {/each}
                                 {#if project.categories.length > 6}
-                                    <span class="badge badge-sm badge-ghost">
+                                    <span class="text-xs px-2 py-1 rounded-md bg-base-200 text-base-content/30">
                                         +{project.categories.length - 6}
                                     </span>
                                 {/if}

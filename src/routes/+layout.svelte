@@ -13,10 +13,10 @@
   ></script>
 </svelte:head>
 
-<div class="h-full max-w-screen-sxl grid grid-rows-layout">
+<div class="min-h-screen flex flex-col">
   <Header></Header>
 
-  <main class="p-0 md:p-9 m-6">
+  <main class="flex-1">
     <slot />
   </main>
   <Footer></Footer>
