@@ -283,7 +283,8 @@
                     src={project.imageUrl}
                     alt={project.title}
                     class="w-full h-48 md:h-full object-cover
-                           transition-transform duration-500
+                           brightness-[0.6] group-hover:brightness-100
+                           transition-all duration-500
                            group-hover:scale-105"
                   />
                 </div>
