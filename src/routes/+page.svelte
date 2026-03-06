@@ -23,9 +23,16 @@
   import PostgresqlIcon from "~icons/cib/postgresql";
   import GitIcon from "~icons/cib/git";
 
+  // What I Do card icons
+  import IconCode from "~icons/mingcute/code-line";
+  import IconBrain from "~icons/mingcute/sparkles-line";
+
   // How I Work card icons
   import IconGroup from "~icons/mingcute/group-line";
   import IconHammer from "~icons/mingcute/hammer-line";
+
+  // Why section icon
+  import IconHeart from "~icons/mingcute/heart-line";
 
   import ChatBot from "$lib/components/ChatBot.svelte";
   import ChatWall from "$lib/components/ChatWall.svelte";
@@ -128,8 +135,49 @@
   </div>
 </section>
 
-<!-- How I Work -->
+<!-- What I Do -->
 <section class="py-24 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-16">
+      <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Services</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">What I Do</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="rounded-lg border border-base-300 p-6">
+        <IconGroup class="w-6 text-base-content/30 mb-4" />
+        <h3 class="font-semibold mb-2">Tech & Team Leadership</h3>
+        <p class="text-sm text-base-content/40 leading-relaxed">
+          Leading teams, owning architecture decisions, running code reviews, and making sure things actually ship.
+        </p>
+      </div>
+      <div class="rounded-lg border border-base-300 p-6">
+        <IconCode class="w-6 text-base-content/30 mb-4" />
+        <h3 class="font-semibold mb-2">Full Stack Development</h3>
+        <p class="text-sm text-base-content/40 leading-relaxed">
+          React, Next.js, Svelte, Node, Python, Go — databases, APIs, infrastructure. The whole stack.
+        </p>
+      </div>
+      <div class="rounded-lg border border-base-300 p-6">
+        <IconBrain class="w-6 text-base-content/30 mb-4" />
+        <h3 class="font-semibold mb-2">AI-Driven Development</h3>
+        <p class="text-sm text-base-content/40 leading-relaxed">
+          Building with AI agents, Claude Code, Codex, and agentic workflows that multiply output.
+        </p>
+      </div>
+      <div class="rounded-lg border border-base-300 p-6">
+        <IconHammer class="w-6 text-base-content/30 mb-4" />
+        <h3 class="font-semibold mb-2">Builder & Creator</h3>
+        <p class="text-sm text-base-content/40 leading-relaxed">
+          Side projects, experiments, content. Always building something — it's what I do for fun too.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How I Work -->
+<section class="py-24 px-4 border-t border-base-300">
   <div class="max-w-5xl mx-auto">
     <div class="mb-16">
       <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Engagement</p>
@@ -174,6 +222,31 @@
         <a href="mailto:hi@benjaminkarlsson.com?subject=Project inquiry" class="text-sm font-medium text-center py-3 bg-base-content text-base-100 rounded-lg hover:opacity-90 transition-opacity">
           Discuss a project
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why I Build -->
+<section class="py-24 px-4 border-t border-base-300">
+  <div class="max-w-5xl mx-auto">
+    <div class="max-w-2xl">
+      <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Motivation</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Why I Build</h2>
+      <div class="text-base text-base-content/50 leading-relaxed space-y-4">
+        <p>
+          I love building stuff. Not just as work — as a way of thinking. I get energy from
+          taking an idea and turning it into something real. A product, a tool, an experiment.
+          The tighter the loop from thought to working software, the better.
+        </p>
+        <p>
+          That's why I gravitate toward AI-accelerated workflows and full-stack ownership.
+          Less waiting, more shipping. I've built side projects, led teams, shipped products
+          across continents — and the thing that keeps me going is the craft itself.
+        </p>
+        <p class="text-base-content/30 text-sm italic">
+          If it can be built, I want to build it.
+        </p>
       </div>
     </div>
   </div>
