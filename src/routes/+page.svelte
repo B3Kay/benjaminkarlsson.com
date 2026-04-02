@@ -207,6 +207,35 @@
   </div>
 </section>
 
+<!-- What People Say -->
+<section class="py-24 px-4 border-t border-base-300">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-16">
+      <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">From colleagues</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight">What People Say</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="rounded-lg border border-base-300 p-6">
+        <p class="text-base font-medium leading-relaxed mb-4">"Great leader"</p>
+        <p class="text-xs text-base-content/30">— On leadership style</p>
+      </div>
+      <div class="rounded-lg border border-base-300 p-6">
+        <p class="text-base font-medium leading-relaxed mb-4">"Social butterfly"</p>
+        <p class="text-xs text-base-content/30">— On team dynamics</p>
+      </div>
+      <div class="rounded-lg border border-base-300 p-6">
+        <p class="text-base font-medium leading-relaxed mb-4">"Social chameleon"</p>
+        <p class="text-xs text-base-content/30">— On adaptability</p>
+      </div>
+      <div class="rounded-lg border border-base-300 p-6">
+        <p class="text-base font-medium leading-relaxed mb-4">"Brings up the energy in the room"</p>
+        <p class="text-xs text-base-content/30">— On team culture</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Featured Projects -->
 <section class="py-24 px-4 border-t border-base-300">
   <div class="max-w-5xl mx-auto">
