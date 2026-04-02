@@ -3,26 +3,6 @@
   import { formatDate } from "$lib/utils";
   import IconArrowRight from "~icons/mingcute/arrow-right-line";
 
-  // Frontend
-  import SveleIcon from "~icons/cib/svelte";
-  import ReactIcon from "~icons/cib/react";
-  import NextJsIcon from "~icons/cib/next-js";
-  import TypescriptIcon from "~icons/cib/typescript";
-  import ReduxIcon from "~icons/cib/redux";
-  import GraphqlIcon from "~icons/cib/graphql";
-  import StorybookIcon from "~icons/cib/storybook";
-  import JestIcon from "~icons/cib/jest";
-
-  // Backend & Infra
-  import NodeJsIcon from "~icons/cib/node-js";
-  import PythonIcon from "~icons/cib/python";
-  import GoIcon from "~icons/cib/go";
-  import DockerIcon from "~icons/cib/docker";
-  import KubernetesIcon from "~icons/cib/kubernetes";
-  import AwsIcon from "~icons/cib/amazon-aws";
-  import PostgresqlIcon from "~icons/cib/postgresql";
-  import GitIcon from "~icons/cib/git";
-
   // What I Do card icons
   import IconCode from "~icons/mingcute/code-line";
   import IconBrain from "~icons/mingcute/sparkles-line";
@@ -30,9 +10,6 @@
   // How I Work card icons
   import IconGroup from "~icons/mingcute/group-line";
   import IconHammer from "~icons/mingcute/hammer-line";
-
-  // Why section icon
-  import IconHeart from "~icons/mingcute/heart-line";
 
   import ChatBot from "$lib/components/ChatBot.svelte";
   import ChatWall from "$lib/components/ChatWall.svelte";
@@ -46,10 +23,10 @@
 
 <svelte:head>
   <title>{config.title} - Tech Lead & Full Stack Developer</title>
-  <meta name="description" content="Tech Lead & Full Stack Developer with {yearsExperience}+ years experience. Currently leading engineering at a NYC startup. Specializing in TypeScript, React, Svelte, and AI-driven development." />
+  <meta name="description" content="Tech Lead & Full Stack Developer with {yearsExperience}+ years experience. Leading engineering at Hailstorm Talent. AI-accelerated development, remote team leadership, and full stack delivery." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{config.title} - Tech Lead & Full Stack Developer" />
-  <meta property="og:description" content="Tech Lead & Full Stack Developer with {yearsExperience}+ years experience. Currently leading engineering at a NYC startup." />
+  <meta property="og:description" content="Tech Lead & Full Stack Developer with {yearsExperience}+ years experience. Leading engineering at Hailstorm Talent." />
   <meta property="og:url" content={config.url} />
 </svelte:head>
 
@@ -58,38 +35,19 @@
   <div class="w-full max-w-5xl mx-auto px-4 py-20">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div class="text-center lg:text-left">
-        <p class="text-xs uppercase tracking-widest text-base-content/30 mb-6 animate-fade-in-up">NYC Startup / Tech Lead</p>
+        <p class="text-xs uppercase tracking-widest text-base-content/30 mb-6 animate-fade-in-up">Hailstorm Talent / Tech Lead</p>
 
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter leading-[1.1] animate-fade-in-up-delay-1">
           Tech Lead &<br />Full Stack Developer
         </h1>
 
         <p class="mt-6 text-base text-base-content/50 leading-relaxed max-w-md mx-auto lg:mx-0 animate-fade-in-up-delay-2">
-          Builder and engineer with {yearsExperience}+ years in tech. Currently
-          Tech Lead at a New York-based startup, shipping project management and
-          finance tools. I build things end-to-end, leveraging AI agents and
-          agentic workflows to move fast.
+          {yearsExperience}+ years leading remote engineering teams and shipping
+          products end-to-end. I hire lean teams, coach developers, and use
+          AI-accelerated workflows to deliver at 10-20x the pace of a
+          traditional setup. Your startup gets senior technical leadership
+          without the overhead.
         </p>
-
-        <!-- Tech icons -->
-        <div class="flex flex-wrap gap-3 mt-8 justify-center lg:justify-start text-base-content/20 animate-fade-in-up-delay-2">
-          <TypescriptIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <ReactIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <NextJsIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <SveleIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <NodeJsIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <PythonIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <GoIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <GraphqlIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <DockerIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <KubernetesIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <AwsIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <PostgresqlIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <ReduxIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <JestIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <StorybookIcon class="w-8 hover:text-base-content/60 transition-colors" />
-          <GitIcon class="w-8 hover:text-base-content/60 transition-colors" />
-        </div>
 
         <div class="flex flex-col sm:flex-row gap-3 mt-10 justify-center lg:justify-start animate-fade-in-up-delay-3">
           <a
@@ -120,16 +78,16 @@
         <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Years Experience</div>
       </div>
       <div>
-        <div class="text-3xl md:text-4xl font-bold tracking-tight">20+</div>
-        <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Technologies</div>
+        <div class="text-3xl md:text-4xl font-bold tracking-tight">6+</div>
+        <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Developers Led</div>
       </div>
       <div>
         <div class="text-3xl md:text-4xl font-bold tracking-tight">6+</div>
         <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Products Shipped</div>
       </div>
       <div>
-        <div class="text-3xl md:text-4xl font-bold tracking-tight">5</div>
-        <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">Countries Worked From</div>
+        <div class="text-3xl md:text-4xl font-bold tracking-tight">10-20x</div>
+        <div class="text-xs text-base-content/30 mt-2 uppercase tracking-wider">AI Productivity Boost</div>
       </div>
     </div>
   </div>
@@ -146,30 +104,30 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="rounded-lg border border-base-300 p-6">
         <IconGroup class="w-6 text-base-content/30 mb-4" />
-        <h3 class="font-semibold mb-2">Tech & Team Leadership</h3>
+        <h3 class="font-semibold mb-2">Hire & Lead Remote Teams</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
-          Leading teams, owning architecture decisions, running code reviews, and making sure things actually ship.
+          Recruit developers globally, onboard them fast, and coach them into a high-performing team. No overhead, no fluff.
         </p>
       </div>
       <div class="rounded-lg border border-base-300 p-6">
         <IconCode class="w-6 text-base-content/30 mb-4" />
-        <h3 class="font-semibold mb-2">Full Stack Development</h3>
+        <h3 class="font-semibold mb-2">Full Stack Delivery</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
-          React, Next.js, Svelte, Node, Python, Go — databases, APIs, infrastructure. The whole stack.
+          React, Next.js, Svelte, Node, Python, Go — from database to deploy. I ship the whole product, not just features.
         </p>
       </div>
       <div class="rounded-lg border border-base-300 p-6">
         <IconBrain class="w-6 text-base-content/30 mb-4" />
-        <h3 class="font-semibold mb-2">AI-Driven Development</h3>
+        <h3 class="font-semibold mb-2">AI-Accelerated Output</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
-          Building with AI agents, Claude Code, Codex, and agentic workflows that multiply output.
+          AI agents for code generation, PR reviews, and testing. A 3-person team shipping like a 10-person one.
         </p>
       </div>
       <div class="rounded-lg border border-base-300 p-6">
         <IconHammer class="w-6 text-base-content/30 mb-4" />
-        <h3 class="font-semibold mb-2">Builder & Creator</h3>
+        <h3 class="font-semibold mb-2">Architecture & Code Reviews</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
-          Side projects, experiments, content. Always building something — it's what I do for fun too.
+          Set up the technical foundation, enforce quality through reviews, and make sure the codebase scales with the business.
         </p>
       </div>
     </div>
@@ -183,7 +141,7 @@
       <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Engagement</p>
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight">How I Work</h2>
       <p class="text-sm text-base-content/40 mt-4 max-w-lg">
-        Two ways to work together, depending on what you need.
+        Two ways to work together, depending on what you need. Typical engagements run 6-24 months.
       </p>
     </div>
 
@@ -193,13 +151,13 @@
         <IconGroup class="w-6 text-base-content/30 mb-6" />
         <h3 class="text-xl font-semibold mb-2">Embed in your team</h3>
         <p class="text-sm text-base-content/40 leading-relaxed mb-6">
-          I join your existing team as a Tech Lead, senior engineer, or fractional CTO. I bring structure, ship features, and level up your developers.
+          I join as your Tech Lead or fractional CTO. I bring structure, coach your developers, and make sure the team ships consistently.
         </p>
         <ul class="text-sm text-base-content/40 space-y-2 mb-8 flex-1">
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> Tech & team leadership</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> Architecture & code reviews</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> Full stack development</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Technical leadership & hiring</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Developer coaching & PR reviews</li>
           <li class="flex gap-2"><span class="text-base-content/20">-</span> AI workflow integration</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Architecture & code quality</li>
         </ul>
         <a href="mailto:hi@benjaminkarlsson.com?subject=Embed in our team" class="text-sm font-medium text-center py-3 border border-base-300 rounded-lg hover:border-base-content/30 transition-colors">
           Get in touch
@@ -211,12 +169,12 @@
         <IconHammer class="w-6 text-base-content/50 mb-6" />
         <h3 class="text-xl font-semibold mb-2">Own the delivery</h3>
         <p class="text-sm text-base-content/40 leading-relaxed mb-6">
-          I take full project responsibility. Define the architecture, assemble the right team, and ship your product from zero to production.
+          I take full project ownership. Hire the right remote team, set up the architecture, and ship your product from zero to production.
         </p>
         <ul class="text-sm text-base-content/40 space-y-2 mb-8 flex-1">
           <li class="flex gap-2"><span class="text-base-content/20">-</span> End-to-end project ownership</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> Team assembly & coordination</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> AI-accelerated development</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Global team hiring & coordination</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> AI-accelerated delivery (10-20x output)</li>
           <li class="flex gap-2"><span class="text-base-content/20">-</span> Architecture to production deploy</li>
         </ul>
         <a href="mailto:hi@benjaminkarlsson.com?subject=Project inquiry" class="text-sm font-medium text-center py-3 bg-base-content text-base-100 rounded-lg hover:opacity-90 transition-opacity">
@@ -227,25 +185,22 @@
   </div>
 </section>
 
-<!-- Why I Build -->
+<!-- Why This Works -->
 <section class="py-24 px-4 border-t border-base-300">
   <div class="max-w-5xl mx-auto">
     <div class="max-w-2xl">
-      <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Motivation</p>
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Why I Build</h2>
+      <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">The advantage</p>
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">A Lean Team That Ships Like a Big One</h2>
       <div class="text-base text-base-content/50 leading-relaxed space-y-4">
         <p>
-          I love building stuff. Not just as work — as a way of thinking. I get energy from
-          taking an idea and turning it into something real. A product, a tool, an experiment.
-          The tighter the loop from thought to working software, the better.
+          Most startups either hire too many developers too early, or hire too few and move too slowly.
+          I solve that gap. I hire a small, senior remote team — then multiply their output with
+          AI-accelerated workflows across code generation, PR reviews, and testing.
         </p>
         <p>
-          That's why I gravitate toward AI-accelerated workflows and full-stack ownership.
-          Less waiting, more shipping. I've built side projects, led teams, shipped products
-          across continents — and the thing that keeps me going is the craft itself.
-        </p>
-        <p class="text-base-content/30 text-sm italic">
-          If it can be built, I want to build it.
+          The result: a 3-person team delivering what normally takes 10. Less burn rate,
+          faster shipping, higher code quality. You get technical leadership, a working team,
+          and a product in production — without building a full engineering org from scratch.
         </p>
       </div>
     </div>
