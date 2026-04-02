@@ -5,10 +5,10 @@
 
 <svelte:head>
     <title>Contact - {config.title}</title>
-    <meta name="description" content="Get in touch with Benjamin Karlsson. Available for freelance full stack development work and collaborations." />
+    <meta name="description" content="Get in touch with Benjamin Karlsson. Available for technical leadership, remote team hiring, and full stack delivery engagements." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Contact - {config.title}" />
-    <meta property="og:description" content="Get in touch with Benjamin Karlsson. Available for freelance full stack development work and collaborations." />
+    <meta property="og:description" content="Get in touch with Benjamin Karlsson. Available for technical leadership, remote team hiring, and full stack delivery engagements." />
 </svelte:head>
 
 <article class="ms-auto me-auto prose max-w-2xl mb-16">

@@ -16,6 +16,7 @@
         <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/portfolio">Portfolio</a>
         <a class="text-sm text-base-content/60 hover:text-base-content transition-colors" href="/about">About</a>
         <Toggle />
+        <a class="text-sm font-medium px-4 py-2 bg-base-content text-base-100 rounded-lg hover:opacity-90 transition-opacity" href="mailto:hi@benjaminkarlsson.com?subject=Project inquiry">Work with me</a>
     </div>
 
     <div class="dropdown dropdown-bottom dropdown-end block md:hidden">
@@ -44,6 +45,9 @@
                 <a class="block py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors" href="/about">About</a>
             </li>
             <li class="border-t border-base-300 mt-2 pt-2">
+                <a class="block py-2 px-3 text-sm font-medium text-base-content hover:bg-base-300 rounded-md transition-colors" href="mailto:hi@benjaminkarlsson.com?subject=Project inquiry">Work with me</a>
+            </li>
+            <li>
                 <button on:click={toggleTheme} class="block w-full text-left py-2 px-3 text-sm text-base-content/60 hover:text-base-content rounded-md hover:bg-base-300 transition-colors">
                     Toggle theme
                 </button>

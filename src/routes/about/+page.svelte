@@ -5,10 +5,10 @@
 
 <svelte:head>
     <title>About - {config.title}</title>
-    <meta name="description" content="Learn about Benjamin Karlsson - developer, designer, creator, and avid traveler with 5+ years in the IT industry." />
+    <meta name="description" content="About Benjamin Karlsson — Tech Lead and full stack developer specializing in remote team leadership and AI-accelerated delivery." />
     <meta property="og:type" content="profile" />
     <meta property="og:title" content="About - {config.title}" />
-    <meta property="og:description" content="Learn about Benjamin Karlsson - developer, designer, creator, and avid traveler with 5+ years in the IT industry." />
+    <meta property="og:description" content="About Benjamin Karlsson — Tech Lead and full stack developer specializing in remote team leadership and AI-accelerated delivery." />
 </svelte:head>
 
 <article class="ms-auto me-auto prose max-w-2xl mb-16">
