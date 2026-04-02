@@ -314,6 +314,9 @@
       <div>
         <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">Blog</p>
         <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Latest Posts</h2>
+        <p class="text-sm text-base-content/40 mt-3 max-w-md">
+          Thoughts on tech, leadership, books, and whatever else I'm thinking about. The non-corporate stuff.
+        </p>
       </div>
       <a href="/blog" class="text-sm text-base-content/40 hover:text-base-content transition-colors hidden md:flex items-center gap-1">
         Read all <IconArrowRight />
