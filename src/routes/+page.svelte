@@ -217,10 +217,10 @@
 
     <div class="grid sm:grid-cols-2 gap-4">
       <div class="rounded-lg bg-base-200 p-8">
-        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"Benjamin took ownership from day one. He didn't just lead the team — he made everyone around him better."</p>
+        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"I saw his custom bike on LinkedIn and thought — I need that creative energy on my team. Best hiring decision I made."</p>
         <div>
-          <p class="text-sm font-medium">Engineering Manager</p>
-          <p class="text-xs text-base-content/30">Former colleague</p>
+          <p class="text-sm font-medium">Hiring Manager</p>
+          <p class="text-xs text-base-content/30">Current client, Hailstorm Talent</p>
         </div>
       </div>
       <div class="rounded-lg bg-base-200 p-8">
