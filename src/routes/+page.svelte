@@ -224,9 +224,9 @@
         </div>
       </div>
       <div class="rounded-lg bg-base-200 p-8">
-        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"A social chameleon. He adapts to any team, any culture, any room — and somehow makes it feel natural."</p>
+        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"He asks the question nobody in the room dares to ask — and somehow makes it sound genuinely curious instead of confrontational. I've never seen anyone do that."</p>
         <div>
-          <p class="text-sm font-medium">Product Designer</p>
+          <p class="text-sm font-medium">Sales Lead</p>
           <p class="text-xs text-base-content/30">Former colleague</p>
         </div>
       </div>
