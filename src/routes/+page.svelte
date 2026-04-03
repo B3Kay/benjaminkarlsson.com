@@ -43,10 +43,10 @@
 
         <p class="mt-6 text-base text-base-content/50 leading-relaxed max-w-md mx-auto lg:mx-0 animate-fade-in-up-delay-2">
           {yearsExperience}+ years leading remote engineering teams and shipping
-          products end-to-end. I hire lean teams, coach developers, and use
-          AI-accelerated workflows to deliver at 10-20x the pace of a
-          traditional setup. Your startup gets senior technical leadership
-          without the overhead.
+          products end-to-end. I set up everything from agile processes and
+          CI/CD to UI design and product strategy — then use AI-accelerated
+          workflows to deliver at 10-20x the pace of a traditional setup.
+          Your startup gets senior technical leadership without the overhead.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 mt-10 justify-center lg:justify-start animate-fade-in-up-delay-3">
@@ -125,9 +125,9 @@
       </div>
       <div class="rounded-lg border border-base-300 p-6">
         <IconHammer class="w-6 text-base-content/30 mb-4" />
-        <h3 class="font-semibold mb-2">Architecture & Code Reviews</h3>
+        <h3 class="font-semibold mb-2">Process, Design & Product</h3>
         <p class="text-sm text-base-content/40 leading-relaxed">
-          Set up the technical foundation, enforce quality through reviews, and make sure the codebase scales with the business.
+          Agile ceremonies, CI/CD pipelines, UI/UX design, and product development. I set up the entire way your team works — not just the code.
         </p>
       </div>
     </div>
@@ -151,13 +151,13 @@
         <IconGroup class="w-6 text-base-content/30 mb-6" />
         <h3 class="text-xl font-semibold mb-2">Embed in your team</h3>
         <p class="text-sm text-base-content/40 leading-relaxed mb-6">
-          I join as your Tech Lead or fractional CTO. I bring structure, coach your developers, and make sure the team ships consistently.
+          I join as your Tech Lead or fractional CTO. I set up agile processes, coach your developers, handle UI/UX design, and make sure the team ships consistently.
         </p>
         <ul class="text-sm text-base-content/40 space-y-2 mb-8 flex-1">
           <li class="flex gap-2"><span class="text-base-content/20">-</span> Technical leadership & hiring</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> Developer coaching & PR reviews</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> AI workflow integration</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> Architecture & code quality</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Agile setup: scrum, demos, CI/CD</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> UI/UX design & product development</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Developer coaching & AI workflows</li>
         </ul>
         <a href="mailto:hi@benjaminkarlsson.com?subject=Embed in our team" class="text-sm font-medium text-center py-3 border border-base-300 rounded-lg hover:border-base-content/30 transition-colors">
           Get in touch
@@ -174,8 +174,8 @@
         <ul class="text-sm text-base-content/40 space-y-2 mb-8 flex-1">
           <li class="flex gap-2"><span class="text-base-content/20">-</span> End-to-end project ownership</li>
           <li class="flex gap-2"><span class="text-base-content/20">-</span> Global team hiring & coordination</li>
+          <li class="flex gap-2"><span class="text-base-content/20">-</span> Process setup, UI/UX & product dev</li>
           <li class="flex gap-2"><span class="text-base-content/20">-</span> AI-accelerated delivery (10-20x output)</li>
-          <li class="flex gap-2"><span class="text-base-content/20">-</span> Architecture to production deploy</li>
         </ul>
         <a href="mailto:hi@benjaminkarlsson.com?subject=Project inquiry" class="text-sm font-medium text-center py-3 bg-base-content text-base-100 rounded-lg hover:opacity-90 transition-opacity">
           Discuss a project
