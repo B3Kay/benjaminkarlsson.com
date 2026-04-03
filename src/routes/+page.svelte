@@ -215,22 +215,34 @@
       <h2 class="text-3xl md:text-4xl font-bold tracking-tight">What People Say</h2>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"Benjamin took ownership from day one. He didn't just lead the team — he made everyone around him better."</p>
-        <p class="text-xs text-base-content/30">— Engineering Manager, former colleague</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="rounded-lg bg-base-200 p-8">
+        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"Benjamin took ownership from day one. He didn't just lead the team — he made everyone around him better."</p>
+        <div>
+          <p class="text-sm font-medium">Engineering Manager</p>
+          <p class="text-xs text-base-content/30">Former colleague</p>
+        </div>
       </div>
-      <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"A social chameleon. He adapts to any team, any culture, any room — and somehow makes it feel natural."</p>
-        <p class="text-xs text-base-content/30">— Product Designer, former colleague</p>
+      <div class="rounded-lg bg-base-200 p-8">
+        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"A social chameleon. He adapts to any team, any culture, any room — and somehow makes it feel natural."</p>
+        <div>
+          <p class="text-sm font-medium">Product Designer</p>
+          <p class="text-xs text-base-content/30">Former colleague</p>
+        </div>
       </div>
-      <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"He brings up the energy in every room he walks into. Meetings went from draining to productive."</p>
-        <p class="text-xs text-base-content/30">— Senior Developer, former teammate</p>
+      <div class="rounded-lg bg-base-200 p-8">
+        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"He brings up the energy in every room he walks into. Meetings went from draining to productive."</p>
+        <div>
+          <p class="text-sm font-medium">Senior Developer</p>
+          <p class="text-xs text-base-content/30">Former teammate</p>
+        </div>
       </div>
-      <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"One of those rare people who's both deeply technical and genuinely great with people. Teams love working with him."</p>
-        <p class="text-xs text-base-content/30">— CTO, former manager</p>
+      <div class="rounded-lg bg-base-200 p-8">
+        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"One of those rare people who's both deeply technical and genuinely great with people. Teams love working with him."</p>
+        <div>
+          <p class="text-sm font-medium">CTO</p>
+          <p class="text-xs text-base-content/30">Former manager</p>
+        </div>
       </div>
     </div>
   </div>
