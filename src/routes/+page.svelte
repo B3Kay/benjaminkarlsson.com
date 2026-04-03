@@ -231,10 +231,10 @@
         </div>
       </div>
       <div class="rounded-lg bg-base-200 p-8">
-        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"He brings up the energy in every room he walks into. Meetings went from draining to productive."</p>
+        <p class="text-lg font-medium leading-relaxed mb-6 text-base-content/80">"Benji is like a Duracell Bunny — this sparkling energy that just transmits to everyone around him. Everyone just loves being around him."</p>
         <div>
-          <p class="text-sm font-medium">Senior Developer</p>
-          <p class="text-xs text-base-content/30">Former teammate</p>
+          <p class="text-sm font-medium">Startup Founder</p>
+          <p class="text-xs text-base-content/30">Former project partner</p>
         </div>
       </div>
       <div class="rounded-lg bg-base-200 p-8">
