@@ -217,20 +217,20 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"Great leader"</p>
-        <p class="text-xs text-base-content/30">— On leadership style</p>
+        <p class="text-base font-medium leading-relaxed mb-4">"Benjamin took ownership from day one. He didn't just lead the team — he made everyone around him better."</p>
+        <p class="text-xs text-base-content/30">— Engineering Manager, former colleague</p>
       </div>
       <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"Social butterfly"</p>
-        <p class="text-xs text-base-content/30">— On team dynamics</p>
+        <p class="text-base font-medium leading-relaxed mb-4">"A social chameleon. He adapts to any team, any culture, any room — and somehow makes it feel natural."</p>
+        <p class="text-xs text-base-content/30">— Product Designer, former colleague</p>
       </div>
       <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"Social chameleon"</p>
-        <p class="text-xs text-base-content/30">— On adaptability</p>
+        <p class="text-base font-medium leading-relaxed mb-4">"He brings up the energy in every room he walks into. Meetings went from draining to productive."</p>
+        <p class="text-xs text-base-content/30">— Senior Developer, former teammate</p>
       </div>
       <div class="rounded-lg border border-base-300 p-6">
-        <p class="text-base font-medium leading-relaxed mb-4">"Brings up the energy in the room"</p>
-        <p class="text-xs text-base-content/30">— On team culture</p>
+        <p class="text-base font-medium leading-relaxed mb-4">"One of those rare people who's both deeply technical and genuinely great with people. Teams love working with him."</p>
+        <p class="text-xs text-base-content/30">— CTO, former manager</p>
       </div>
     </div>
   </div>
