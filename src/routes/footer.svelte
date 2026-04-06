@@ -9,7 +9,7 @@
             <div>
                 <p class="text-sm font-semibold tracking-tight">Benjamin Karlsson</p>
                 <p class="text-sm text-base-content/40 mt-2 max-w-xs">
-                    Tech Lead, builder, and full stack developer. Writing about tech, productivity, and things I find interesting.
+                    Tech Lead & Full Stack Developer. Hiring lean remote teams and shipping products with AI-accelerated workflows.
                 </p>
             </div>
 

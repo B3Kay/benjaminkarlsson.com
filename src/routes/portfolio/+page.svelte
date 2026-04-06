@@ -1,6 +1,7 @@
 <script lang="ts">
     import * as config from "$lib/config.js";
-    import { Star } from "lucide-svelte";
+    import { formatDate } from "$lib/utils";
+    import { Star, Calendar } from "lucide-svelte";
 
     // biome-ignore lint/suspicious/noImplicitAnyLet: <explanation>
     export let data;
@@ -19,7 +20,7 @@
         <p class="text-xs uppercase tracking-widest text-base-content/30 mb-3">{data.portfolio.length} Projects</p>
         <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Portfolio</h1>
         <p class="text-base-content/40 text-sm mt-4 max-w-lg">
-            Real work from real companies. Each one taught me something different about building software people actually use.
+            Products shipped for real companies — from enterprise platforms to startup MVPs.
         </p>
     </header>
 
@@ -49,20 +50,25 @@
 
                         <div class="flex-1 p-6 md:p-8 flex flex-col justify-between">
                             <div>
-                                <div class="flex items-start justify-between gap-4 mb-3">
-                                    <h2 class="text-lg font-semibold
-                                               group-hover:text-base-content/70 transition-colors duration-200">
-                                        {project.title}
-                                    </h2>
+                                <div class="flex items-center gap-3 mb-3 text-xs text-base-content/30">
+                                    <span class="flex items-center gap-1">
+                                        <Calendar size={12} />
+                                        {formatDate(project.date)}
+                                    </span>
                                     {#if project.rating}
-                                        <div class="flex items-center gap-1 text-xs text-base-content/30 flex-shrink-0">
+                                        <span class="flex items-center gap-1" title="Impact rating">
                                             <Star size={12} />
-                                            <span>{project.rating}</span>
-                                        </div>
+                                            {project.rating}/5
+                                        </span>
                                     {/if}
                                 </div>
 
-                                <p class="text-base-content/40 text-sm mb-5 leading-relaxed">
+                                <h2 class="text-lg font-semibold mb-3
+                                           group-hover:text-base-content/70 transition-colors duration-200">
+                                    {project.title}
+                                </h2>
+
+                                <p class="text-base-content/40 text-sm mb-5 leading-relaxed line-clamp-2">
                                     {project.description}
                                 </p>
                             </div>
