@@ -13,7 +13,7 @@
     <meta property="og:image" content={data.meta.image} />
 </svelte:head>
 
-<article class="ms-auto me-auto prose max-w-2xl">
+<article class="ms-auto me-auto prose max-w-2xl px-4 sm:px-6">
     <hgroup>
         <!-- <h1 class="text-4xl capitalize">{data.meta.title}</h1>
         <p>{data.meta.description}</p> -->
